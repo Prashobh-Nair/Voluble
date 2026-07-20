@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voluble - Planning to move Abroad?</title>
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Voluble helps you shape your career and feel at home when moving abroad. Build confidence in your English and communication for job interviews, workplace, and everyday life.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating Navigation Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo" id="header-logo">
+                <!-- Inline SVG Paper Plane Logo Icon -->
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 2L2 8.66667L11.5 12.5L15.3333 22L22 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>
+                    <path d="M11.5 12.5L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Voluble</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#why-voluble" class="nav-link">Why Voluble</a>
+                <a href="#waitlist" class="nav-link">Waitlist</a>
+            </nav>
+            
+            <a href="#waitlist" class="nav-btn">Join Waitlist &rarr;</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Hero Section (Page 1) -->
+        <section id="hero" class="section hero-section">
+            <!-- Full-width landscape skyline background -->
+            <img src="assets/hero_background.png" alt="Global Skylines Background" class="hero-bg-skyline">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Planning to move <span class="serif-title">Abroad?</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Your English got you the visa.<br>
+                        Your communication will shape your career.
+                    </p>
+                    
+                    <div class="hero-actions">
+                        <a href="#waitlist" class="btn-primary">
+                            Join the Early Access Waitlist 
+                            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        
+                        <div class="trust-badge">
+                            <span class="check-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span>Designed for Indians moving abroad.</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Country Tags Grid -->
+                    <div class="country-tags">
+                        <div class="country-tag" data-country="us">
+                            <img class="flag-icon-img" src="assets/us.svg" alt="USA Flag">
+                            <span>USA</span>
+                        </div>
+                        <div class="country-tag" data-country="ca">
+                            <img class="flag-icon-img" src="assets/ca.svg" alt="Canada Flag">
+                            <span>Canada</span>
+                        </div>
+                        <div class="country-tag" data-country="gb">
+                            <img class="flag-icon-img" src="assets/gb.svg" alt="UK Flag">
+                            <span>UK</span>
+                        </div>
+                        <div class="country-tag" data-country="au">
+                            <img class="flag-icon-img" src="assets/au.svg" alt="Australia Flag">
+                            <span>Australia</span>
+                        </div>
+                        <div class="country-tag" data-country="nz">
+                            <img class="flag-icon-img" src="assets/nz.svg" alt="New Zealand Flag">
+                            <span>New Zealand</span>
+                        </div>
+                    </div>
+
+                    <!-- Destination Spotlight (Dynamic Hover Card) -->
+                    <div class="destination-spotlight" id="destinationSpotlight">
+                        <div class="spotlight-placeholder" id="spotlightPlaceholder">
+                            <span class="pulse-dot"></span>
+                            Hover over a country tag to explore career paths
+                        </div>
+                        <div class="spotlight-data" id="spotlightData">
+                            <div class="spotlight-header">
+                                <span class="spotlight-flag" id="spotlightFlag">🇺🇸</span>
+                                <h4 id="spotlightCountry">United States</h4>
+                            </div>
+                            <p class="spotlight-info" id="spotlightInfo">Top Hubs: San Francisco, Seattle, New York | Key Focus: AI, SaaS & Big Tech</p>
+                            <div class="spotlight-footer">
+                                <span class="salary-label">Avg. Dev Salary:</span>
+                                <span class="spotlight-salary" id="spotlightSalary">$120K – $180K</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Contrast Comparison (Page 2) -->
+        <section id="about" class="section comparison-section">
+            <div class="comparison-container">
+                <h2 class="comparison-title">
+                    The people who speak up, <span class="serif-title text-light">Move Up</span>
+                </h2>
+                
+                <div class="comparison-grid">
+                    <!-- Column 1: Good Engineer -->
+                    <div class="comparison-card normal-path">
+                        <div class="card-header">
+                            <h3 class="engineer-type">Good Engineer</h3>
+                            <ul class="features-list">
+                                <li class="feature-item">
+                                    <span class="radio-icon"></span>
+                                    <span>Great at Coding</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="image-wrapper">
+                            <img src="assets/engineer_hoodie.jpg" alt="Engineer focused on coding" class="engineer-img">
+                        </div>
+                        
+                        <div class="card-footer">
+                            <span class="comp-label">Average compensation</span>
+                            <span class="comp-value">$80K – $100K</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Column 2: Good Engineer Who Speaks -->
+                    <div class="comparison-card elevated-path">
+                        <div class="card-header">
+                            <h3 class="engineer-type">Good Engineer who speaks</h3>
+                            <ul class="features-list">
+                                <li class="feature-item">
+                                    <span class="radio-icon active"></span>
+                                    <span>Great at Coding</span>
+                                </li>
+                                <li class="feature-item">
+                                    <span class="radio-icon active"></span>
+                                    <span>Speaks Confidently</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="image-wrapper">
+                            <img src="assets/engineer_yellow.jpg" alt="Confident speaking engineer" class="engineer-img">
+                        </div>
+                        
+                        <div class="card-footer">
+                            <span class="comp-label">Average compensation</span>
+                            <span class="comp-value highlighted">$150K – $250K+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Value Proposition / Services (Page 3) -->
+        <section id="why-voluble" class="section services-section">
+            <!-- Full-width landscape background -->
+            <img src="assets/services_background.png" alt="Situational Communication Background" class="services-bg-skyline">
+
+            <div class="services-container">
+                <div class="section-tag-wrapper">
+                    <span class="section-badge">How Voluble Helps</span>
+                </div>
+                
+                <h2 class="services-title">
+                    Practice the conversations<br>you'll actually have.
+                </h2>
+                
+                <div class="services-grid">
+                    <!-- Card 1: Job Interviews -->
+                    <div class="service-card">
+                        <div class="service-icon-box">
+                            <svg class="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="6" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M9 6V4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V6" stroke="currentColor" stroke-width="2"/>
+                                <path d="M3 11H21" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-name">Job Interviews</h3>
+                        <p class="service-desc">Practice behavioral interviews before the real one.</p>
+                    </div>
+                    
+                    <!-- Card 2: Workplace Communication -->
+                    <div class="service-card">
+                        <div class="service-icon-box">
+                            <svg class="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 12C9.65685 12 11 10.6569 11 9C11 7.34315 9.65685 6 8 6C6.34315 6 5 7.34315 5 9C5 10.6569 6.34315 12 8 12Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M16 12C17.6569 12 19 10.6569 19 9C19 7.34315 17.6569 6 16 6C14.3431 6 13 7.34315 13 9C13 10.6569 14.3431 12 16 12Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M2 18V19C2 19.5523 2.44772 20 3 20H13C13.5523 20 14 19.5523 14 19V18C14 16.3431 11.3137 15 8 15C4.68629 15 2 16.3431 2 18Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M16 15C18.2091 15 20.3 16 21 17.5V19C21 19.5523 20.5523 20 20 20H17" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-name">Workplace Communication</h3>
+                        <p class="service-desc">Build clarity and confidence in every professional conversation.</p>
+                    </div>
+                    
+                    <!-- Card 3: Everyday Life -->
+                    <div class="service-card">
+                        <div class="service-icon-box">
+                            <svg class="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 9L12 3L21 9V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="M9 21V12H15V21" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-name">Everyday Life</h3>
+                        <p class="service-desc">Handle everyday situations confidently, from the very first day.</p>
+                    </div>
+                </div>
+                
+                <p class="services-quote">
+                    First speak their language. Then they'll speak yours.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 4: Comic Journey (Page 4) -->
+        <section class="section comic-section">
+            <div class="comic-container">
+                <div class="comic-header-wrapper">
+                    <!-- Left Decor -->
+                    <div class="comic-decor-left">
+                        <img src="assets/decor_left.jpg" alt="Cloud and star decoration" class="decor-left-img">
+                    </div>
+                    
+                    <!-- Center Header Content -->
+                    <div class="comic-header-center">
+                        <div class="section-tag-wrapper">
+                            <span class="section-badge bg-teal">Imagine Your First Month Abroad</span>
+                        </div>
+                        
+                        <h2 class="comic-title">
+                            <span class="title-line-1">IMAGINE LANDING</span>
+                            <span class="title-line-2">WITH CONFIDENCE.</span>
+                        </h2>
+                    </div>
+
+                    <!-- Right Decor -->
+                    <div class="comic-decor-right">
+                        <img src="assets/paper_plane_4.jpg" alt="Paper plane flying with heart trail" class="decor-right-img">
+                    </div>
+                </div>
+                
+                <!-- 3x2 Comic Grid -->
+                <div class="comic-grid">
+                    <div class="comic-frame-card" data-index="1">
+                        <img src="assets/comic_1.jpg" alt="Frame 1: Land in New York" class="comic-frame-img">
+                    </div>
+                    <div class="comic-frame-card" data-index="2">
+                        <img src="assets/comic_2.jpg" alt="Frame 2: Order coffee confidently" class="comic-frame-img">
+                    </div>
+                    <div class="comic-frame-card" data-index="3">
+                        <img src="assets/comic_3.jpg" alt="Frame 3: Ace first team meeting" class="comic-frame-img">
+                    </div>
+                    <div class="comic-frame-card" data-index="4">
+                        <img src="assets/comic_4.jpg" alt="Frame 4: Make first international friend" class="comic-frame-img">
+                    </div>
+                    <div class="comic-frame-card" data-index="5">
+                        <img src="assets/comic_5.jpg" alt="Frame 5: Start building career" class="comic-frame-img">
+                    </div>
+                    <div class="comic-frame-card" data-index="6">
+                        <img src="assets/comic_6.jpg" alt="Frame 6: Feel like you belong" class="comic-frame-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Continuous Scrolling Ticker (Plan. Learn. Grow. Repeat.) -->
+        <div class="ticker-container">
+            <div class="ticker-track">
+                <div class="ticker-group">
+                    <span><span class="ticker-star">✦</span> PLAN.</span>
+                    <span><span class="ticker-star">✦</span> LEARN.</span>
+                    <span><span class="ticker-star">✦</span> GROW.</span>
+                    <span><span class="ticker-star">✦</span> REPEAT.</span>
+                    <span><span class="ticker-star">✦</span> PLAN.</span>
+                    <span><span class="ticker-star">✦</span> LEARN.</span>
+                    <span><span class="ticker-star">✦</span> GROW.</span>
+                    <span><span class="ticker-star">✦</span> REPEAT.</span>
+                    <span><span class="ticker-star">✦</span> PLAN.</span>
+                    <span><span class="ticker-star">✦</span> LEARN.</span>
+                    <span><span class="ticker-star">✦</span> GROW.</span>
+                    <span><span class="ticker-star">✦</span> REPEAT.</span>
+                </div>
+                <div class="ticker-group" aria-hidden="true">
+                    <span><span class="ticker-star">✦</span> PLAN.</span>
+                    <span><span class="ticker-star">✦</span> LEARN.</span>
+                    <span><span class="ticker-star">✦</span> GROW.</span>
+                    <span><span class="ticker-star">✦</span> REPEAT.</span>
+                    <span><span class="ticker-star">✦</span> PLAN.</span>
+                    <span><span class="ticker-star">✦</span> LEARN.</span>
+                    <span><span class="ticker-star">✦</span> GROW.</span>
+                    <span><span class="ticker-star">✦</span> REPEAT.</span>
+                    <span><span class="ticker-star">✦</span> PLAN.</span>
+                    <span><span class="ticker-star">✦</span> LEARN.</span>
+                    <span><span class="ticker-star">✦</span> GROW.</span>
+                    <span><span class="ticker-star">✦</span> REPEAT.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 5: Waitlist Signup Form (Page 5) -->
+        <section id="waitlist" class="section waitlist-section">
+            <div class="waitlist-container">
+                <div class="waitlist-info">
+                    <!-- Floating Paper Plane with Trail for Form Section -->
+                    <div class="form-plane-container">
+                        <svg class="dotted-trail-form" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 120 C 40 80, 80 80, 110 50 C 130 30, 150 40, 160 60" stroke="#023b59" stroke-width="2" stroke-dasharray="5,5" stroke-linecap="round"/>
+                        </svg>
+                        <img src="assets/paper_plane_5.jpg" alt="Paper Plane Waitlist" class="form-plane-img">
+                    </div>
+                    
+                    <h2 class="waitlist-title">
+                        Give us 12 weeks.<br>
+                        We'll help you feel at home.
+                    </h2>
+                    <p class="waitlist-subtitle">
+                        Join our waitlist and be among the first to experience Voluble.
+                    </p>
+                </div>
+                
+                <div class="waitlist-form-container">
+                    <form class="waitlist-form" id="waitlistForm" novalidate>
+                        <!-- Form Row: Name -->
+                        <div class="form-group">
+                            <span class="input-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 21V19C20 17.9401 19.5786 16.9235 18.8284 16.1734C18.0783 15.4232 17.0617 15 16 15H8C6.93827 15 5.92172 15.4232 5.17157 16.1734C4.42143 16.9235 4 17.9401 4 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required>
+                            <span class="error-msg" id="nameError">Please enter your name</span>
+                        </div>
+                        
+                        <!-- Form Row: Phone Number -->
+                        <div class="form-group">
+                            <div class="phone-input-wrapper">
+                                <select id="countryCode" name="countryCode" class="form-select">
+                                    <option value="+91">🇮🇳 +91</option>
+                                    <option value="+1">🇺🇸 +1</option>
+                                    <option value="+44">🇬🇧 +44</option>
+                                    <option value="+61">🇦🇺 +61</option>
+                                    <option value="+64">🇳🇿 +64</option>
+                                </select>
+                                <input type="tel" id="phone" name="phone" class="form-input phone-field" placeholder="Phone Number" required>
+                            </div>
+                            <span class="error-msg" id="phoneError">Please enter a valid phone number</span>
+                        </div>
+                        
+                        <!-- Form Row: Email -->
+                        <div class="form-group">
+                            <span class="input-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="Email Address" required>
+                            <span class="error-msg" id="emailError">Please enter a valid email address</span>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn-submit" id="submitBtn">
+                            <span>Join the Waitlist</span>
+                            <svg class="submit-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 2L2 8.66667L11.5 12.5L15.3333 22L22 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>
+                                <path d="M11.5 12.5L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        
+                        <!-- Form Success Indicator -->
+                        <div class="form-success-container" id="successMsg">
+                            <div class="success-icon-box">
+                                <svg class="success-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1216 8.53447 21.3736C6.51167 20.6257 4.78369 19.2443 3.60803 17.4332C2.43237 15.622 1.87413 13.4736 2.0152 11.3149C2.15627 9.15622 2.98927 7.10098 4.38927 5.46162C5.78926 3.82226 7.67969 2.68457 9.77494 2.21477C11.8702 1.74497 14.0536 1.9686 16 2.85" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>You're on the list!</h3>
+                            <p>Thank you for signing up. We'll be in touch soon with your early access invitation.</p>
+                        </div>
+                    </form>
+                    
+                    <div class="form-privacy">
+                        <svg class="lock-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M7 11V7C7 5.67392 7.52678 4.40215 8.46447 3.46447C9.40215 2.52678 10.6739 2 12 2C13.3261 2 14.5979 2.52678 15.5355 3.46447C16.4732 4.40215 17 5.67392 17 7V11" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                        <span>No spam. Just early access & helpful updates.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Voluble. All rights reserved. Designed for professional growth.</p>
+        </div>
+    </footer>
+
+    <!-- JS file -->
+    <script src="main.js"></script>
+</body>
+</html>
