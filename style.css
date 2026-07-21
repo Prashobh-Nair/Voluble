@@ -1336,6 +1336,7 @@ img {
     cursor: pointer;
     padding: 0;
     pointer-events: all;
+    transform: translate(-50%, -22px);
     transition: transform var(--transition-normal);
 }
 
