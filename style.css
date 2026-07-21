@@ -163,6 +163,14 @@ img {
     gap: 2.5rem;
 }
 
+.mobile-hamburger-btn {
+    display: none;
+}
+
+.hero-skyline-banner {
+    display: none;
+}
+
 .nav-link {
     font-weight: 600;
     color: var(--color-brand-teal);
@@ -1714,36 +1722,144 @@ img {
         font-size: 0.85rem;
     }
     
+    .mobile-hamburger-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 22px;
+        height: 16px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .mobile-hamburger-btn span {
+        width: 100%;
+        height: 2.5px;
+        background-color: var(--color-brand-teal);
+        border-radius: 2px;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
     .hero-section {
-        padding-top: 6rem;
-        padding-bottom: 10rem;
+        padding-top: 4.5rem;
+        padding-bottom: 6rem;
+        position: relative;
+        overflow: hidden;
     }
 
     .hero-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 3.5rem;
+        grid-template-columns: 52% 48%; /* 2-column side by side matching reference screenshot */
+        text-align: left;
+        gap: 0.5rem;
+        align-items: flex-start;
     }
     
     .hero-content {
-        align-items: center;
-    }
-    
-    .hero-features {
         align-items: flex-start;
-        margin: 0 auto;
-    }
-    
-    .hero-actions {
-        align-items: center;
+        text-align: left;
+        z-index: 2;
     }
 
-    .hero-graphic {
+    .hero-decor-plane {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-dotted-trail {
+        width: 75px;
+        height: 25px;
+    }
+
+    .hero-plane-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .hero-title {
+        font-size: 1.65rem;
+        line-height: 1.15;
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+
+    .hero-features {
+        align-items: flex-start;
+        margin: 0 0 1.25rem 0;
+        gap: 0.65rem;
+    }
+
+    .feature-item {
+        gap: 0.5rem;
+    }
+
+    .feature-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .feature-text {
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: var(--color-brand-teal);
+    }
+
+    .hero-actions {
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .btn-primary {
+        width: 100%;
+        padding: 0.65rem 0.8rem;
+        font-size: 0.78rem;
+        border-radius: 8px;
         justify-content: center;
     }
 
-    .hero-skyline-left-container {
-        display: none; /* Hide Statue of Liberty skyline on small tablet/mobile */
+    .hero-subtext {
+        font-size: 0.58rem;
+        text-align: left;
+        margin-top: 0.35rem;
+    }
+
+    .hero-graphic {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        z-index: 2;
+    }
+
+    .passport-img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: -4px 8px 24px rgba(2, 38, 57, 0.12);
+    }
+
+    .hero-skyline-banner {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60%;
+        height: 110px;
+        z-index: 1;
+        pointer-events: none;
+        opacity: 0.85;
+    }
+
+    .skyline-banner-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: bottom left;
     }
     
     .waitlist-container {
