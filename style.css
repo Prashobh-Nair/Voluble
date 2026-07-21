@@ -989,9 +989,12 @@ img {
 
 /* SECTION 5: WAITLIST SIGNUP FORM */
 .waitlist-section {
-    background-color: var(--bg-waitlist);
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    background-color: var(--bg-hero);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    min-height: calc(100vh - 200px); /* Centered full-screen feel */
+    display: flex;
+    align-items: center;
 }
 
 .waitlist-container {
