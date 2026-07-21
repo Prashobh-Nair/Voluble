@@ -207,6 +207,10 @@ img {
 /* SECTION 1: HERO SECTION */
 .hero-section {
     background-color: var(--bg-hero);
+    background-image: url('assets/hero_background_mockup.png');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
     min-height: 100vh;
     position: relative;
     display: flex;
@@ -342,22 +346,7 @@ img {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* Floating left bottom NYC skyline */
-.hero-skyline-left-container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 25%;
-    max-width: 320px;
-    z-index: 1;
-    pointer-events: none;
-}
 
-.skyline-left-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
 
 /* SECTION 2: CONTRAST COMPARISON (Move Up) */
 .comparison-section {
