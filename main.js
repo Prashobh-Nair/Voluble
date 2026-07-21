@@ -360,6 +360,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ── Auto-open USA on mobile (touch devices) ──────────────────────────
+    const isTouchDevice = () => window.innerWidth <= 768 || ('ontouchstart' in window);
+    if (isTouchDevice()) {
+        // Short delay so the section is painted and visible first
+        setTimeout(() => {
+            showTooltip('usa');
+        }, 600);
+    }
+
     // ==========================================
     // 3D PARALLAX & TILT INTERACTION ENGINE
     // ==========================================
