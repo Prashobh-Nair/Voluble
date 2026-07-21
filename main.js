@@ -142,50 +142,50 @@ document.addEventListener('DOMContentLoaded', () => {
             name: "United States",
             flag: "assets/us.svg",
             items: [
-                { icon: "☕", title: "Ordering coffee", sub: "At cafes and coffee shops" },
-                { icon: "💼", title: "Office introductions", sub: "First meetings & small talk" },
-                { icon: "🏠", title: "Renting apartments", sub: "Talking to landlords & agents" },
-                { icon: "👥", title: "Making friends", sub: "Socializing & building connections" }
+                { icon: "💵", title: "Tipping culture", sub: "Handling tips at dining & bars" },
+                { icon: "🏥", title: "US health insurance", sub: "Navigating copays & networks" },
+                { icon: "🛒", title: "Target & Trader Joe's", sub: "Checkout slang & bag requests" },
+                { icon: "💬", title: "Watercooler chats", sub: "Weekend plans & NFL/sports talk" }
             ]
         },
         canada: {
             name: "Canada",
             flag: "assets/ca.svg",
             items: [
-                { icon: "☕", title: "Ordering coffee", sub: "At local cafes and coffee shops" },
-                { icon: "❄️", title: "Surviving winter", sub: "Weather small talk & gear" },
-                { icon: "🏠", title: "Renting apartments", sub: "Interacting with landlords" },
-                { icon: "💼", title: "Workplace culture", sub: "Icebreakers & team networking" }
+                { icon: "🧥", title: "Winter coat shopping", sub: "Asking for parkas & thermal gear" },
+                { icon: "🏒", title: "Ice hockey (NHL) talks", sub: "Joining local fan banter" },
+                { icon: "💳", title: "Building credit score", sub: "Opening accounts & credit types" },
+                { icon: "🍂", title: "Canadianisms (eh/loonie)", sub: "Blending in with local accents" }
             ]
         },
         uk: {
             name: "United Kingdom",
             flag: "assets/gb.svg",
             items: [
-                { icon: "🍻", title: "Pub talk & socializing", sub: "Ordering drinks & pub chat" },
-                { icon: "🚇", title: "Asking directions", sub: "Tube stations & transit queries" },
-                { icon: "☕", title: "Office small talk", sub: "Tea breaks & local office slang" },
-                { icon: "🏥", title: "Doctor appointments", sub: "GP registration & queries" }
+                { icon: "🎫", title: "Transit & Oyster cards", sub: "Buying tube tickets & tap-ins" },
+                { icon: "🍻", title: "Ordering a pub pint", sub: "Paying at the bar (no tables)" },
+                { icon: "☔", title: "Weather small talk", sub: "Discussing rain & overcast skies" },
+                { icon: "🏥", title: "NHS GP registration", sub: "Setting up local medical checkups" }
             ]
         },
         australia: {
             name: "Australia",
             flag: "assets/au.svg",
             items: [
-                { icon: "☕", title: "Ordering coffee", sub: "Flat white orders & cafe talks" },
-                { icon: "🏠", title: "Renting a house", sub: "Leases & property inspections" },
-                { icon: "🍖", title: "Barbecue small talk", sub: "Weekend BBQ social chats" },
-                { icon: "💼", title: "Workplace slang", sub: "Understanding local office terms" }
+                { icon: "☕", title: "Ordering custom coffee", sub: "Flat whites, sizes & local terms" },
+                { icon: "🦘", title: "Aussie slang (arvo/barbie)", sub: "Greeting mates at social events" },
+                { icon: "🏠", title: "Renting inspections", sub: "Handling rental queues & forms" },
+                { icon: "🏄", title: "Surf & beach safety", sub: "Understanding flags & swimming terms" }
             ]
         },
         nz: {
             name: "New Zealand",
             flag: "assets/nz.svg",
             items: [
-                { icon: "☕", title: "Ordering coffee", sub: "Flat whites & local order styles" },
-                { icon: "🏠", title: "Flatting interviews", sub: "Meeting potential flatmates" },
-                { icon: "👋", title: "Casual greetings", sub: "Greeting colleagues & kiwi terms" },
-                { icon: "🤝", title: "Making connections", sub: "Joining clubs & hobby groups" }
+                { icon: "🥝", title: "Kia Ora & Maori terms", sub: "Using common kiwi greetings" },
+                { icon: "🏡", title: "Flatting interviews", sub: "Convincing potential kiwi flatmates" },
+                { icon: "🥾", title: "Tramping in the wild", sub: "Gear lists & hiking track chats" },
+                { icon: "🍎", title: "Supermarket comparisons", sub: "Pak'nSave vs Woolworths jargon" }
             ]
         }
     };
@@ -357,6 +357,83 @@ document.addEventListener('DOMContentLoaded', () => {
             mapTooltipCard.classList.remove('active');
             pinButtons.forEach(pin => pin.classList.remove('active'));
             selectorButtons.forEach(btn => btn.classList.remove('active'));
+        });
+    }
+
+    // ==========================================
+    // 3D PARALLAX & TILT INTERACTION ENGINE
+    // ==========================================
+    const init3DTiltEffect = (selector, maxDegree = 10) => {
+        const elements = document.querySelectorAll(selector);
+        
+        elements.forEach(el => {
+            el.style.transformStyle = 'preserve-3d';
+            
+            el.addEventListener('mousemove', (e) => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = ((y - centerY) / centerY) * -maxDegree;
+                const rotateY = ((x - centerX) / centerX) * maxDegree;
+                
+                el.style.transition = 'transform 0.1s ease-out, box-shadow 0.2s ease';
+                el.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateZ(10px)`;
+            });
+            
+            el.addEventListener('mouseleave', () => {
+                el.style.transition = 'transform 0.5s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.5s ease';
+                el.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
+            });
+        });
+    };
+
+    // Initialize 3D Tilt on hero passport graphic, comparison cards, and journey cards
+    init3DTiltEffect('.hero-graphic', 8);
+    init3DTiltEffect('.comparison-card', 7);
+    init3DTiltEffect('.journey-card', 7);
+    init3DTiltEffect('.career-growth-bar', 4);
+
+    // ==========================================
+    // PAGE 4: TRANSFORMATION SPOTLIGHT TOGGLE
+    // ==========================================
+    const btnWeek1 = document.getElementById('btn-week-1');
+    const btnWeek12 = document.getElementById('btn-week-12');
+    const spotlightAvatar = document.getElementById('spotlight-avatar');
+    const spotlightLabel = document.getElementById('spotlight-label');
+    const spotlightQuote = document.getElementById('spotlight-quote');
+    const spotlightPct = document.getElementById('spotlight-pct');
+    const spotlightBar = document.getElementById('spotlight-bar');
+    const spotlightStatus = document.getElementById('spotlight-status');
+
+    if (btnWeek1 && btnWeek12) {
+        btnWeek1.addEventListener('click', () => {
+            btnWeek1.classList.add('active');
+            btnWeek12.classList.remove('active');
+            
+            spotlightAvatar.textContent = '😰';
+            spotlightLabel.textContent = 'Real Scenario: Standup Meeting';
+            spotlightQuote.textContent = '"Umm... I think... my code has bug... sorry, can you repeat that question again?"';
+            spotlightPct.textContent = '25%';
+            spotlightBar.style.width = '25%';
+            spotlightBar.style.background = 'linear-gradient(90deg, #e74c3c, #f39c12)';
+            spotlightStatus.textContent = '⚠️ High anxiety & translation hesitation';
+        });
+
+        btnWeek12.addEventListener('click', () => {
+            btnWeek12.classList.add('active');
+            btnWeek1.classList.remove('active');
+            
+            spotlightAvatar.textContent = '🚀';
+            spotlightLabel.textContent = 'Real Scenario: Executive Architecture Review';
+            spotlightQuote.textContent = '"Let me walk you through our architectural trade-offs, performance gains, and proposed rollout."';
+            spotlightPct.textContent = '98%';
+            spotlightBar.style.width = '98%';
+            spotlightBar.style.background = 'linear-gradient(90deg, #088a99, #2ecc71)';
+            spotlightStatus.textContent = '✨ Fluent, natural & confident leader';
         });
     }
 });
