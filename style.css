@@ -1279,13 +1279,14 @@ img {
 .spotlight-map-container {
     position: relative;
     width: 100%;
-    display: block;
+    aspect-ratio: 1024 / 563; /* Match the exact image aspect ratio */
     overflow: visible;
 }
 
 .spotlight-map-bg {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
     opacity: 0.95;
     mix-blend-mode: multiply;
