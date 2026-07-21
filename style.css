@@ -1226,7 +1226,7 @@ img {
 
 /* SECTION 2: COUNTRY SPOTLIGHT */
 .spotlight-section {
-    background-color: #FFFFFF; /* Pure white background as requested */
+    background-color: #FCF8F5; /* Matches the map image background color exactly */
     padding: 8rem 0;
     position: relative;
     overflow: hidden;
