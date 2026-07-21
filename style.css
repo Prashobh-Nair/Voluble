@@ -1823,53 +1823,70 @@ img {
         display: none;
     }
 
-    /* Map Pins Responsive Scaling & Perfect Location Calibration */
-    .pin-badge {
-        width: 1.6rem;
-        height: 1.6rem;
-        border-width: 1.5px;
-    }
-
-    .pin-label {
-        font-size: 0.58rem;
-        padding: 0.15rem 0.4rem;
-        margin-top: 0.2rem;
-        border-radius: 4px;
-    }
-
+    /* Map Pins Responsive Scaling & User Red Dot Location Calibration */
     .map-pin-btn {
-        transform: translate(-50%, -10px);
+        transform: translate(-50%, -50%) !important;
     }
 
     .map-pin-btn:hover,
     .map-pin-btn.active {
-        transform: translate(-50%, -14px) scale(1.1) !important;
+        transform: translate(-50%, -50%) scale(1.15) !important;
+    }
+
+    .pin-badge {
+        width: 1.4rem;
+        height: 1.4rem;
+        border-width: 1.5px;
+    }
+
+    .pin-label {
+        font-size: 0.52rem;
+        padding: 0.12rem 0.35rem;
+        margin-top: 0.15rem;
+        border-radius: 4px;
+    }
+
+    /* Exact Red Dot Positions Marked by User */
+    #pin-canada {
+        left: 28.5% !important;
+        top: 14.5% !important;
+    }
+
+    #pin-usa {
+        left: 28.5% !important;
+        top: 20.8% !important;
+    }
+
+    #pin-uk {
+        left: 52.0% !important;
+        top: 20.0% !important;
+    }
+
+    #pin-australia {
+        left: 70.0% !important;
+        top: 31.0% !important;
+    }
+
+    #pin-nz {
+        left: 78.5% !important;
+        top: 34.3% !important;
     }
 }
 
 /* Mobile Devices (480px) */
 @media (max-width: 480px) {
     .pin-badge {
-        width: 1.25rem;
-        height: 1.25rem;
+        width: 1.15rem;
+        height: 1.15rem;
         border-width: 1.5px;
     }
 
     .pin-label {
-        font-size: 0.5rem;
+        font-size: 0.46rem;
         font-weight: 700;
-        padding: 0.1rem 0.3rem;
+        padding: 0.1rem 0.28rem;
         margin-top: 0.1rem;
         border-radius: 3px;
-    }
-
-    .map-pin-btn {
-        transform: translate(-50%, -8px);
-    }
-
-    .map-pin-btn:hover,
-    .map-pin-btn.active {
-        transform: translate(-50%, -10px) scale(1.1) !important;
     }
 
     .header {
