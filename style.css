@@ -206,9 +206,9 @@ img {
 
 /* SECTION 1: HERO SECTION */
 .hero-section {
-    background-color: var(--bg-hero);
+    background-color: #fde9d5; /* Match top gradient sky color of background image */
     background-image: url('assets/hero_background_mockup.png');
-    background-size: cover;
+    background-size: 100% auto;
     background-position: center bottom;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -1258,6 +1258,7 @@ img {
     
     .hero-section {
         padding-top: 6rem;
+        background-size: cover;
     }
 
     .hero-container {
