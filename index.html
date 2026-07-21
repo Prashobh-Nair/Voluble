@@ -109,6 +109,165 @@
             </div>
         </section>
 
+        <!-- Section 2: Country Spotlight (Built for Indians Moving Abroad) -->
+        <section id="country-spotlight" class="section spotlight-section">
+            <!-- Decorative Stamps & Plane -->
+            <div class="spotlight-decor-plane">
+                <svg class="dotted-trail-spotlight" viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 50 Q 80 10, 150 40 T 280 60" stroke="#088a99" stroke-width="1.5" stroke-dasharray="4,4" stroke-linecap="round"/>
+                </svg>
+                <img src="assets/paper_plane_1.png" alt="Paper Plane Mascot" class="spotlight-plane-img">
+            </div>
+
+            <div class="spotlight-outer-container">
+                <div class="spotlight-split-container">
+                    <!-- Left Side Content -->
+                    <div class="spotlight-content">
+                        <h2 class="spotlight-main-title">
+                            Built for<br>Indians Moving<br><span class="highlight-text">Abroad.</span>
+                        </h2>
+                        <p class="spotlight-subtitle">
+                            Wherever life takes you, Voluble prepares you for the conversations that matter.
+                        </p>
+                    </div>
+
+                    <!-- Right Side: Interactive Map Visual -->
+                    <div class="spotlight-map-container">
+                        <img src="assets/world_map_bg.png" alt="World Map Background" class="spotlight-map-bg">
+                        
+                        <!-- Country Pins (Absolute positioned on map) -->
+                        <div class="map-pins-wrapper">
+                            <!-- Canada Pin -->
+                            <button class="map-pin-btn" id="pin-canada" data-country="canada" style="top: 25%; left: 22%;">
+                                <div class="pin-badge">
+                                    <img src="assets/ca.svg" alt="Canada Flag" class="pin-flag">
+                                </div>
+                                <span class="pin-label">Canada</span>
+                            </button>
+                            
+                            <!-- USA Pin -->
+                            <button class="map-pin-btn active" id="pin-usa" data-country="usa" style="top: 40%; left: 20%;">
+                                <div class="pin-badge">
+                                    <img src="assets/us.svg" alt="USA Flag" class="pin-flag">
+                                </div>
+                                <span class="pin-label">United States</span>
+                            </button>
+                            
+                            <!-- UK Pin -->
+                            <button class="map-pin-btn" id="pin-uk" data-country="uk" style="top: 22%; left: 48%;">
+                                <div class="pin-badge">
+                                    <img src="assets/gb.svg" alt="UK Flag" class="pin-flag">
+                                </div>
+                                <span class="pin-label">United Kingdom</span>
+                            </button>
+                            
+                            <!-- Australia Pin -->
+                            <button class="map-pin-btn" id="pin-australia" data-country="australia" style="top: 72%; left: 85%;">
+                                <div class="pin-badge">
+                                    <img src="assets/au.svg" alt="Australia Flag" class="pin-flag">
+                                </div>
+                                <span class="pin-label">Australia</span>
+                            </button>
+                            
+                            <!-- New Zealand Pin -->
+                            <button class="map-pin-btn" id="pin-nz" data-country="nz" style="top: 82%; left: 92%;">
+                                <div class="pin-badge">
+                                    <img src="assets/nz.svg" alt="New Zealand Flag" class="pin-flag">
+                                </div>
+                                <span class="pin-label">New Zealand</span>
+                            </button>
+                        </div>
+
+                        <!-- Interactive Tooltip Card Overlay -->
+                        <div class="map-tooltip-card" id="mapTooltipCard">
+                            <button class="tooltip-close-btn" id="tooltipClose">&times;</button>
+                            <div class="tooltip-header">
+                                <img src="assets/us.svg" alt="Country Flag" class="tooltip-flag" id="tooltipFlag">
+                                <h4 class="tooltip-country-name" id="tooltipCountry">United States</h4>
+                            </div>
+                            <p class="tooltip-section-title">Most practiced conversations</p>
+                            <ul class="tooltip-list" id="tooltipList">
+                                <!-- Default USA Items -->
+                                <li class="tooltip-item">
+                                    <span class="tooltip-item-icon">☕</span>
+                                    <div class="tooltip-item-text">
+                                        <h5>Ordering coffee</h5>
+                                        <p>At cafes and coffee shops</p>
+                                    </div>
+                                </li>
+                                <li class="tooltip-item">
+                                    <span class="tooltip-item-icon">💼</span>
+                                    <div class="tooltip-item-text">
+                                        <h5>Office introductions</h5>
+                                        <p>First meetings & small talk</p>
+                                    </div>
+                                </li>
+                                <li class="tooltip-item">
+                                    <span class="tooltip-item-icon">🏠</span>
+                                    <div class="tooltip-item-text">
+                                        <h5>Renting apartments</h5>
+                                        <p>Talking to landlords & agents</p>
+                                    </div>
+                                </li>
+                                <li class="tooltip-item">
+                                    <span class="tooltip-item-icon">👥</span>
+                                    <div class="tooltip-item-text">
+                                        <h5>Making friends</h5>
+                                        <p>Socializing & building connections</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Selector Pill Menu -->
+                <div class="spotlight-selector-wrapper">
+                    <div class="spotlight-selector-pill">
+                        <button class="selector-item-btn active" data-country="usa">
+                            <img src="assets/us.svg" alt="USA Flag" class="selector-flag">
+                            <span>United States</span>
+                        </button>
+                        <button class="selector-item-btn" data-country="canada">
+                            <img src="assets/ca.svg" alt="Canada Flag" class="selector-flag">
+                            <span>Canada</span>
+                        </button>
+                        <button class="selector-item-btn" data-country="uk">
+                            <img src="assets/gb.svg" alt="UK Flag" class="selector-flag">
+                            <span>United Kingdom</span>
+                        </button>
+                        <button class="selector-item-btn" data-country="australia">
+                            <img src="assets/au.svg" alt="Australia Flag" class="selector-flag">
+                            <span>Australia</span>
+                        </button>
+                        <button class="selector-item-btn" data-country="nz">
+                            <img src="assets/nz.svg" alt="New Zealand Flag" class="selector-flag">
+                            <span>New Zealand</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Faded Passport Stamps in Corners -->
+            <div class="stamp-decor stamp-left-bottom">
+                <div class="stamp-content">
+                    <span class="stamp-type">DEPARTURE</span>
+                    <span class="stamp-route">IND &rarr; WORLD</span>
+                    <span class="stamp-tag">NEW BEGINNINGS</span>
+                </div>
+            </div>
+            
+            <div class="stamp-decor stamp-right-bottom">
+                <div class="stamp-circle">
+                    <svg class="stamp-plane-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 2L2 8.66667L11.5 12.5L15.3333 22L22 2Z"/>
+                        <path d="M11.5 12.5L22 2"/>
+                    </svg>
+                    <span class="stamp-curved-text">A NEW CHAPTER &bull; AWAITS</span>
+                </div>
+            </div>
+        </section>
+
         <!-- Section 5: Waitlist Signup Form (Page 5) -->
         <section id="waitlist" class="section waitlist-section">
             <div class="waitlist-container">

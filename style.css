@@ -1224,6 +1224,416 @@ img {
     margin: 0;
 }
 
+/* SECTION 2: COUNTRY SPOTLIGHT */
+.spotlight-section {
+    background-color: #FAF4EB; /* Soft warm sand background */
+    padding: 8rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.spotlight-outer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.spotlight-split-container {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.spotlight-content {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.spotlight-main-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    color: var(--color-brand-teal);
+    line-height: 1.15;
+    font-weight: 800;
+    margin: 0;
+}
+
+.spotlight-main-title .highlight-text {
+    color: var(--color-accent-teal);
+}
+
+.spotlight-subtitle {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Map Graphics and Container */
+.spotlight-map-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.5 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.spotlight-map-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.9;
+}
+
+.map-pins-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.map-pin-btn {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    pointer-events: all;
+    transition: transform var(--transition-normal);
+}
+
+.pin-badge {
+    width: 2.8rem;
+    height: 2.8rem;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 6px 18px rgba(2, 38, 57, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all var(--transition-normal);
+}
+
+.pin-flag {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pin-label {
+    background-color: #FFFFFF;
+    color: var(--color-brand-teal);
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 0.3rem 0.65rem;
+    border-radius: 6px;
+    margin-top: 0.4rem;
+    box-shadow: 0 4px 10px rgba(2, 38, 57, 0.06);
+    white-space: nowrap;
+    transition: all var(--transition-normal);
+}
+
+/* Active Pin and Hover Styling */
+.map-pin-btn:hover {
+    transform: scale(1.08) translateY(-2px);
+    z-index: 10;
+}
+
+.map-pin-btn:hover .pin-badge,
+.map-pin-btn.active .pin-badge {
+    border-color: var(--color-accent-teal);
+    box-shadow: 0 8px 24px rgba(8, 138, 153, 0.22);
+}
+
+.map-pin-btn:hover .pin-label,
+.map-pin-btn.active .pin-label {
+    background-color: var(--color-accent-teal);
+    color: #FFFFFF;
+}
+
+/* Interactive Popover Tooltip Card styling */
+.map-tooltip-card {
+    position: absolute;
+    width: 280px;
+    background-color: #FFFFFF;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(2, 38, 57, 0.12);
+    padding: 1.5rem;
+    border: 1px solid rgba(2, 38, 57, 0.05);
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0.92) translateY(5px);
+    transition: opacity var(--transition-normal), transform var(--transition-normal);
+    text-align: left;
+}
+
+.map-tooltip-card.active {
+    pointer-events: all;
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+.tooltip-close-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.25rem;
+    transition: var(--transition-fast);
+}
+
+.tooltip-close-btn:hover {
+    color: var(--color-text-dark);
+}
+
+.tooltip-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.75rem;
+    padding-right: 1rem;
+}
+
+.tooltip-flag {
+    width: 28px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip-country-name {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--color-brand-teal);
+    margin: 0;
+}
+
+.tooltip-section-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-accent-teal);
+    font-weight: 700;
+    margin: 0 0 0.85rem 0;
+    border-bottom: 1px solid rgba(2, 38, 57, 0.08);
+    padding-bottom: 0.4rem;
+}
+
+.tooltip-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.tooltip-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.tooltip-item-icon {
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
+.tooltip-item-text {
+    text-align: left;
+}
+
+.tooltip-item-text h5 {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin: 0 0 0.15rem 0;
+}
+
+.tooltip-item-text p {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Bottom Selector Pill Menu Styling */
+.spotlight-selector-wrapper {
+    margin-top: 3.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.spotlight-selector-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    background-color: #FFFFFF;
+    padding: 0.45rem;
+    border-radius: 100px;
+    border: 1px solid rgba(2, 38, 57, 0.08);
+    box-shadow: 0 4px 15px rgba(2, 38, 57, 0.04);
+}
+
+.selector-item-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.25rem;
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    transition: all var(--transition-normal);
+}
+
+.selector-item-btn:hover {
+    color: var(--color-brand-teal);
+    background-color: rgba(2, 38, 57, 0.03);
+}
+
+.selector-item-btn.active {
+    color: var(--color-brand-teal);
+    background-color: #F8F1E4; /* Sand tone matching active pill */
+    box-shadow: inset 0 1px 2px rgba(2, 38, 57, 0.06);
+}
+
+.selector-flag {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Decorative Passport Stamps in Corners */
+.stamp-decor {
+    position: absolute;
+    color: rgba(2, 38, 57, 0.08);
+    pointer-events: none;
+    user-select: none;
+}
+
+.stamp-left-bottom {
+    bottom: 2rem;
+    left: 2rem;
+    border: 2.5px solid currentColor;
+    border-radius: 10px;
+    padding: 0.8rem 1.2rem;
+    transform: rotate(-12deg);
+}
+
+.stamp-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stamp-type {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.25em;
+    border-bottom: 1.5px solid currentColor;
+    padding-bottom: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.stamp-route {
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+}
+
+.stamp-tag {
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-top: 0.15rem;
+}
+
+.stamp-right-bottom {
+    bottom: 2rem;
+    right: 2rem;
+    transform: rotate(8deg);
+}
+
+.stamp-circle {
+    width: 100px;
+    height: 100px;
+    border: 2.5px dashed currentColor;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.stamp-plane-icon {
+    width: 2rem;
+    height: 2rem;
+    color: currentColor;
+    margin-bottom: 0.2rem;
+}
+
+.stamp-curved-text {
+    font-size: 0.45rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* Top left paper plane flight details */
+.spotlight-decor-plane {
+    position: absolute;
+    top: 2rem;
+    left: 4rem;
+    width: 250px;
+    height: 100px;
+    pointer-events: none;
+    opacity: 0.55;
+}
+
+.dotted-trail-spotlight {
+    width: 100%;
+    height: 100%;
+}
+
+.spotlight-plane-img {
+    position: absolute;
+    width: 2.5rem;
+    height: auto;
+    top: 50px;
+    right: 10px;
+    transform: rotate(15deg);
+}
+
 /* RESPONSIVENESS MEDIA QUERIES */
 
 /* Large Tablets & Small Desktops (1024px) */
@@ -1235,6 +1645,10 @@ img {
     
     .waitlist-container {
         gap: 2.5rem;
+    }
+
+    .spotlight-split-container {
+        gap: 2rem;
     }
 }
 
@@ -1324,6 +1738,64 @@ img {
         left: 50%;
         transform: translateX(-50%);
     }
+
+    .spotlight-section {
+        padding: 5rem 0;
+    }
+
+    .spotlight-split-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .spotlight-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .spotlight-map-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .map-tooltip-card {
+        position: relative;
+        width: 100%;
+        max-width: 480px;
+        margin: 1.5rem auto 0 auto;
+        left: 0 !important;
+        right: 0 !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        transform: none;
+        opacity: 0;
+        pointer-events: none;
+        box-shadow: 0 5px 20px rgba(2, 38, 57, 0.08);
+    }
+
+    .map-tooltip-card.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .spotlight-selector-pill {
+        flex-wrap: wrap;
+        justify-content: center;
+        border-radius: 20px;
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .selector-item-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .stamp-decor,
+    .spotlight-decor-plane {
+        display: none;
+    }
 }
 
 /* Mobile Devices (480px) */
@@ -1366,5 +1838,20 @@ img {
     
     .form-select {
         width: 100%;
+    }
+
+    .spotlight-main-title {
+        font-size: 2.2rem;
+    }
+
+    .selector-item-btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+
+    .spotlight-selector-pill {
+        width: 100%;
+        border-radius: 16px;
+        justify-content: center;
     }
 }
