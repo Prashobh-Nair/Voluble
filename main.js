@@ -281,31 +281,82 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Attach click listeners to Map Pins
+    let closeTimeout = null;
+
+    const showTooltip = (countryKey) => {
+        if (closeTimeout) {
+            clearTimeout(closeTimeout);
+            closeTimeout = null;
+        }
+        updateCountrySpotlight(countryKey);
+    };
+
+    const hideTooltip = () => {
+        if (closeTimeout) return;
+        closeTimeout = setTimeout(() => {
+            if (mapTooltipCard) {
+                mapTooltipCard.classList.remove('active');
+            }
+            // Remove active classes when not hovering any country
+            pinButtons.forEach(pin => pin.classList.remove('active'));
+            selectorButtons.forEach(btn => btn.classList.remove('active'));
+        }, 200); // 200ms buffer for mouse movement between pin and card
+    };
+
+    // Map Pins Hover and Click Listeners
     pinButtons.forEach(pin => {
+        const countryKey = pin.getAttribute('data-country');
+        
+        pin.addEventListener('mouseenter', () => {
+            showTooltip(countryKey);
+        });
+        
+        pin.addEventListener('mouseleave', () => {
+            hideTooltip();
+        });
+        
         pin.addEventListener('click', () => {
-            const countryKey = pin.getAttribute('data-country');
-            updateCountrySpotlight(countryKey);
+            showTooltip(countryKey);
         });
     });
 
-    // Attach click listeners to Bottom Selector Buttons
+    // Bottom Selector Buttons Hover and Click Listeners
     selectorButtons.forEach(btn => {
+        const countryKey = btn.getAttribute('data-country');
+        
+        btn.addEventListener('mouseenter', () => {
+            showTooltip(countryKey);
+        });
+        
+        btn.addEventListener('mouseleave', () => {
+            hideTooltip();
+        });
+        
         btn.addEventListener('click', () => {
-            const countryKey = btn.getAttribute('data-country');
-            updateCountrySpotlight(countryKey);
+            showTooltip(countryKey);
         });
     });
 
-    // Tooltip close action
-    if (tooltipClose && mapTooltipCard) {
-        tooltipClose.addEventListener('click', () => {
-            mapTooltipCard.classList.remove('active');
+    // Tooltip Card Hover Listeners to prevent auto-close
+    if (mapTooltipCard) {
+        mapTooltipCard.addEventListener('mouseenter', () => {
+            if (closeTimeout) {
+                clearTimeout(closeTimeout);
+                closeTimeout = null;
+            }
+        });
+        
+        mapTooltipCard.addEventListener('mouseleave', () => {
+            hideTooltip();
         });
     }
 
-    // Initialize with default (USA)
-    if (document.getElementById('pin-usa')) {
-        updateCountrySpotlight('usa');
+    // Tooltip Close Action
+    if (tooltipClose && mapTooltipCard) {
+        tooltipClose.addEventListener('click', () => {
+            mapTooltipCard.classList.remove('active');
+            pinButtons.forEach(pin => pin.classList.remove('active'));
+            selectorButtons.forEach(btn => btn.classList.remove('active'));
+        });
     }
 });
