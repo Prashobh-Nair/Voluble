@@ -716,11 +716,110 @@
     .std-fomo-bottom-banner { flex-direction: column; text-align: center; }
 }
 
+@media (max-width: 768px) {
+    .std-hero-section {
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+        min-height: auto;
+        background-position: center top;
+    }
+
+    .std-hero-container {
+        padding: 0 0.85rem;
+    }
+
+    .std-hero-card-full {
+        padding: 2.25rem 1.25rem;
+        border-radius: 24px;
+        gap: 1.35rem;
+    }
+
+    .std-hero-badge {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0.4rem 0.85rem;
+        border-radius: 16px;
+        gap: 0.35rem;
+        max-width: 100%;
+    }
+
+    .std-hero-badge .badge-text {
+        font-size: 0.78rem;
+    }
+
+    .std-hero-badge .country-codes {
+        font-size: 0.78rem;
+    }
+
+    .std-hero-headline {
+        font-size: clamp(1.6rem, 6.2vw, 2.2rem);
+        line-height: 1.28;
+    }
+
+    .std-hero-headline br {
+        display: none;
+    }
+
+    .std-hero-lead {
+        font-size: 0.95rem;
+        line-height: 1.55;
+    }
+
+    .std-hero-stats-row {
+        gap: 0.45rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .std-stat-pill {
+        font-size: 0.78rem;
+        padding: 0.35rem 0.75rem;
+    }
+
+    .std-hero-cta-cluster {
+        width: 100%;
+        gap: 0.65rem;
+    }
+
+    .btn-hero-primary {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+        padding: 0.85rem 1.5rem;
+        font-size: 0.98rem;
+    }
+
+    .std-hero-offer-tag {
+        font-size: 0.82rem;
+    }
+}
+
 @media (max-width: 640px) {
     .std-feature-grid  { grid-template-columns: 1fr; }
     .std-after-grid    { grid-template-columns: repeat(2, 1fr); }
     .std-gap-insight   { flex-direction: column; text-align: center; }
-    .std-hero-headline { font-size: clamp(2rem,9vw,3rem); }
 }
 
-@media (max-width: 480px) { .std-after-grid { grid-template-columns: 1fr; } }
+@media (max-width: 480px) {
+    .std-after-grid { grid-template-columns: 1fr; }
+
+    .std-hero-section {
+        padding-top: 5.5rem;
+        padding-bottom: 2.25rem;
+    }
+
+    .std-hero-container {
+        padding: 0 0.65rem;
+    }
+
+    .std-hero-card-full {
+        padding: 1.75rem 1rem;
+        border-radius: 20px;
+        gap: 1.15rem;
+    }
+
+    .std-hero-headline {
+        font-size: 1.55rem;
+    }
+}
+
