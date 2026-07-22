@@ -3,6 +3,23 @@
 const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxB96z625hHIhL84ZfYJJOJzoT-8jl6glC6qRGvvz0ZigkDDEox9i_OiPCO_ijgReE1/exec'; 
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Mobile Hamburger Menu Toggle
+    const hamburgerBtn = document.getElementById('mobile-hamburger-btn');
+    const headerEl = document.querySelector('.header');
+
+    if (hamburgerBtn && headerEl) {
+        hamburgerBtn.addEventListener('click', () => {
+            headerEl.classList.toggle('mobile-open');
+        });
+
+        // Close menu when clicking outside or on a link
+        document.addEventListener('click', (e) => {
+            if (!headerEl.contains(e.target)) {
+                headerEl.classList.remove('mobile-open');
+            }
+        });
+    }
+
     // Waitlist Form Validation and Submission
     const waitlistForm = document.getElementById('waitlistForm');
     const nameInput = document.getElementById('name');
