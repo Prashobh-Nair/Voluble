@@ -6,46 +6,37 @@
 
 /* ---- FOLD 1: HERO ----------------------------------------- */
 .std-hero-section {
-    background-color: #f0f4f8;
-    background-image:
-        radial-gradient(ellipse at 10% 20%, rgba(8,138,153,0.14) 0%, transparent 55%),
-        radial-gradient(ellipse at 85% 80%, rgba(2,59,89,0.1) 0%, transparent 50%);
+    position: relative;
+    background: url('images/germany_students_hero_bg.jpg') no-repeat center center / cover;
     min-height: 100svh;
     display: flex;
     align-items: center;
-    padding-top: 7.5rem;
-    padding-bottom: 3.5rem;
-    position: relative;
+    padding-top: 8rem;
+    padding-bottom: 4.5rem;
     overflow: hidden;
 }
 
-.std-hero-bg-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: clamp(5rem, 18vw, 14rem);
-    font-family: var(--font-serif);
-    font-weight: 900;
-    color: rgba(2,59,89,0.04);
-    white-space: nowrap;
-    pointer-events: none;
-    user-select: none;
-    z-index: 0;
-    letter-spacing: -0.04em;
-}
-
 .std-hero-container {
-    max-width: 1080px;
+    max-width: 1020px;
     margin: 0 auto;
     width: 100%;
     padding: 0 1.5rem;
     position: relative;
     z-index: 2;
+}
+
+.std-hero-card-full {
+    background: rgba(255, 255, 255, 0.94);
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    border-radius: 32px;
+    padding: 3.5rem 2.5rem;
+    box-shadow: 0 24px 64px rgba(2, 38, 57, 0.12), 0 4px 20px rgba(0, 0, 0, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1.85rem;
     text-align: center;
 }
 

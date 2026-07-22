@@ -5887,6 +5887,201 @@ body.germany-page .waitlist-section {
     }
 
     .illus-strip-overlay {
+@media (max-width: 768px) {
+    .nav-links-desktop {
+        display: none;
+    }
+
+    .germany-hero {
+        padding-top: 6.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .germany-hero-container {
+        padding: 0 1rem;
+    }
+
+    .germany-hero-split-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .germany-hero-left {
+        text-align: center;
+    }
+
+    .left-badge {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .germany-badge {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0.4rem 0.85rem;
+        max-width: 100%;
+        gap: 0.35rem;
+    }
+
+    .badge-text {
+        font-size: 0.78rem;
+    }
+
+    .germany-hero-title {
+        font-size: clamp(1.6rem, 5.8vw, 2.1rem);
+        line-height: 1.3;
+        margin-bottom: 1.2rem;
+    }
+
+    .stat-highlight-block {
+        margin-bottom: 0.2rem;
+    }
+
+    .germany-hero-lead {
+        font-size: 0.95rem;
+        line-height: 1.55;
+        margin-bottom: 1.5rem;
+    }
+
+    .left-cta {
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero-cta-btn {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+    }
+
+    .hero-offer-tag {
+        font-size: 0.85rem;
+        padding: 0.35rem 0.85rem;
+    }
+
+    .nursing-snapshot-card {
+        padding: 1.5rem 1.25rem;
+        border-radius: 20px;
+        max-width: 100%;
+    }
+
+    .snapshot-header {
+        gap: 0.75rem;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .snapshot-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.8rem;
+        border-radius: 12px;
+    }
+
+    .snapshot-title {
+        font-size: 1.1rem;
+    }
+
+    .snapshot-stat-item {
+        padding: 0.75rem 0.85rem;
+    }
+
+    .stat-number {
+        font-size: 0.92rem;
+    }
+
+    .stat-label {
+        font-size: 0.78rem;
+    }
+
+    .germany-landmark-bar {
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .landmark-pill {
+        font-size: 0.78rem;
+        padding: 0.4rem 0.85rem;
+    }
+
+    .stat-cards-grid,
+    .solution-cards-grid,
+    .struggle-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cols-5,
+    .cols-4,
+    .cols-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .roadmap-phase-block {
+        padding: 1.5rem 1.15rem;
+        border-radius: 20px;
+    }
+
+    .phase-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+    }
+
+    .checklist-card-container {
+        padding: 1.5rem 1.15rem;
+    }
+
+    .solution-summary-pills {
+        border-radius: 24px;
+        padding: 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .pill-dot {
+        display: none;
+    }
+}
+
+/* Illustration responsive rules */
+@media (max-width: 900px) {
+    .gap-header-split {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .gap-header-illus {
+        order: -1;
+    }
+
+    .gap-illus-img {
+        max-width: 100%;
+        aspect-ratio: 16/9;
+    }
+
+    .solution-success-illus {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .solution-illus-img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 600px) {
+    .illus-divider-strip {
+        max-height: 220px;
+    }
+
+    .illus-strip-img {
+        height: 220px;
+    }
+
+    .illus-strip-overlay {
         background: linear-gradient(to bottom, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.3) 80%, transparent 100%);
         align-items: flex-start;
         padding: 1.25rem 1rem;
@@ -5896,4 +6091,38 @@ body.germany-page .waitlist-section {
         font-size: 1rem;
         max-width: 90%;
     }
+}
+
+/* ============================================================
+   UNIFIED FONT SYSTEM FOR GERMANY NURSES & STUDENTS PAGES
+   Enforces Plus Jakarta Sans across the entire Nurse & Student pages
+   ============================================================ */
+body.germany-page,
+body.germany-page *,
+body.germany-page .serif-title,
+body.germany-page h1,
+body.germany-page h2,
+body.germany-page h3,
+body.germany-page h4,
+body.germany-page h5,
+body.germany-page h6,
+body.germany-page .conclusion-highlight,
+body.germany-page .banner-text,
+body.germany-page .waitlist-title,
+body.germany-students-page,
+body.germany-students-page *,
+body.germany-students-page .serif-title,
+body.germany-students-page h1,
+body.germany-students-page h2,
+body.germany-students-page h3,
+body.germany-students-page h4,
+body.germany-students-page h5,
+body.germany-students-page h6,
+body.germany-students-page .std-hero-headline,
+body.germany-students-page .std-fomo-title,
+body.germany-students-page .std-banner-title,
+body.germany-students-page .conclusion-highlight,
+body.germany-students-page .std-after-title,
+body.germany-students-page .std-waitlist-title {
+    font-family: var(--font-sans), 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
 }
