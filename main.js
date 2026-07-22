@@ -1,6 +1,6 @@
 // Voluble Landing Page Interactions
 // CONFIGURATION: Paste your Google Apps Script Web App URL below to send waitlist leads to Google Sheets:
-const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxB96z625hHIhL84ZfYJJOJzoT-8jl6glC6qRGvvz0ZigkDDEox9i_OiPCO_ijgReE1/exec'; 
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbztIcMrlczjO66F5whdjMf80-yZGFaflimgWz0OwfPT6JNs8aXXEqCgMz1e7o6lGySc/exec'; 
 
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile Hamburger Menu Toggle
@@ -141,19 +141,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Construct URL query parameters so e.parameter.sheetName is populated in Google Apps Script!
                     const targetUrl = `${GOOGLE_SHEETS_URL}?sheetName=${encodeURIComponent(pageType)}&sheet=${encodeURIComponent(pageType)}&pageType=${encodeURIComponent(pageType)}&tab=${encodeURIComponent(pageType)}&sourcePage=${encodeURIComponent(sourcePage)}`;
 
-                    // Send form encoded body
-                    const urlParams = new URLSearchParams();
-                    for (const key in formData) {
-                        urlParams.append(key, formData[key]);
-                    }
-
                     fetch(targetUrl, {
                         method: 'POST',
                         mode: 'no-cors',
                         headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded'
+                            'Content-Type': 'text/plain;charset=utf-8'
                         },
-                        body: urlParams.toString()
+                        body: JSON.stringify(formData)
                     })
                     .then(() => {
                         handleSuccess();
