@@ -395,28 +395,6 @@
     box-shadow: 0 14px 28px rgba(8, 138, 153, 0.12);
 }
 
-/* Brand Teal Highlight Card (Replaced bright green with brand teal) */
-.highlight-step-card {
-    background: linear-gradient(135deg, #E6F6F7 0%, #FFFFFF 100%);
-    border: 2px solid #088A99;
-    box-shadow: 0 6px 20px rgba(8, 138, 153, 0.1);
-}
-
-.success-step-card {
-    background: linear-gradient(135deg, #023B59 0%, #012437 100%);
-    color: #FFFFFF;
-    border: 2px solid #088A99;
-    box-shadow: 0 8px 24px rgba(2, 59, 89, 0.25);
-}
-
-.success-step-card .step-card-title {
-    color: #FFFFFF !important;
-}
-
-.success-step-card .step-card-desc {
-    color: rgba(255, 255, 255, 0.85) !important;
-}
-
 .card-top-row {
     display: flex;
     align-items: center;
@@ -431,16 +409,6 @@
     background: rgba(2, 59, 89, 0.08);
     padding: 0.2rem 0.55rem;
     border-radius: 100px;
-}
-
-.teal-step-badge {
-    background: #088A99;
-    color: #FFFFFF;
-}
-
-.dark-step-badge {
-    background: #F59E0B;
-    color: #FFFFFF;
 }
 
 .step-icon-emoji {
