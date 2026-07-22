@@ -140,30 +140,45 @@
             </div>
         </section>
 
-        <!-- FOLD 3 - THE ROADMAP (Uniform Color Cards) -->
+        <!-- FOLD 3 - THE ROADMAP (Apple-Style Horizontal Sliding Carousel) -->
         <section id="roadmap" class="section roadmap-section">
             <div class="section-container roadmap-container">
 
-                <div class="roadmap-header-box text-center">
-                    <div class="section-tag-wrapper">
-                        <span class="section-badge bg-teal">The Roadmap</span>
+                <!-- Header & Controls -->
+                <div class="roadmap-header-row">
+                    <div class="roadmap-header-box">
+                        <div class="section-tag-wrapper">
+                            <span class="section-badge bg-teal">The Roadmap</span>
+                        </div>
+                        <h2 class="serif-title section-title">Here's what your Germany journey actually looks like.</h2>
+                        <p class="section-subtitle">11 critical steps grouped into 3 key phases standing between where you are today and your first semester in Germany.</p>
                     </div>
-                    <h2 class="serif-title section-title text-center">Here's what your Germany journey actually looks like.</h2>
-                    <p class="section-subtitle text-center">11 critical steps grouped into 3 key phases standing between where you are today and your first semester in Germany.</p>
+
+                    <!-- Apple Floating Navigation Arrows -->
+                    <div class="apple-carousel-controls">
+                        <button class="apple-carousel-btn prev-btn" id="roadmap-carousel-prev" aria-label="Previous step">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M15 18l-6-6 6-6"/>
+                            </svg>
+                        </button>
+                        <button class="apple-carousel-btn next-btn" id="roadmap-carousel-next" aria-label="Next step">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 18l6-6-6-6"/>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
-                <!-- Phase 1: University & Language Foundations -->
-                <div class="roadmap-phase-block">
-                    <div class="phase-header">
-                        <span class="phase-badge phase-1-badge">PHASE 1</span>
-                        <h3 class="phase-title">University Selection &amp; Language Foundations</h3>
-                    </div>
-                    
-                    <div class="roadmap-horizontal-grid cols-6">
+                <!-- Apple Sliding Cards Track -->
+                <div class="apple-carousel-wrapper">
+                    <div class="apple-carousel-track" id="roadmap-carousel-track">
                         <!-- Step 1 -->
-                        <div class="roadmap-horizontal-card">
+                        <div class="roadmap-horizontal-card apple-slide-card">
                             <div class="card-top-row">
+                                <span class="phase-badge phase-1-badge">PHASE 1</span>
                                 <span class="step-badge">01</span>
+                            </div>
+                            <div class="card-icon-line">
                                 <span class="step-icon-emoji">🎓</span>
                             </div>
                             <h4 class="step-card-title">Choose University</h4>
@@ -171,9 +186,12 @@
                         </div>
 
                         <!-- Step 2 -->
-                        <div class="roadmap-horizontal-card">
+                        <div class="roadmap-horizontal-card apple-slide-card">
                             <div class="card-top-row">
+                                <span class="phase-badge phase-1-badge">PHASE 1</span>
                                 <span class="step-badge">02</span>
+                            </div>
+                            <div class="card-icon-line">
                                 <span class="step-icon-emoji">📝</span>
                             </div>
                             <h4 class="step-card-title">Prepare Documents</h4>
@@ -181,9 +199,12 @@
                         </div>
 
                         <!-- Step 3 -->
-                        <div class="roadmap-horizontal-card">
+                        <div class="roadmap-horizontal-card apple-slide-card">
                             <div class="card-top-row">
+                                <span class="phase-badge phase-1-badge">PHASE 1</span>
                                 <span class="step-badge">03</span>
+                            </div>
+                            <div class="card-icon-line">
                                 <span class="step-icon-emoji">🇩🇪</span>
                             </div>
                             <h4 class="step-card-title">German A1</h4>
@@ -191,9 +212,12 @@
                         </div>
 
                         <!-- Step 4 -->
-                        <div class="roadmap-horizontal-card">
+                        <div class="roadmap-horizontal-card apple-slide-card">
                             <div class="card-top-row">
+                                <span class="phase-badge phase-1-badge">PHASE 1</span>
                                 <span class="step-badge">04</span>
+                            </div>
+                            <div class="card-icon-line">
                                 <span class="step-icon-emoji">🇩🇪</span>
                             </div>
                             <h4 class="step-card-title">German A2</h4>
@@ -201,9 +225,12 @@
                         </div>
 
                         <!-- Step 5 -->
-                        <div class="roadmap-horizontal-card">
+                        <div class="roadmap-horizontal-card apple-slide-card">
                             <div class="card-top-row">
+                                <span class="phase-badge phase-1-badge">PHASE 1</span>
                                 <span class="step-badge">05</span>
+                            </div>
+                            <div class="card-icon-line">
                                 <span class="step-icon-emoji">🇩🇪</span>
                             </div>
                             <h4 class="step-card-title">German B1</h4>
@@ -211,29 +238,25 @@
                         </div>
 
                         <!-- Step 6 -->
-                        <div class="roadmap-horizontal-card">
+                        <div class="roadmap-horizontal-card apple-slide-card">
                             <div class="card-top-row">
+                                <span class="phase-badge phase-1-badge">PHASE 1</span>
                                 <span class="step-badge">06</span>
+                            </div>
+                            <div class="card-icon-line">
                                 <span class="step-icon-emoji">🇩🇪</span>
                             </div>
                             <h4 class="step-card-title">German B2</h4>
                             <p class="step-card-desc">Upper-intermediate fluency required for degree</p>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Phase 2: Exams & Applications -->
-                <div class="roadmap-phase-block">
-                    <div class="phase-header">
-                        <span class="phase-badge phase-2-badge">PHASE 2</span>
-                        <h3 class="phase-title">Language Certification &amp; Applications</h3>
-                    </div>
-
-                    <div class="roadmap-horizontal-grid cols-3">
                         <!-- Step 7 -->
-                        <div class="roadmap-horizontal-card">
+                        <div class="roadmap-horizontal-card apple-slide-card">
                             <div class="card-top-row">
+                                <span class="phase-badge phase-2-badge">PHASE 2</span>
                                 <span class="step-badge">07</span>
+                            </div>
+                            <div class="card-icon-line">
                                 <span class="step-icon-emoji">📝</span>
                             </div>
                             <h4 class="step-card-title">Goethe / TELC Exams</h4>
@@ -241,9 +264,12 @@
                         </div>
 
                         <!-- Step 8 -->
-                        <div class="roadmap-horizontal-card">
+                        <div class="roadmap-horizontal-card apple-slide-card">
                             <div class="card-top-row">
+                                <span class="phase-badge phase-2-badge">PHASE 2</span>
                                 <span class="step-badge">08</span>
+                            </div>
+                            <div class="card-icon-line">
                                 <span class="step-icon-emoji">🎯</span>
                             </div>
                             <h4 class="step-card-title">University Applications</h4>
@@ -251,29 +277,25 @@
                         </div>
 
                         <!-- Step 9 -->
-                        <div class="roadmap-horizontal-card">
+                        <div class="roadmap-horizontal-card apple-slide-card">
                             <div class="card-top-row">
+                                <span class="phase-badge phase-2-badge">PHASE 2</span>
                                 <span class="step-badge">09</span>
+                            </div>
+                            <div class="card-icon-line">
                                 <span class="step-icon-emoji">🎓</span>
                             </div>
                             <h4 class="step-card-title">Admission Letter</h4>
                             <p class="step-card-desc">Receive official German acceptance (Zulassungsbescheid)</p>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Phase 3: Visa & Relocation -->
-                <div class="roadmap-phase-block">
-                    <div class="phase-header">
-                        <span class="phase-badge phase-3-badge">PHASE 3</span>
-                        <h3 class="phase-title">Visa, Relocation &amp; University Start</h3>
-                    </div>
-
-                    <div class="roadmap-horizontal-grid cols-2">
                         <!-- Step 10 -->
-                        <div class="roadmap-horizontal-card">
+                        <div class="roadmap-horizontal-card apple-slide-card">
                             <div class="card-top-row">
+                                <span class="phase-badge phase-3-badge">PHASE 3</span>
                                 <span class="step-badge">10</span>
+                            </div>
+                            <div class="card-icon-line">
                                 <span class="step-icon-emoji">🛂</span>
                             </div>
                             <h4 class="step-card-title">Student Visa</h4>
@@ -281,15 +303,36 @@
                         </div>
 
                         <!-- Step 11 -->
-                        <div class="roadmap-horizontal-card">
+                        <div class="roadmap-horizontal-card apple-slide-card">
                             <div class="card-top-row">
+                                <span class="phase-badge phase-3-badge">PHASE 3</span>
                                 <span class="step-badge">11</span>
+                            </div>
+                            <div class="card-icon-line">
                                 <span class="step-icon-emoji">✈️</span>
                             </div>
                             <h4 class="step-card-title">Move to Germany</h4>
                             <p class="step-card-desc">Flight, arrival, city registration (Anmeldung) &amp; semester start</p>
                         </div>
                     </div>
+                </div>
+
+                <!-- Apple Pagination Indicator & Drag Hint -->
+                <div class="apple-carousel-pagination">
+                    <div class="apple-dots-group" id="roadmap-carousel-dots">
+                        <button class="apple-dot active" data-index="0" aria-label="Go to step 1"></button>
+                        <button class="apple-dot" data-index="1" aria-label="Go to step 2"></button>
+                        <button class="apple-dot" data-index="2" aria-label="Go to step 3"></button>
+                        <button class="apple-dot" data-index="3" aria-label="Go to step 4"></button>
+                        <button class="apple-dot" data-index="4" aria-label="Go to step 5"></button>
+                        <button class="apple-dot" data-index="5" aria-label="Go to step 6"></button>
+                        <button class="apple-dot" data-index="6" aria-label="Go to step 7"></button>
+                        <button class="apple-dot" data-index="7" aria-label="Go to step 8"></button>
+                        <button class="apple-dot" data-index="8" aria-label="Go to step 9"></button>
+                        <button class="apple-dot" data-index="9" aria-label="Go to step 10"></button>
+                        <button class="apple-dot" data-index="10" aria-label="Go to step 11"></button>
+                    </div>
+                    <span class="apple-scroll-hint">Swipe or drag to explore ↔</span>
                 </div>
 
                 <!-- Bottom Summary Callout Box -->
@@ -345,68 +388,100 @@
             </div>
         </section>
 
-        <!-- FOLD 5 - WHY VOLUBLE -->
+        <!-- FOLD 5 - WHY VOLUBLE (Apple-Style Horizontal Sliding Carousel) -->
         <section id="solution" class="section std-solution-section">
             <div class="std-solution-container">
 
-                <div class="text-center">
-                    <div class="section-tag-wrapper">
-                        <span class="section-badge bg-teal">The Solution</span>
+                <div class="voluble-platform-header-row" style="display: flex; align-items: flex-end; justify-content: space-between; width: 100%; gap: 2rem; margin-bottom: 0.5rem;">
+                    <div class="text-left" style="text-align: left;">
+                        <div class="section-tag-wrapper">
+                            <span class="section-badge bg-teal">The Solution</span>
+                        </div>
+                        <h2 class="serif-title section-title">Everything You Need for Germany.<br>One Platform.</h2>
+                        <p class="section-subtitle">Forget juggling YouTube playlists, coaching institutes, Telegram groups, and random PDFs. Voluble brings everything together.</p>
+                        <div class="std-solution-tagline-badge" style="margin-top: 0.5rem;">⚡ The Complete Germany Preparation Platform</div>
                     </div>
-                    <h2 class="serif-title section-title text-center">Everything You Need for Germany.<br>One Platform.</h2>
-                    <p class="section-subtitle text-center">Forget juggling YouTube playlists, coaching institutes, Telegram groups, and random PDFs. Voluble brings everything together.</p>
-                    <div class="std-solution-tagline-badge">⚡ The Complete Germany Preparation Platform</div>
+
+                    <!-- Apple Floating Navigation Arrows -->
+                    <div class="apple-carousel-controls">
+                        <button class="apple-carousel-btn prev-btn" id="student-sol-prev" aria-label="Previous module">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M15 18l-6-6 6-6"/>
+                            </svg>
+                        </button>
+                        <button class="apple-carousel-btn next-btn" id="student-sol-next" aria-label="Next module">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 18l6-6-6-6"/>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
-                <div class="std-feature-grid">
-                    <div class="std-feature-card std-fc-teal">
-                        <div class="std-fc-top">
-                            <div class="std-fc-icon std-icon-teal">📚</div>
-                            <span class="std-fc-module">Module 01</span>
+                <!-- Apple Sliding Cards Track -->
+                <div class="apple-carousel-wrapper">
+                    <div class="apple-carousel-track" id="student-sol-track">
+                        <div class="std-feature-card std-fc-teal apple-slide-card">
+                            <div class="std-fc-top">
+                                <div class="std-fc-icon std-icon-teal">📚</div>
+                                <span class="std-fc-module">Module 01</span>
+                            </div>
+                            <h3 class="std-fc-title">Complete German Course (A1–B2)</h3>
+                            <p class="std-fc-desc">Structured curriculum designed for Indian students. Learn at your own pace with daily lessons and progress tracking from absolute beginner to exam-ready.</p>
                         </div>
-                        <h3 class="std-fc-title">Complete German Course (A1–B2)</h3>
-                        <p class="std-fc-desc">Structured curriculum designed for Indian students. Learn at your own pace with daily lessons and progress tracking from absolute beginner to exam-ready.</p>
-                    </div>
-                    <div class="std-feature-card std-fc-indigo">
-                        <div class="std-fc-top">
-                            <div class="std-fc-icon std-icon-indigo">📝</div>
-                            <span class="std-fc-module">Module 02</span>
+                        <div class="std-feature-card std-fc-indigo apple-slide-card">
+                            <div class="std-fc-top">
+                                <div class="std-fc-icon std-icon-indigo">📝</div>
+                                <span class="std-fc-module">Module 02</span>
+                            </div>
+                            <h3 class="std-fc-title">Goethe &amp; TELC Exam Preparation</h3>
+                            <p class="std-fc-desc">Targeted exam strategies, realistic mock tests, and module-by-module practice to ensure you pass on the first attempt.</p>
                         </div>
-                        <h3 class="std-fc-title">Goethe &amp; TELC Exam Preparation</h3>
-                        <p class="std-fc-desc">Targeted exam strategies, realistic mock tests, and module-by-module practice to ensure you pass on the first attempt.</p>
-                    </div>
-                    <div class="std-feature-card std-fc-amber">
-                        <div class="std-fc-top">
-                            <div class="std-fc-icon std-icon-amber">🗣</div>
-                            <span class="std-fc-module">Module 03</span>
+                        <div class="std-feature-card std-fc-amber apple-slide-card">
+                            <div class="std-fc-top">
+                                <div class="std-fc-icon std-icon-amber">🗣</div>
+                                <span class="std-fc-module">Module 03</span>
+                            </div>
+                            <h3 class="std-fc-title">AI Speaking Practice</h3>
+                            <p class="std-fc-desc">Practice spoken German 24/7 with our AI speech trainer. Instant feedback on pronunciation, grammar, and fluency — no judgment, no time pressure.</p>
                         </div>
-                        <h3 class="std-fc-title">AI Speaking Practice</h3>
-                        <p class="std-fc-desc">Practice spoken German 24/7 with our AI speech trainer. Instant feedback on pronunciation, grammar, and fluency — no judgment, no time pressure.</p>
-                    </div>
-                    <div class="std-feature-card std-fc-rose">
-                        <div class="std-fc-top">
-                            <div class="std-fc-icon std-icon-rose">🎯</div>
-                            <span class="std-fc-module">Module 04</span>
+                        <div class="std-feature-card std-fc-rose apple-slide-card">
+                            <div class="std-fc-top">
+                                <div class="std-fc-icon std-icon-rose">🎯</div>
+                                <span class="std-fc-module">Module 04</span>
+                            </div>
+                            <h3 class="std-fc-title">Daily Learning Plans</h3>
+                            <p class="std-fc-desc">Personalised study schedules that adapt to your pace and exam date. Never lose track of where you are in your German journey.</p>
                         </div>
-                        <h3 class="std-fc-title">Daily Learning Plans</h3>
-                        <p class="std-fc-desc">Personalised study schedules that adapt to your pace and exam date. Never lose track of where you are in your German journey.</p>
-                    </div>
-                    <div class="std-feature-card std-fc-blue">
-                        <div class="std-fc-top">
-                            <div class="std-fc-icon std-icon-blue">🎓</div>
-                            <span class="std-fc-module">Module 05</span>
+                        <div class="std-feature-card std-fc-blue apple-slide-card">
+                            <div class="std-fc-top">
+                                <div class="std-fc-icon std-icon-blue">🎓</div>
+                                <span class="std-fc-module">Module 05</span>
+                            </div>
+                            <h3 class="std-fc-title">Germany Student Guide</h3>
+                            <p class="std-fc-desc">Step-by-step guidance on university applications, uni-assist, blocked accounts, visa documents, and navigating German bureaucracy.</p>
                         </div>
-                        <h3 class="std-fc-title">Germany Student Guide</h3>
-                        <p class="std-fc-desc">Step-by-step guidance on university applications, uni-assist, blocked accounts, visa documents, and navigating German bureaucracy.</p>
-                    </div>
-                    <div class="std-feature-card std-fc-emerald">
-                        <div class="std-fc-top">
-                            <div class="std-fc-icon std-icon-emerald">🤖</div>
-                            <span class="std-fc-module">Module 06</span>
+                        <div class="std-feature-card std-fc-emerald apple-slide-card">
+                            <div class="std-fc-top">
+                                <div class="std-fc-icon std-icon-emerald">🤖</div>
+                                <span class="std-fc-module">Module 06</span>
+                            </div>
+                            <h3 class="std-fc-title">AI Germany Copilot</h3>
+                            <p class="std-fc-desc">Your 24/7 assistant that answers every question about Germany — from admission requirements to finding a flat after you arrive.</p>
                         </div>
-                        <h3 class="std-fc-title">AI Germany Copilot</h3>
-                        <p class="std-fc-desc">Your 24/7 assistant that answers every question about Germany — from admission requirements to finding a flat after you arrive.</p>
                     </div>
+                </div>
+
+                <!-- Apple Pagination Indicator & Drag Hint -->
+                <div class="apple-carousel-pagination">
+                    <div class="apple-dots-group" id="student-sol-dots">
+                        <button class="apple-dot active" data-index="0" aria-label="Go to module 1"></button>
+                        <button class="apple-dot" data-index="1" aria-label="Go to module 2"></button>
+                        <button class="apple-dot" data-index="2" aria-label="Go to module 3"></button>
+                        <button class="apple-dot" data-index="3" aria-label="Go to module 4"></button>
+                        <button class="apple-dot" data-index="4" aria-label="Go to module 5"></button>
+                        <button class="apple-dot" data-index="5" aria-label="Go to module 6"></button>
+                    </div>
+                    <span class="apple-scroll-hint">Swipe or drag to explore ↔</span>
                 </div>
 
                 <div class="solution-summary-pills">
@@ -422,57 +497,91 @@
             </div>
         </section>
 
-        <!-- FOLD 6 - LIFE AFTER GERMANY -->
+        <!-- FOLD 6 - LIFE AFTER GERMANY (Apple-Style Horizontal Sliding Carousel) -->
         <section id="after-germany" class="section std-after-section">
             <div class="std-after-container">
 
-                <div class="std-after-header">
-                    <div class="std-after-badge">After You Arrive</div>
-                    <h2 class="serif-title std-after-title">Your journey doesn't stop after your visa is approved.</h2>
-                    <p class="std-after-lead">Voluble stays with you after you arrive — helping you navigate real life in Germany from Day One.</p>
+                <div class="voluble-platform-header-row" style="display: flex; align-items: flex-end; justify-content: space-between; width: 100%; gap: 2rem; margin-bottom: 0.5rem;">
+                    <div class="std-after-header" style="text-align: left; align-items: flex-start;">
+                        <div class="std-after-badge">After You Arrive</div>
+                        <h2 class="serif-title std-after-title">Your journey doesn't stop after your visa is approved.</h2>
+                        <p class="std-after-lead">Voluble stays with you after you arrive — helping you navigate real life in Germany from Day One.</p>
+                    </div>
+
+                    <!-- Apple Floating Navigation Arrows -->
+                    <div class="apple-carousel-controls">
+                        <button class="apple-carousel-btn prev-btn" id="student-after-prev" aria-label="Previous life card" style="background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.25); color: #ffffff;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M15 18l-6-6 6-6"/>
+                            </svg>
+                        </button>
+                        <button class="apple-carousel-btn next-btn" id="student-after-next" aria-label="Next life card" style="background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.25); color: #ffffff;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 18l6-6-6-6"/>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
-                <div class="std-after-grid">
-                    <div class="std-after-card">
-                        <div class="std-after-emoji">🏠</div>
-                        <h4 class="std-after-card-title">Find Accommodation</h4>
-                        <p class="std-after-card-desc">Navigate WG listings, landlord conversations, and rental agreements in German.</p>
+                <!-- Apple Sliding Cards Track -->
+                <div class="apple-carousel-wrapper">
+                    <div class="apple-carousel-track" id="student-after-track">
+                        <div class="std-after-card apple-slide-card">
+                            <div class="std-after-emoji">🏠</div>
+                            <h4 class="std-after-card-title">Find Accommodation</h4>
+                            <p class="std-after-card-desc">Navigate WG listings, landlord conversations, and rental agreements in German.</p>
+                        </div>
+                        <div class="std-after-card apple-slide-card">
+                            <div class="std-after-emoji">🛒</div>
+                            <h4 class="std-after-card-title">Daily Conversations</h4>
+                            <p class="std-after-card-desc">Handle supermarkets, pharmacies, neighbours, and errands with confidence.</p>
+                        </div>
+                        <div class="std-after-card apple-slide-card">
+                            <div class="std-after-emoji">🏦</div>
+                            <h4 class="std-after-card-title">Banking &amp; Finances</h4>
+                            <p class="std-after-card-desc">Open accounts, understand letters, and manage finances in German.</p>
+                        </div>
+                        <div class="std-after-card apple-slide-card">
+                            <div class="std-after-emoji">🚆</div>
+                            <h4 class="std-after-card-title">Public Transport</h4>
+                            <p class="std-after-card-desc">Navigate Deutsche Bahn, S-Bahn, U-Bahn, and regional transport.</p>
+                        </div>
+                        <div class="std-after-card apple-slide-card">
+                            <div class="std-after-emoji">🎓</div>
+                            <h4 class="std-after-card-title">University Life</h4>
+                            <p class="std-after-card-desc">Follow lectures, participate in seminars, and talk with professors.</p>
+                        </div>
+                        <div class="std-after-card apple-slide-card">
+                            <div class="std-after-emoji">💼</div>
+                            <h4 class="std-after-card-title">Part-Time Jobs</h4>
+                            <p class="std-after-card-desc">Apply and interview for Werkstudent roles and Minijobs alongside studies.</p>
+                        </div>
+                        <div class="std-after-card apple-slide-card">
+                            <div class="std-after-emoji">🤝</div>
+                            <h4 class="std-after-card-title">Make Friends Confidently</h4>
+                            <p class="std-after-card-desc">Connect with German students and build your network from week one.</p>
+                        </div>
+                        <div class="std-after-card apple-slide-card">
+                            <div class="std-after-emoji">🤖</div>
+                            <h4 class="std-after-card-title">AI Copilot — Always On</h4>
+                            <p class="std-after-card-desc">Ask anything, anytime. Your Germany Copilot never stops helping.</p>
+                        </div>
                     </div>
-                    <div class="std-after-card">
-                        <div class="std-after-emoji">🛒</div>
-                        <h4 class="std-after-card-title">Daily Conversations</h4>
-                        <p class="std-after-card-desc">Handle supermarkets, pharmacies, neighbours, and errands with confidence.</p>
+                </div>
+
+                <!-- Apple Pagination Indicator & Drag Hint -->
+                <div class="apple-carousel-pagination">
+                    <div class="apple-dots-group" id="student-after-dots">
+                        <button class="apple-dot active" data-index="0" aria-label="Go to card 1" style="background: rgba(255,255,255,0.3);"></button>
+                        <button class="apple-dot" data-index="1" aria-label="Go to card 2" style="background: rgba(255,255,255,0.3);"></button>
+                        <button class="apple-dot" data-index="2" aria-label="Go to card 3" style="background: rgba(255,255,255,0.3);"></button>
+                        <button class="apple-dot" data-index="3" aria-label="Go to card 4" style="background: rgba(255,255,255,0.3);"></button>
+                        <button class="apple-dot" data-index="4" aria-label="Go to card 5" style="background: rgba(255,255,255,0.3);"></button>
+                        <button class="apple-dot" data-index="5" aria-label="Go to card 6" style="background: rgba(255,255,255,0.3);"></button>
+                        <button class="apple-dot" data-index="6" aria-label="Go to card 7" style="background: rgba(255,255,255,0.3);"></button>
+                        <button class="apple-dot" data-index="7" aria-label="Go to card 8" style="background: rgba(255,255,255,0.3);"></button>
                     </div>
-                    <div class="std-after-card">
-                        <div class="std-after-emoji">🏦</div>
-                        <h4 class="std-after-card-title">Banking &amp; Finances</h4>
-                        <p class="std-after-card-desc">Open accounts, understand letters, and manage finances in German.</p>
-                    </div>
-                    <div class="std-after-card">
-                        <div class="std-after-emoji">🚆</div>
-                        <h4 class="std-after-card-title">Public Transport</h4>
-                        <p class="std-after-card-desc">Navigate Deutsche Bahn, S-Bahn, U-Bahn, and regional transport.</p>
-                    </div>
-                    <div class="std-after-card">
-                        <div class="std-after-emoji">🎓</div>
-                        <h4 class="std-after-card-title">University Life</h4>
-                        <p class="std-after-card-desc">Follow lectures, participate in seminars, and talk with professors.</p>
-                    </div>
-                    <div class="std-after-card">
-                        <div class="std-after-emoji">💼</div>
-                        <h4 class="std-after-card-title">Part-Time Jobs</h4>
-                        <p class="std-after-card-desc">Apply and interview for Werkstudent roles and Minijobs alongside studies.</p>
-                    </div>
-                    <div class="std-after-card">
-                        <div class="std-after-emoji">🤝</div>
-                        <h4 class="std-after-card-title">Make Friends Confidently</h4>
-                        <p class="std-after-card-desc">Connect with German students and build your network from week one.</p>
-                    </div>
-                    <div class="std-after-card">
-                        <div class="std-after-emoji">🤖</div>
-                        <h4 class="std-after-card-title">AI Copilot — Always On</h4>
-                        <p class="std-after-card-desc">Ask anything, anytime. Your Germany Copilot never stops helping.</p>
-                    </div>
+                    <span class="apple-scroll-hint" style="color: rgba(255,255,255,0.5);">Swipe or drag to explore ↔</span>
                 </div>
 
                 <div class="std-after-callout">

@@ -345,89 +345,126 @@
             </div>
         </section>
 
-        <!-- Section 4: Meet Voluble Platform (Fold 4) -->
+        <!-- Section 4: Meet Voluble Platform (Fold 4 - Apple-Style Sliding Carousel) -->
         <section id="meet-voluble" class="section meet-voluble-section">
             <div class="voluble-platform-container">
-                <!-- Section Header -->
-                <div class="voluble-platform-header">
-                    <span class="voluble-pill">
-                        <span class="pill-sparkle">✨</span> Meet Voluble
-                    </span>
-                    <h2 class="voluble-platform-title">
-                        Your <span class="highlight-text">Career Readiness Platform</span> for Life Abroad.
-                    </h2>
-                    <p class="voluble-platform-subheading">
-                        Voluble helps Indian students build the communication, confidence and career skills that universities don't teach—but employers expect.
-                    </p>
+                <!-- Section Header with Apple-Style Navigation Controls -->
+                <div class="voluble-platform-header-row">
+                    <div class="voluble-platform-header">
+                        <span class="voluble-pill">
+                            <span class="pill-sparkle">✨</span> Meet Voluble
+                        </span>
+                        <h2 class="voluble-platform-title">
+                            Your <span class="highlight-text">Career Readiness Platform</span> for Life Abroad.
+                        </h2>
+                        <p class="voluble-platform-subheading">
+                            Voluble helps Indian students build the communication, confidence and career skills that universities don't teach—but employers expect.
+                        </p>
+                    </div>
+
+                    <!-- Apple Floating Navigation Arrows -->
+                    <div class="apple-carousel-controls">
+                        <button class="apple-carousel-btn prev-btn" id="apple-carousel-prev" aria-label="Previous slide">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M15 18l-6-6 6-6"/>
+                            </svg>
+                        </button>
+                        <button class="apple-carousel-btn next-btn" id="apple-carousel-next" aria-label="Next slide">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 18l6-6-6-6"/>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
-                <!-- 6 Feature Cards Grid -->
-                <div class="voluble-features-grid">
-                    <!-- Feature Card 1 -->
-                    <div class="voluble-feature-card">
-                        <div class="feature-icon-wrapper">
-                            <span class="feature-emoji">🔑</span>
+                <!-- Apple Sliding Cards Track -->
+                <div class="apple-carousel-wrapper">
+                    <div class="apple-carousel-track" id="apple-carousel-track">
+                        <!-- Feature Card 1 -->
+                        <div class="voluble-feature-card apple-slide-card">
+                            <div class="feature-icon-wrapper icon-amber">
+                                <span class="feature-emoji">🔑</span>
+                            </div>
+                            <span class="apple-card-tag">MODULE 01</span>
+                            <h3 class="feature-card-title">Interview Preparation</h3>
+                            <p class="feature-card-desc">
+                                Crack internship and full-time interviews with confidence. Practice behavioral questions & scenarios.
+                            </p>
                         </div>
-                        <h3 class="feature-card-title">Interview Preparation</h3>
-                        <p class="feature-card-desc">
-                            Crack internship and full-time interviews with confidence.
-                        </p>
-                    </div>
 
-                    <!-- Feature Card 2 -->
-                    <div class="voluble-feature-card">
-                        <div class="feature-icon-wrapper">
-                            <span class="feature-emoji">🤝</span>
+                        <!-- Feature Card 2 -->
+                        <div class="voluble-feature-card apple-slide-card">
+                            <div class="feature-icon-wrapper icon-teal">
+                                <span class="feature-emoji">🤝</span>
+                            </div>
+                            <span class="apple-card-tag">MODULE 02</span>
+                            <h3 class="feature-card-title">Networking</h3>
+                            <p class="feature-card-desc">
+                                Learn how to build meaningful professional relationships, connect on LinkedIn & pitch recruiters.
+                            </p>
                         </div>
-                        <h3 class="feature-card-title">Networking</h3>
-                        <p class="feature-card-desc">
-                            Learn how to build meaningful professional relationships.
-                        </p>
-                    </div>
 
-                    <!-- Feature Card 3 -->
-                    <div class="voluble-feature-card">
-                        <div class="feature-icon-wrapper">
-                            <span class="feature-emoji">💼</span>
+                        <!-- Feature Card 3 -->
+                        <div class="voluble-feature-card apple-slide-card">
+                            <div class="feature-icon-wrapper icon-indigo">
+                                <span class="feature-emoji">💼</span>
+                            </div>
+                            <span class="apple-card-tag">MODULE 03</span>
+                            <h3 class="feature-card-title">Workplace Communication</h3>
+                            <p class="feature-card-desc">
+                                Communicate confidently with professors, managers and colleagues in team standups and 1-on-1s.
+                            </p>
                         </div>
-                        <h3 class="feature-card-title">Workplace Communication</h3>
-                        <p class="feature-card-desc">
-                            Communicate confidently with professors, managers and colleagues.
-                        </p>
-                    </div>
 
-                    <!-- Feature Card 4 -->
-                    <div class="voluble-feature-card">
-                        <div class="feature-icon-wrapper">
-                            <span class="feature-emoji">🗣️</span>
+                        <!-- Feature Card 4 -->
+                        <div class="voluble-feature-card apple-slide-card">
+                            <div class="feature-icon-wrapper icon-rose">
+                                <span class="feature-emoji">🗣️</span>
+                            </div>
+                            <span class="apple-card-tag">MODULE 04</span>
+                            <h3 class="feature-card-title">Confidence Coaching</h3>
+                            <p class="feature-card-desc">
+                                Speak with clarity in classrooms, meetings and everyday conversations without accent anxiety.
+                            </p>
                         </div>
-                        <h3 class="feature-card-title">Confidence Coaching</h3>
-                        <p class="feature-card-desc">
-                            Speak with clarity in classrooms, meetings and everyday conversations.
-                        </p>
-                    </div>
 
-                    <!-- Feature Card 5 -->
-                    <div class="voluble-feature-card">
-                        <div class="feature-icon-wrapper">
-                            <span class="feature-emoji">🎯</span>
+                        <!-- Feature Card 5 -->
+                        <div class="voluble-feature-card apple-slide-card">
+                            <div class="feature-icon-wrapper icon-emerald">
+                                <span class="feature-emoji">🎯</span>
+                            </div>
+                            <span class="apple-card-tag">MODULE 05</span>
+                            <h3 class="feature-card-title">Career Readiness</h3>
+                            <p class="feature-card-desc">
+                                Prepare for internships, career fairs, elevator pitches and graduate recruitment assessment centers.
+                            </p>
                         </div>
-                        <h3 class="feature-card-title">Career Readiness</h3>
-                        <p class="feature-card-desc">
-                            Prepare for internships, career fairs and graduate recruitment.
-                        </p>
-                    </div>
 
-                    <!-- Feature Card 6 -->
-                    <div class="voluble-feature-card">
-                        <div class="feature-icon-wrapper">
-                            <span class="feature-emoji">🌏</span>
+                        <!-- Feature Card 6 -->
+                        <div class="voluble-feature-card apple-slide-card">
+                            <div class="feature-icon-wrapper icon-blue">
+                                <span class="feature-emoji">🌏</span>
+                            </div>
+                            <span class="apple-card-tag">MODULE 06</span>
+                            <h3 class="feature-card-title">Life Abroad</h3>
+                            <p class="feature-card-desc">
+                                Navigate real-world situations, banking, rental housing, and social interactions from day one.
+                            </p>
                         </div>
-                        <h3 class="feature-card-title">Life Abroad</h3>
-                        <p class="feature-card-desc">
-                            Navigate real-world situations with confidence from day one.
-                        </p>
                     </div>
+                </div>
+
+                <!-- Apple Pagination Indicator & Drag Hint -->
+                <div class="apple-carousel-pagination">
+                    <div class="apple-dots-group" id="apple-carousel-dots">
+                        <button class="apple-dot active" data-index="0" aria-label="Go to slide 1"></button>
+                        <button class="apple-dot" data-index="1" aria-label="Go to slide 2"></button>
+                        <button class="apple-dot" data-index="2" aria-label="Go to slide 3"></button>
+                        <button class="apple-dot" data-index="3" aria-label="Go to slide 4"></button>
+                        <button class="apple-dot" data-index="4" aria-label="Go to slide 5"></button>
+                        <button class="apple-dot" data-index="5" aria-label="Go to slide 6"></button>
+                    </div>
+                    <span class="apple-scroll-hint">Swipe or drag to explore ↔</span>
                 </div>
 
                 <!-- Bottom Statement -->

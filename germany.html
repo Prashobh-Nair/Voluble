@@ -230,34 +230,49 @@
             </div>
         </div>
 
-        <!-- FOLD 3: THE ROADMAP (Horizontal Pathway Matrix) -->
+        <!-- FOLD 3: THE ROADMAP (Apple-Style Horizontal Sliding Pathway Carousel) -->
         <section id="roadmap" class="section roadmap-section">
             <div class="section-container roadmap-container">
                 
-                <div class="roadmap-header-box text-center">
-                    <div class="section-tag-wrapper">
-                        <span class="section-badge bg-teal">The Pathway</span>
+                <!-- Header & Controls -->
+                <div class="roadmap-header-row">
+                    <div class="roadmap-header-box">
+                        <div class="section-tag-wrapper">
+                            <span class="section-badge bg-teal">The Pathway</span>
+                        </div>
+                        <h2 class="serif-title section-title">
+                            Here's what it actually takes to become a Nurse in Germany.
+                        </h2>
+                        <p class="section-subtitle">
+                            11 critical steps grouped into 3 key phases standing between where you are today and your registered nurse license.
+                        </p>
                     </div>
-                    <h2 class="serif-title section-title text-center">
-                        Here's what it actually takes to become a Nurse in Germany.
-                    </h2>
-                    <p class="section-subtitle text-center">
-                        11 critical steps grouped into 3 key phases standing between where you are today and your registered nurse license.
-                    </p>
+
+                    <!-- Apple Floating Navigation Arrows -->
+                    <div class="apple-carousel-controls">
+                        <button class="apple-carousel-btn prev-btn" id="nurse-roadmap-prev" aria-label="Previous step">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M15 18l-6-6 6-6"/>
+                            </svg>
+                        </button>
+                        <button class="apple-carousel-btn next-btn" id="nurse-roadmap-next" aria-label="Next step">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 18l6-6-6-6"/>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
-                <!-- Phase 1: Language Mastery (Steps 1 to 5) -->
-                <div class="roadmap-phase-block">
-                    <div class="phase-header">
-                        <span class="phase-badge phase-1-badge">PHASE 1</span>
-                        <h3 class="phase-title">Language Proficiency & Fundamentals</h3>
-                    </div>
-                    
-                    <div class="roadmap-horizontal-grid cols-5">
+                <!-- Apple Sliding Cards Track -->
+                <div class="apple-carousel-wrapper">
+                    <div class="apple-carousel-track" id="nurse-roadmap-track">
                         <!-- Step 1 -->
-                        <div class="roadmap-horizontal-card">
+                        <div class="roadmap-horizontal-card apple-slide-card">
                             <div class="card-top-row">
+                                <span class="phase-badge phase-1-badge">PHASE 1</span>
                                 <span class="step-badge">01</span>
+                            </div>
+                            <div class="card-icon-line">
                                 <span class="step-icon-emoji">🎓</span>
                             </div>
                             <h4 class="step-card-title">Nursing Degree</h4>
@@ -265,89 +280,90 @@
                         </div>
 
                         <!-- Step 2 -->
-                        <div class="roadmap-horizontal-card">
+                        <div class="roadmap-horizontal-card apple-slide-card">
                             <div class="card-top-row">
+                                <span class="phase-badge phase-1-badge">PHASE 1</span>
                                 <span class="step-badge">02</span>
+                            </div>
+                            <div class="card-icon-line">
                                 <span class="step-icon-emoji">🇩🇪</span>
                             </div>
                             <h4 class="step-card-title">German A1</h4>
-                            <p class="step-card-desc">Basic vocabulary & simple sentence structures</p>
+                            <p class="step-card-desc">Basic vocabulary &amp; simple sentence structures</p>
                         </div>
 
                         <!-- Step 3 -->
-                        <div class="roadmap-horizontal-card">
+                        <div class="roadmap-horizontal-card apple-slide-card">
                             <div class="card-top-row">
+                                <span class="phase-badge phase-1-badge">PHASE 1</span>
                                 <span class="step-badge">03</span>
+                            </div>
+                            <div class="card-icon-line">
                                 <span class="step-icon-emoji">🇩🇪</span>
                             </div>
                             <h4 class="step-card-title">German A2</h4>
-                            <p class="step-card-desc">Everyday communication & sentence building</p>
+                            <p class="step-card-desc">Everyday communication &amp; sentence building</p>
                         </div>
 
                         <!-- Step 4 -->
-                        <div class="roadmap-horizontal-card">
+                        <div class="roadmap-horizontal-card apple-slide-card">
                             <div class="card-top-row">
+                                <span class="phase-badge phase-1-badge">PHASE 1</span>
                                 <span class="step-badge">04</span>
+                            </div>
+                            <div class="card-icon-line">
                                 <span class="step-icon-emoji">🇩🇪</span>
                             </div>
                             <h4 class="step-card-title">German B1</h4>
-                            <p class="step-card-desc">Intermediate language & clinical dialogue</p>
+                            <p class="step-card-desc">Intermediate language &amp; clinical dialogue</p>
                         </div>
 
                         <!-- Step 5 -->
-                        <div class="roadmap-horizontal-card highlight-step-card">
+                        <div class="roadmap-horizontal-card apple-slide-card">
                             <div class="card-top-row">
-                                <span class="step-badge green-step-badge">05</span>
+                                <span class="phase-badge phase-1-badge">PHASE 1</span>
+                                <span class="step-badge">05</span>
+                            </div>
+                            <div class="card-icon-line">
                                 <span class="step-icon-emoji">🇩🇪</span>
                             </div>
                             <h4 class="step-card-title">German B2</h4>
                             <p class="step-card-desc">Upper-intermediate fluency required for license</p>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Phase 2: Credentials & Recognition (Steps 6 & 7) -->
-                <div class="roadmap-phase-block">
-                    <div class="phase-header">
-                        <span class="phase-badge phase-2-badge">PHASE 2</span>
-                        <h3 class="phase-title">Documentation & State Recognition</h3>
-                    </div>
-
-                    <div class="roadmap-horizontal-grid cols-2">
                         <!-- Step 6 -->
-                        <div class="roadmap-horizontal-card">
+                        <div class="roadmap-horizontal-card apple-slide-card">
                             <div class="card-top-row">
+                                <span class="phase-badge phase-2-badge">PHASE 2</span>
                                 <span class="step-badge">06</span>
+                            </div>
+                            <div class="card-icon-line">
                                 <span class="step-icon-emoji">📄</span>
                             </div>
                             <h4 class="step-card-title">Document Prep</h4>
-                            <p class="step-card-desc">Certified translations & official apostille attestation</p>
+                            <p class="step-card-desc">Certified translations &amp; official apostille attestation</p>
                         </div>
 
                         <!-- Step 7 -->
-                        <div class="roadmap-horizontal-card highlight-step-card">
+                        <div class="roadmap-horizontal-card apple-slide-card">
                             <div class="card-top-row">
-                                <span class="step-badge green-step-badge">07</span>
+                                <span class="phase-badge phase-2-badge">PHASE 2</span>
+                                <span class="step-badge">07</span>
+                            </div>
+                            <div class="card-icon-line">
                                 <span class="step-icon-emoji">🏛️</span>
                             </div>
                             <h4 class="step-card-title">Qualification Recognition</h4>
                             <p class="step-card-desc">Official state Anerkennungsverfahren in Germany</p>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Phase 3: Placement, Visa & Practice (Steps 8 to 11) -->
-                <div class="roadmap-phase-block">
-                    <div class="phase-header">
-                        <span class="phase-badge phase-3-badge">PHASE 3</span>
-                        <h3 class="phase-title">Interviews, Visa & Hospital Relocation</h3>
-                    </div>
-
-                    <div class="roadmap-horizontal-grid cols-4">
                         <!-- Step 8 -->
-                        <div class="roadmap-horizontal-card">
+                        <div class="roadmap-horizontal-card apple-slide-card">
                             <div class="card-top-row">
+                                <span class="phase-badge phase-3-badge">PHASE 3</span>
                                 <span class="step-badge">08</span>
+                            </div>
+                            <div class="card-icon-line">
                                 <span class="step-icon-emoji">🏥</span>
                             </div>
                             <h4 class="step-card-title">Hospital Interviews</h4>
@@ -355,9 +371,12 @@
                         </div>
 
                         <!-- Step 9 -->
-                        <div class="roadmap-horizontal-card">
+                        <div class="roadmap-horizontal-card apple-slide-card">
                             <div class="card-top-row">
+                                <span class="phase-badge phase-3-badge">PHASE 3</span>
                                 <span class="step-badge">09</span>
+                            </div>
+                            <div class="card-icon-line">
                                 <span class="step-icon-emoji">🛂</span>
                             </div>
                             <h4 class="step-card-title">Visa Process</h4>
@@ -365,25 +384,49 @@
                         </div>
 
                         <!-- Step 10 -->
-                        <div class="roadmap-horizontal-card">
+                        <div class="roadmap-horizontal-card apple-slide-card">
                             <div class="card-top-row">
+                                <span class="phase-badge phase-3-badge">PHASE 3</span>
                                 <span class="step-badge">10</span>
+                            </div>
+                            <div class="card-icon-line">
                                 <span class="step-icon-emoji">✈️</span>
                             </div>
                             <h4 class="step-card-title">Relocate to Germany</h4>
-                            <p class="step-card-desc">Flight, arrival & local city registration (Anmeldung)</p>
+                            <p class="step-card-desc">Flight, arrival &amp; local city registration (Anmeldung)</p>
                         </div>
 
                         <!-- Step 11 -->
-                        <div class="roadmap-horizontal-card success-step-card">
+                        <div class="roadmap-horizontal-card apple-slide-card">
                             <div class="card-top-row">
-                                <span class="step-badge gold-step-badge">11</span>
+                                <span class="phase-badge phase-3-badge">PHASE 3</span>
+                                <span class="step-badge">11</span>
+                            </div>
+                            <div class="card-icon-line">
                                 <span class="step-icon-emoji">👩‍⚕️</span>
                             </div>
                             <h4 class="step-card-title">Registered Nurse</h4>
-                            <p class="step-card-desc">Full Pflegefachkraft license & practicing in Germany</p>
+                            <p class="step-card-desc">Full Pflegefachkraft license &amp; practicing in Germany</p>
                         </div>
                     </div>
+                </div>
+
+                <!-- Apple Pagination Indicator & Drag Hint -->
+                <div class="apple-carousel-pagination">
+                    <div class="apple-dots-group" id="nurse-roadmap-dots">
+                        <button class="apple-dot active" data-index="0" aria-label="Go to step 1"></button>
+                        <button class="apple-dot" data-index="1" aria-label="Go to step 2"></button>
+                        <button class="apple-dot" data-index="2" aria-label="Go to step 3"></button>
+                        <button class="apple-dot" data-index="3" aria-label="Go to step 4"></button>
+                        <button class="apple-dot" data-index="4" aria-label="Go to step 5"></button>
+                        <button class="apple-dot" data-index="5" aria-label="Go to step 6"></button>
+                        <button class="apple-dot" data-index="6" aria-label="Go to step 7"></button>
+                        <button class="apple-dot" data-index="7" aria-label="Go to step 8"></button>
+                        <button class="apple-dot" data-index="8" aria-label="Go to step 9"></button>
+                        <button class="apple-dot" data-index="9" aria-label="Go to step 10"></button>
+                        <button class="apple-dot" data-index="10" aria-label="Go to step 11"></button>
+                    </div>
+                    <span class="apple-scroll-hint">Swipe or drag to explore ↔</span>
                 </div>
 
                 <!-- Bottom Summary Callout Box -->
@@ -395,7 +438,7 @@
             </div>
         </section>
 
-        <!-- FOLD 4: THE GAP (Where Nurses Struggle) -->
+        <!-- FOLD 4: THE GAP (Where Nurses Struggle - Apple-Style Horizontal Sliding Carousel) -->
         <section id="gap" class="section gap-section">
             <div class="section-container gap-container">
                 
@@ -411,83 +454,116 @@
                             Not with ambition. <span class="struggle-tag">With preparation.</span>
                         </p>
                     </div>
-                    <div class="gap-header-illus">
-                        <img src="images/germany_nurse_study.jpg" alt="Nurse studying German language" class="gap-illus-img" loading="lazy">
+
+                    <div class="gap-header-right-group" style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+                        <div class="gap-header-illus">
+                            <img src="images/germany_nurse_study.jpg" alt="Nurse studying German language" class="gap-illus-img" loading="lazy">
+                        </div>
+
+                        <!-- Apple Floating Navigation Arrows -->
+                        <div class="apple-carousel-controls">
+                            <button class="apple-carousel-btn prev-btn" id="hurdles-carousel-prev" aria-label="Previous hurdle">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M15 18l-6-6 6-6"/>
+                                </svg>
+                            </button>
+                            <button class="apple-carousel-btn next-btn" id="hurdles-carousel-next" aria-label="Next hurdle">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 18l6-6-6-6"/>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="struggle-cards-grid">
-                    <!-- Hurdle 1 -->
-                    <div class="struggle-card">
-                        <div class="struggle-card-top">
-                            <div class="struggle-icon-box">❌</div>
-                            <span class="struggle-num">HURDLE 01</span>
+                <!-- Apple Sliding Cards Track -->
+                <div class="apple-carousel-wrapper">
+                    <div class="apple-carousel-track" id="hurdles-carousel-track">
+                        <!-- Hurdle 1 -->
+                        <div class="struggle-card apple-slide-card">
+                            <div class="struggle-card-top">
+                                <div class="struggle-icon-box">❌</div>
+                                <span class="struggle-num">HURDLE 01</span>
+                            </div>
+                            <h3 class="struggle-card-title">Consistent German Study</h3>
+                            <p class="struggle-card-desc">
+                                Balancing long 12-hour hospital shifts in India with rigid, fixed-time language class schedules.
+                            </p>
                         </div>
-                        <h3 class="struggle-card-title">Consistent German Study</h3>
-                        <p class="struggle-card-desc">
-                            Balancing long 12-hour hospital shifts in India with rigid, fixed-time language class schedules.
-                        </p>
-                    </div>
 
-                    <!-- Hurdle 2 -->
-                    <div class="struggle-card">
-                        <div class="struggle-card-top">
-                            <div class="struggle-icon-box">❌</div>
-                            <span class="struggle-num">HURDLE 02</span>
+                        <!-- Hurdle 2 -->
+                        <div class="struggle-card apple-slide-card">
+                            <div class="struggle-card-top">
+                                <div class="struggle-icon-box">❌</div>
+                                <span class="struggle-num">HURDLE 02</span>
+                            </div>
+                            <h3 class="struggle-card-title">Goethe / TELC Exams</h3>
+                            <p class="struggle-card-desc">
+                                Failing specific modules due to strict exam patterns and lack of realistic, timed practice tests.
+                            </p>
                         </div>
-                        <h3 class="struggle-card-title">Goethe / TELC Exams</h3>
-                        <p class="struggle-card-desc">
-                            Failing specific modules due to strict exam patterns and lack of realistic, timed practice tests.
-                        </p>
-                    </div>
 
-                    <!-- Hurdle 3 -->
-                    <div class="struggle-card">
-                        <div class="struggle-card-top">
-                            <div class="struggle-icon-box">❌</div>
-                            <span class="struggle-num">HURDLE 03</span>
+                        <!-- Hurdle 3 -->
+                        <div class="struggle-card apple-slide-card">
+                            <div class="struggle-card-top">
+                                <div class="struggle-icon-box">❌</div>
+                                <span class="struggle-num">HURDLE 03</span>
+                            </div>
+                            <h3 class="struggle-card-title">Speaking Confidently</h3>
+                            <p class="struggle-card-desc">
+                                Knowing grammar rules on paper but freezing up when asked to speak conversational German aloud.
+                            </p>
                         </div>
-                        <h3 class="struggle-card-title">Speaking Confidently</h3>
-                        <p class="struggle-card-desc">
-                            Knowing grammar rules on paper but freezing up when asked to speak conversational German aloud.
-                        </p>
-                    </div>
 
-                    <!-- Hurdle 4 -->
-                    <div class="struggle-card">
-                        <div class="struggle-card-top">
-                            <div class="struggle-icon-box">❌</div>
-                            <span class="struggle-num">HURDLE 04</span>
+                        <!-- Hurdle 4 -->
+                        <div class="struggle-card apple-slide-card">
+                            <div class="struggle-card-top">
+                                <div class="struggle-icon-box">❌</div>
+                                <span class="struggle-num">HURDLE 04</span>
+                            </div>
+                            <h3 class="struggle-card-title">Medical German (Pflege-Deutsch)</h3>
+                            <p class="struggle-card-desc">
+                                Standard textbook German doesn't cover clinical terminology, patient handover reports, and hospital slang.
+                            </p>
                         </div>
-                        <h3 class="struggle-card-title">Medical German (Pflege-Deutsch)</h3>
-                        <p class="struggle-card-desc">
-                            Standard textbook German doesn't cover clinical terminology, patient handover reports, and hospital slang.
-                        </p>
-                    </div>
 
-                    <!-- Hurdle 5 -->
-                    <div class="struggle-card">
-                        <div class="struggle-card-top">
-                            <div class="struggle-icon-box">❌</div>
-                            <span class="struggle-num">HURDLE 05</span>
+                        <!-- Hurdle 5 -->
+                        <div class="struggle-card apple-slide-card">
+                            <div class="struggle-card-top">
+                                <div class="struggle-icon-box">❌</div>
+                                <span class="struggle-num">HURDLE 05</span>
+                            </div>
+                            <h3 class="struggle-card-title">Hospital Interviews</h3>
+                            <p class="struggle-card-desc">
+                                Unprepared for German interview etiquette, clinical scenario questions, and hospital director expectations.
+                            </p>
                         </div>
-                        <h3 class="struggle-card-title">Hospital Interviews</h3>
-                        <p class="struggle-card-desc">
-                            Unprepared for German interview etiquette, clinical scenario questions, and hospital director expectations.
-                        </p>
-                    </div>
 
-                    <!-- Hurdle 6 -->
-                    <div class="struggle-card">
-                        <div class="struggle-card-top">
-                            <div class="struggle-icon-box">❌</div>
-                            <span class="struggle-num">HURDLE 06</span>
+                        <!-- Hurdle 6 -->
+                        <div class="struggle-card apple-slide-card">
+                            <div class="struggle-card-top">
+                                <div class="struggle-icon-box">❌</div>
+                                <span class="struggle-num">HURDLE 06</span>
+                            </div>
+                            <h3 class="struggle-card-title">Documentation &amp; Anerkennung</h3>
+                            <p class="struggle-card-desc">
+                                Getting stuck in months of bureaucracy during qualification recognition and visa paperwork.
+                            </p>
                         </div>
-                        <h3 class="struggle-card-title">Documentation & Anerkennung</h3>
-                        <p class="struggle-card-desc">
-                            Getting stuck in months of bureaucracy during qualification recognition and visa paperwork.
-                        </p>
                     </div>
+                </div>
+
+                <!-- Apple Pagination Indicator & Drag Hint -->
+                <div class="apple-carousel-pagination">
+                    <div class="apple-dots-group" id="hurdles-carousel-dots">
+                        <button class="apple-dot active" data-index="0" aria-label="Go to hurdle 1"></button>
+                        <button class="apple-dot" data-index="1" aria-label="Go to hurdle 2"></button>
+                        <button class="apple-dot" data-index="2" aria-label="Go to hurdle 3"></button>
+                        <button class="apple-dot" data-index="3" aria-label="Go to hurdle 4"></button>
+                        <button class="apple-dot" data-index="4" aria-label="Go to hurdle 5"></button>
+                        <button class="apple-dot" data-index="5" aria-label="Go to hurdle 6"></button>
+                    </div>
+                    <span class="apple-scroll-hint">Swipe or drag to explore ↔</span>
                 </div>
 
                 <!-- Bottom Highlight Bar -->
@@ -499,94 +575,126 @@
             </div>
         </section>
 
-        <!-- FOLD 5: THE SOLUTION (Meet Voluble) -->
+        <!-- FOLD 5: THE SOLUTION (Meet Voluble - Apple-Style Horizontal Sliding Carousel) -->
         <section id="solution" class="section solution-section">
             <div class="section-container solution-container">
                 
-                <div class="solution-header-box text-center">
-                    <div class="section-tag-wrapper">
-                        <span class="section-badge bg-teal solution-badge">The Solution</span>
+                <div class="voluble-platform-header-row" style="display: flex; align-items: flex-end; justify-content: space-between; width: 100%; gap: 2rem; margin-bottom: 0.5rem;">
+                    <div class="solution-header-box" style="text-align: left;">
+                        <div class="section-tag-wrapper">
+                            <span class="section-badge bg-teal solution-badge">The Solution</span>
+                        </div>
+                        <h2 class="serif-title section-title solution-title">
+                            Meet Voluble.
+                        </h2>
+                        <div class="solution-tagline-badge" style="margin-top: 0.5rem;">
+                            <span>⚡ One Platform. Every Step to Germany.</span>
+                        </div>
                     </div>
-                    <h2 class="serif-title section-title solution-title text-center">
-                        Meet Voluble.
-                    </h2>
-                    <div class="solution-tagline-badge">
-                        <span>⚡ One Platform. Every Step to Germany.</span>
+
+                    <!-- Apple Floating Navigation Arrows -->
+                    <div class="apple-carousel-controls">
+                        <button class="apple-carousel-btn prev-btn" id="nurse-sol-prev" aria-label="Previous module">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M15 18l-6-6 6-6"/>
+                            </svg>
+                        </button>
+                        <button class="apple-carousel-btn next-btn" id="nurse-sol-next" aria-label="Next module">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 18l6-6-6-6"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
 
-                <div class="solution-cards-grid">
-                    <!-- Solution Card 1 -->
-                    <div class="solution-card feature-card-1">
-                        <div class="solution-card-top">
-                            <div class="solution-icon-box icon-teal">📚</div>
-                            <span class="solution-module-tag">MODULE 01</span>
+                <!-- Apple Sliding Cards Track -->
+                <div class="apple-carousel-wrapper">
+                    <div class="apple-carousel-track" id="nurse-sol-track">
+                        <!-- Solution Card 1 -->
+                        <div class="solution-card feature-card-1 apple-slide-card">
+                            <div class="solution-card-top">
+                                <div class="solution-icon-box icon-teal">📚</div>
+                                <span class="solution-module-tag">MODULE 01</span>
+                            </div>
+                            <h3 class="solution-card-title">German from A1–B2</h3>
+                            <p class="solution-card-desc">
+                                Structured language modules designed specifically for Indian healthcare professionals. Learn flexibly at your own pace around hospital shifts.
+                            </p>
                         </div>
-                        <h3 class="solution-card-title">German from A1–B2</h3>
-                        <p class="solution-card-desc">
-                            Structured language modules designed specifically for Indian healthcare professionals. Learn flexibly at your own pace around hospital shifts.
-                        </p>
-                    </div>
 
-                    <!-- Solution Card 2 -->
-                    <div class="solution-card feature-card-2">
-                        <div class="solution-card-top">
-                            <div class="solution-icon-box icon-amber">📝</div>
-                            <span class="solution-module-tag">MODULE 02</span>
+                        <!-- Solution Card 2 -->
+                        <div class="solution-card feature-card-2 apple-slide-card">
+                            <div class="solution-card-top">
+                                <div class="solution-icon-box icon-amber">📝</div>
+                                <span class="solution-module-tag">MODULE 02</span>
+                            </div>
+                            <h3 class="solution-card-title">Goethe / TELC Exam Prep</h3>
+                            <p class="solution-card-desc">
+                                Targeted strategy guides, past question pattern practice, and realistic mock exams to guarantee you clear official German exams on attempt #1.
+                            </p>
                         </div>
-                        <h3 class="solution-card-title">Goethe / TELC Exam Prep</h3>
-                        <p class="solution-card-desc">
-                            Targeted strategy guides, past question pattern practice, and realistic mock exams to guarantee you clear official German exams on attempt #1.
-                        </p>
-                    </div>
 
-                    <!-- Solution Card 3 -->
-                    <div class="solution-card feature-card-3">
-                        <div class="solution-card-top">
-                            <div class="solution-icon-box icon-indigo">🗣️</div>
-                            <span class="solution-module-tag">MODULE 03</span>
+                        <!-- Solution Card 3 -->
+                        <div class="solution-card feature-card-3 apple-slide-card">
+                            <div class="solution-card-top">
+                                <div class="solution-icon-box icon-indigo">🗣️</div>
+                                <span class="solution-module-tag">MODULE 03</span>
+                            </div>
+                            <h3 class="solution-card-title">AI Speaking Practice</h3>
+                            <p class="solution-card-desc">
+                                Practice real spoken German 24/7 with our AI speech trainer. Get instant feedback on pronunciation, clinical vocabulary, and grammar without any fear.
+                            </p>
                         </div>
-                        <h3 class="solution-card-title">AI Speaking Practice</h3>
-                        <p class="solution-card-desc">
-                            Practice real spoken German 24/7 with our AI speech trainer. Get instant feedback on pronunciation, clinical vocabulary, and grammar without any fear.
-                        </p>
-                    </div>
 
-                    <!-- Solution Card 4 -->
-                    <div class="solution-card feature-card-4">
-                        <div class="solution-card-top">
-                            <div class="solution-icon-box icon-rose">🏥</div>
-                            <span class="solution-module-tag">MODULE 04</span>
+                        <!-- Solution Card 4 -->
+                        <div class="solution-card feature-card-4 apple-slide-card">
+                            <div class="solution-card-top">
+                                <div class="solution-icon-box icon-rose">🏥</div>
+                                <span class="solution-module-tag">MODULE 04</span>
+                            </div>
+                            <h3 class="solution-card-title">Medical German (Pflege-Deutsch)</h3>
+                            <p class="solution-card-desc">
+                                Master specialized clinical vocabulary, patient handover protocols, doctor-nurse dialogue, and ward documentation.
+                            </p>
                         </div>
-                        <h3 class="solution-card-title">Medical German (Pflege-Deutsch)</h3>
-                        <p class="solution-card-desc">
-                            Master specialized clinical vocabulary, patient handover protocols, doctor-nurse dialogue, and ward documentation.
-                        </p>
-                    </div>
 
-                    <!-- Solution Card 5 -->
-                    <div class="solution-card feature-card-5">
-                        <div class="solution-card-top">
-                            <div class="solution-icon-box icon-purple">🎤</div>
-                            <span class="solution-module-tag">MODULE 05</span>
+                        <!-- Solution Card 5 -->
+                        <div class="solution-card feature-card-5 apple-slide-card">
+                            <div class="solution-card-top">
+                                <div class="solution-icon-box icon-purple">🎤</div>
+                                <span class="solution-module-tag">MODULE 05</span>
+                            </div>
+                            <h3 class="solution-card-title">Hospital Interview Coaching</h3>
+                            <p class="solution-card-desc">
+                                Mock interviews and response frameworks customized for German hospital nursing directors and healthcare recruiters.
+                            </p>
                         </div>
-                        <h3 class="solution-card-title">Hospital Interview Coaching</h3>
-                        <p class="solution-card-desc">
-                            Mock interviews and response frameworks customized for German hospital nursing directors and healthcare recruiters.
-                        </p>
-                    </div>
 
-                    <!-- Solution Card 6 -->
-                    <div class="solution-card feature-card-6">
-                        <div class="solution-card-top">
-                            <div class="solution-icon-box icon-emerald">🤖</div>
-                            <span class="solution-module-tag">MODULE 06</span>
+                        <!-- Solution Card 6 -->
+                        <div class="solution-card feature-card-6 apple-slide-card">
+                            <div class="solution-card-top">
+                                <div class="solution-icon-box icon-emerald">🤖</div>
+                                <span class="solution-module-tag">MODULE 06</span>
+                            </div>
+                            <h3 class="solution-card-title">Germany Copilot</h3>
+                            <p class="solution-card-desc">
+                                Your 24/7 assistant guiding you step-by-step through qualification recognition (Anerkennung), document verification, and visa steps.
+                            </p>
                         </div>
-                        <h3 class="solution-card-title">Germany Copilot</h3>
-                        <p class="solution-card-desc">
-                            Your 24/7 assistant guiding you step-by-step through qualification recognition (Anerkennung), document verification, and visa steps.
-                        </p>
                     </div>
+                </div>
+
+                <!-- Apple Pagination Indicator & Drag Hint -->
+                <div class="apple-carousel-pagination">
+                    <div class="apple-dots-group" id="nurse-sol-dots">
+                        <button class="apple-dot active" data-index="0" aria-label="Go to module 1"></button>
+                        <button class="apple-dot" data-index="1" aria-label="Go to module 2"></button>
+                        <button class="apple-dot" data-index="2" aria-label="Go to module 3"></button>
+                        <button class="apple-dot" data-index="3" aria-label="Go to module 4"></button>
+                        <button class="apple-dot" data-index="4" aria-label="Go to module 5"></button>
+                        <button class="apple-dot" data-index="5" aria-label="Go to module 6"></button>
+                    </div>
+                    <span class="apple-scroll-hint">Swipe or drag to explore ↔</span>
                 </div>
 
                 <!-- Bottom Summary Tag -->
@@ -597,7 +705,6 @@
                     <span class="pill-dot">•</span>
                     <span class="pill-item highlight-pill">Move to Germany 🇩🇪</span>
                 </div>
-
 
             </div>
         </section>

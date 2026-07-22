@@ -131,13 +131,6 @@
     box-shadow: 0 8px 20px rgba(8,138,153,0.1);
 }
 
-.pill-flag-icon {
-    width: 18px;
-    height: 12px;
-    border-radius: 2px;
-    object-fit: cover;
-}
-
 .std-hero-cta-cluster {
     display: flex;
     flex-direction: column;
@@ -286,7 +279,7 @@
     color: #7dd3fc; font-weight: 700; font-size: 0.9rem; white-space: nowrap;
 }
 
-/* ---- FOLD 3: THE ROADMAP (Horizontal Phased Matrix) --------- */
+/* ---- FOLD 3: THE ROADMAP (Apple-Style Horizontal Sliding Carousel) */
 .roadmap-section {
     background-color: #FDF5EE;
     padding: 6rem 1.5rem;
@@ -300,106 +293,67 @@
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+}
+
+.roadmap-header-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
     width: 100%;
+    gap: 2rem;
 }
 
 .roadmap-header-box {
     max-width: 780px;
-    margin: 0 auto;
-}
-
-.roadmap-phase-block {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(10px);
-    border: 1.5px solid rgba(2, 59, 89, 0.08);
-    border-radius: 24px;
-    padding: 1.85rem;
-    box-shadow: 0 10px 30px rgba(2, 59, 89, 0.04);
-    width: 100%;
-}
-
-.phase-header {
-    display: flex;
-    align-items: center;
-    gap: 0.85rem;
-    margin-bottom: 0.5rem;
+    text-align: left;
 }
 
 .phase-badge {
-    font-size: 0.78rem;
+    font-size: 0.72rem;
     font-weight: 800;
     letter-spacing: 0.06em;
-    padding: 0.35rem 0.85rem;
+    padding: 0.25rem 0.75rem;
     border-radius: 100px;
     text-transform: uppercase;
 }
 
-.phase-1-badge {
-    background-color: #E6F6F7;
-    color: #088A99;
-}
+.phase-1-badge { background-color: #E6F6F7; color: #088A99; }
+.phase-2-badge { background-color: #FEF3C7; color: #B45309; }
+.phase-3-badge { background-color: #E0F2FE; color: #0284C7; }
 
-.phase-2-badge {
-    background-color: #FEF3C7;
-    color: #B45309;
-}
-
-.phase-3-badge {
-    background-color: #E0F2FE;
-    color: #0284C7;
-}
-
-.phase-title {
-    font-family: var(--font-serif);
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: #023B59;
-}
-
-.roadmap-horizontal-grid {
-    display: grid;
-    gap: 1.15rem;
-    width: 100%;
-}
-
-.cols-6 {
-    grid-template-columns: repeat(6, 1fr);
-}
-
-.cols-3 {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.cols-2 {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.roadmap-horizontal-card {
+/* Sliding Track & Cards */
+.roadmap-horizontal-card.apple-slide-card {
+    flex: 0 0 320px;
+    min-width: 290px;
+    scroll-snap-align: start;
     background: #FFFFFF;
     border: 1.5px solid rgba(2, 59, 89, 0.09);
-    border-radius: 18px;
-    padding: 1.25rem 1.1rem;
+    border-radius: 24px;
+    padding: 1.75rem 1.4rem;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 14px rgba(2, 59, 89, 0.03);
-    transition: all var(--transition-normal);
-    position: relative;
+    gap: 1rem;
+    box-shadow: 0 8px 24px rgba(2, 59, 89, 0.04);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
 }
 
-.roadmap-horizontal-card:hover {
-    transform: translateY(-4px);
+.roadmap-horizontal-card.apple-slide-card:hover {
+    transform: translateY(-8px) scale(1.015);
     border-color: #088A99;
-    box-shadow: 0 14px 28px rgba(8, 138, 153, 0.12);
+    box-shadow: 0 20px 40px rgba(8, 138, 153, 0.12);
 }
 
 .card-top-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 0.75rem;
+    width: 100%;
+}
+
+.card-icon-line {
+    display: flex;
+    align-items: center;
+    margin-top: 0.25rem;
 }
 
 .step-badge {
@@ -407,80 +361,63 @@
     font-weight: 800;
     color: #023B59;
     background: rgba(2, 59, 89, 0.08);
-    padding: 0.2rem 0.55rem;
+    padding: 0.2rem 0.6rem;
     border-radius: 100px;
 }
 
 .step-icon-emoji {
-    font-size: 1.35rem;
-}
-
-.card-flag-icon {
-    width: 22px;
-    height: 15px;
-    border-radius: 3px;
-    object-fit: cover;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    font-size: 1.75rem;
 }
 
 .step-card-title {
-    font-size: 0.98rem;
+    font-size: 1.08rem;
     font-weight: 700;
     color: #1E293B;
-    margin-bottom: 0.35rem;
+    margin: 0;
     line-height: 1.35;
 }
 
 .step-card-desc {
-    font-size: 0.82rem;
+    font-size: 0.88rem;
     color: #64748B;
-    line-height: 1.5;
+    line-height: 1.55;
     margin: 0;
 }
 
-/* Bottom Summary Callout Box - Full Width with no leftover empty space */
 .roadmap-conclusion-box {
-    background: linear-gradient(135deg, #023B59 0%, #012437 100%);
+    background: #023B59;
     border-radius: 24px;
-    padding: 2.5rem 3rem;
+    padding: 2.25rem 2rem;
     text-align: center;
     color: #FFFFFF;
-    box-shadow: 0 16px 40px rgba(2, 59, 89, 0.2);
-    width: 100%;
-    margin-top: 0.5rem;
+    box-shadow: 0 14px 32px rgba(2, 59, 89, 0.15);
+    margin-top: 1rem;
 }
 
 .conclusion-lead {
-    font-size: 1.15rem;
-    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 0.4rem;
 }
 
 .conclusion-highlight {
     font-family: var(--font-serif);
-    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
     color: #FFFFFF;
     font-weight: 800;
     margin: 0;
 }
 
-/* Responsive breakdown for Roadmap Grid */
-@media (max-width: 1024px) {
-    .cols-6 { grid-template-columns: repeat(3, 1fr); }
-    .cols-3 { grid-template-columns: repeat(3, 1fr); }
-    .cols-2 { grid-template-columns: repeat(2, 1fr); }
-    .roadmap-conclusion-box { padding: 2rem 1.5rem; }
-}
-
 @media (max-width: 768px) {
-    .cols-6 { grid-template-columns: repeat(2, 1fr); }
-    .cols-3 { grid-template-columns: repeat(1, 1fr); }
-    .cols-2 { grid-template-columns: repeat(1, 1fr); }
-    .roadmap-phase-block { padding: 1.25rem; }
-}
-
-@media (max-width: 480px) {
-    .cols-6 { grid-template-columns: 1fr; }
+    .roadmap-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .roadmap-horizontal-card.apple-slide-card {
+        flex: 0 0 82vw;
+        min-width: 260px;
+    }
 }
 
 /* ---- FOLD 4: THE GAP -------------------------------------- */
@@ -516,13 +453,6 @@
     transition: var(--transition-normal);
     font-size: 0.95rem; font-weight: 600;
     color: #1e293b; line-height: 1.45;
-}
-
-.check-flag-icon {
-    width: 18px;
-    height: 12px;
-    border-radius: 2px;
-    object-fit: cover;
 }
 
 .std-check-item:hover {
@@ -584,6 +514,12 @@
     box-shadow: 0 6px 20px rgba(2,59,89,0.04);
     transition: var(--transition-normal);
     position: relative; overflow: hidden;
+}
+
+.std-feature-card.apple-slide-card {
+    flex: 0 0 calc(33.333% - 1rem);
+    min-width: 310px;
+    scroll-snap-align: start;
 }
 
 .std-feature-card::before {
@@ -692,6 +628,12 @@
     display: flex; flex-direction: column; gap: 0.75rem;
     transition: var(--transition-normal);
     backdrop-filter: blur(8px);
+}
+
+.std-after-card.apple-slide-card {
+    flex: 0 0 calc(25% - 1rem);
+    min-width: 270px;
+    scroll-snap-align: start;
 }
 
 .std-after-card:hover {

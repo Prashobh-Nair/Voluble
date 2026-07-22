@@ -462,4 +462,465 @@ document.addEventListener('DOMContentLoaded', () => {
             spotlightStatus.textContent = '✨ Fluent, natural & confident leader';
         });
     }
+
+    // ==========================================
+    // APPLE-STYLE SLIDING CAROUSEL ENGINE
+    // ==========================================
+    const appleTrack = document.getElementById('apple-carousel-track');
+    const applePrevBtn = document.getElementById('apple-carousel-prev');
+    const appleNextBtn = document.getElementById('apple-carousel-next');
+    const appleDots = document.querySelectorAll('.apple-dot');
+
+    if (appleTrack) {
+        const updateAppleControls = () => {
+            const maxScroll = appleTrack.scrollWidth - appleTrack.clientWidth;
+            if (applePrevBtn) applePrevBtn.disabled = appleTrack.scrollLeft <= 5;
+            if (appleNextBtn) appleNextBtn.disabled = appleTrack.scrollLeft >= maxScroll - 5;
+
+            // Sync active dot
+            if (maxScroll > 0) {
+                const scrollRatio = appleTrack.scrollLeft / maxScroll;
+                const activeIndex = Math.min(
+                    appleDots.length - 1,
+                    Math.round(scrollRatio * (appleDots.length - 1))
+                );
+
+                appleDots.forEach((dot, idx) => {
+                    if (idx === activeIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+        };
+
+        // Arrow Button Clicks
+        if (applePrevBtn) {
+            applePrevBtn.addEventListener('click', () => {
+                const firstCard = appleTrack.querySelector('.apple-slide-card');
+                const scrollAmount = firstCard ? firstCard.offsetWidth + 24 : 340;
+                appleTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+        }
+
+        if (appleNextBtn) {
+            appleNextBtn.addEventListener('click', () => {
+                const firstCard = appleTrack.querySelector('.apple-slide-card');
+                const scrollAmount = firstCard ? firstCard.offsetWidth + 24 : 340;
+                appleTrack.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+        }
+
+        // Dot Navigation Clicks
+        appleDots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+                const cards = appleTrack.querySelectorAll('.apple-slide-card');
+                if (cards[idx]) {
+                    cards[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+                }
+            });
+        });
+
+        // Mouse Drag Interaction (Apple-like desktop dragging)
+        let isDragging = false;
+        let startX = 0;
+        let startScrollLeft = 0;
+
+        appleTrack.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            appleTrack.classList.add('is-dragging');
+            startX = e.pageX - appleTrack.offsetLeft;
+            startScrollLeft = appleTrack.scrollLeft;
+        });
+
+        appleTrack.addEventListener('mouseleave', () => {
+            isDragging = false;
+            appleTrack.classList.remove('is-dragging');
+        });
+
+        appleTrack.addEventListener('mouseup', () => {
+            isDragging = false;
+            appleTrack.classList.remove('is-dragging');
+        });
+
+        appleTrack.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            const x = e.pageX - appleTrack.offsetLeft;
+            const walk = (x - startX) * 1.6;
+            appleTrack.scrollLeft = startScrollLeft - walk;
+        });
+
+        appleTrack.addEventListener('scroll', updateAppleControls);
+        window.addEventListener('resize', updateAppleControls);
+        updateAppleControls();
+    }
+
+    // ==========================================
+    // ROADMAP CAROUSEL ENGINE (Germany Students)
+    // ==========================================
+    const rmapTrack = document.getElementById('roadmap-carousel-track');
+    const rmapPrevBtn = document.getElementById('roadmap-carousel-prev');
+    const rmapNextBtn = document.getElementById('roadmap-carousel-next');
+    const rmapDots = document.querySelectorAll('#roadmap-carousel-dots .apple-dot');
+
+    if (rmapTrack) {
+        const updateRmapControls = () => {
+            const maxScroll = rmapTrack.scrollWidth - rmapTrack.clientWidth;
+            if (rmapPrevBtn) rmapPrevBtn.disabled = rmapTrack.scrollLeft <= 5;
+            if (rmapNextBtn) rmapNextBtn.disabled = rmapTrack.scrollLeft >= maxScroll - 5;
+
+            if (maxScroll > 0 && rmapDots.length > 0) {
+                const scrollRatio = rmapTrack.scrollLeft / maxScroll;
+                const activeIndex = Math.min(
+                    rmapDots.length - 1,
+                    Math.round(scrollRatio * (rmapDots.length - 1))
+                );
+
+                rmapDots.forEach((dot, idx) => {
+                    if (idx === activeIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+        };
+
+        if (rmapPrevBtn) {
+            rmapPrevBtn.addEventListener('click', () => {
+                const firstCard = rmapTrack.querySelector('.apple-slide-card');
+                const scrollAmount = firstCard ? firstCard.offsetWidth + 24 : 320;
+                rmapTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+        }
+
+        if (rmapNextBtn) {
+            rmapNextBtn.addEventListener('click', () => {
+                const firstCard = rmapTrack.querySelector('.apple-slide-card');
+                const scrollAmount = firstCard ? firstCard.offsetWidth + 24 : 320;
+                rmapTrack.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+        }
+
+        rmapDots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+                const cards = rmapTrack.querySelectorAll('.apple-slide-card');
+                if (cards[idx]) {
+                    cards[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+                }
+            });
+        });
+
+        let isDraggingRmap = false;
+        let startXRmap = 0;
+        let startScrollLeftRmap = 0;
+
+        rmapTrack.addEventListener('mousedown', (e) => {
+            isDraggingRmap = true;
+            rmapTrack.classList.add('is-dragging');
+            startXRmap = e.pageX - rmapTrack.offsetLeft;
+            startScrollLeftRmap = rmapTrack.scrollLeft;
+        });
+
+        rmapTrack.addEventListener('mouseleave', () => {
+            isDraggingRmap = false;
+            rmapTrack.classList.remove('is-dragging');
+        });
+
+        rmapTrack.addEventListener('mouseup', () => {
+            isDraggingRmap = false;
+            rmapTrack.classList.remove('is-dragging');
+        });
+
+        rmapTrack.addEventListener('mousemove', (e) => {
+            if (!isDraggingRmap) return;
+            e.preventDefault();
+            const x = e.pageX - rmapTrack.offsetLeft;
+            const walk = (x - startXRmap) * 1.6;
+            rmapTrack.scrollLeft = startScrollLeftRmap - walk;
+        });
+
+        rmapTrack.addEventListener('scroll', updateRmapControls);
+        window.addEventListener('resize', updateRmapControls);
+        updateRmapControls();
+    }
+
+    // ==========================================
+    // NURSE ROADMAP CAROUSEL ENGINE (Germany Nurses)
+    // ==========================================
+    const nurseTrack = document.getElementById('nurse-roadmap-track');
+    const nursePrevBtn = document.getElementById('nurse-roadmap-prev');
+    const nurseNextBtn = document.getElementById('nurse-roadmap-next');
+    const nurseDots = document.querySelectorAll('#nurse-roadmap-dots .apple-dot');
+
+    if (nurseTrack) {
+        const updateNurseControls = () => {
+            const maxScroll = nurseTrack.scrollWidth - nurseTrack.clientWidth;
+            if (nursePrevBtn) nursePrevBtn.disabled = nurseTrack.scrollLeft <= 5;
+            if (nurseNextBtn) nurseNextBtn.disabled = nurseTrack.scrollLeft >= maxScroll - 5;
+
+            if (maxScroll > 0 && nurseDots.length > 0) {
+                const scrollRatio = nurseTrack.scrollLeft / maxScroll;
+                const activeIndex = Math.min(
+                    nurseDots.length - 1,
+                    Math.round(scrollRatio * (nurseDots.length - 1))
+                );
+
+                nurseDots.forEach((dot, idx) => {
+                    if (idx === activeIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+        };
+
+        if (nursePrevBtn) {
+            nursePrevBtn.addEventListener('click', () => {
+                const firstCard = nurseTrack.querySelector('.apple-slide-card');
+                const scrollAmount = firstCard ? firstCard.offsetWidth + 24 : 320;
+                nurseTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+        }
+
+        if (nurseNextBtn) {
+            nurseNextBtn.addEventListener('click', () => {
+                const firstCard = nurseTrack.querySelector('.apple-slide-card');
+                const scrollAmount = firstCard ? firstCard.offsetWidth + 24 : 320;
+                nurseTrack.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+        }
+
+        nurseDots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+                const cards = nurseTrack.querySelectorAll('.apple-slide-card');
+                if (cards[idx]) {
+                    cards[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+                }
+            });
+        });
+
+        let isDraggingNurse = false;
+        let startXNurse = 0;
+        let startScrollLeftNurse = 0;
+
+        nurseTrack.addEventListener('mousedown', (e) => {
+            isDraggingNurse = true;
+            nurseTrack.classList.add('is-dragging');
+            startXNurse = e.pageX - nurseTrack.offsetLeft;
+            startScrollLeftNurse = nurseTrack.scrollLeft;
+        });
+
+        nurseTrack.addEventListener('mouseleave', () => {
+            isDraggingNurse = false;
+            nurseTrack.classList.remove('is-dragging');
+        });
+
+        nurseTrack.addEventListener('mouseup', () => {
+            isDraggingNurse = false;
+            nurseTrack.classList.remove('is-dragging');
+        });
+
+        nurseTrack.addEventListener('mousemove', (e) => {
+            if (!isDraggingNurse) return;
+            e.preventDefault();
+            const x = e.pageX - nurseTrack.offsetLeft;
+            const walk = (x - startXNurse) * 1.6;
+            nurseTrack.scrollLeft = startScrollLeftNurse - walk;
+        });
+
+        nurseTrack.addEventListener('scroll', updateNurseControls);
+        window.addEventListener('resize', updateNurseControls);
+        updateNurseControls();
+    }
+
+    // ==========================================
+    // HURDLES CAROUSEL ENGINE (Germany Nurses Fold 4)
+    // ==========================================
+    const hurdlesTrack = document.getElementById('hurdles-carousel-track');
+    const hurdlesPrevBtn = document.getElementById('hurdles-carousel-prev');
+    const hurdlesNextBtn = document.getElementById('hurdles-carousel-next');
+    const hurdlesDots = document.querySelectorAll('#hurdles-carousel-dots .apple-dot');
+
+    if (hurdlesTrack) {
+        const updateHurdlesControls = () => {
+            const maxScroll = hurdlesTrack.scrollWidth - hurdlesTrack.clientWidth;
+            if (hurdlesPrevBtn) hurdlesPrevBtn.disabled = hurdlesTrack.scrollLeft <= 5;
+            if (hurdlesNextBtn) hurdlesNextBtn.disabled = hurdlesTrack.scrollLeft >= maxScroll - 5;
+
+            if (maxScroll > 0 && hurdlesDots.length > 0) {
+                const scrollRatio = hurdlesTrack.scrollLeft / maxScroll;
+                const activeIndex = Math.min(
+                    hurdlesDots.length - 1,
+                    Math.round(scrollRatio * (hurdlesDots.length - 1))
+                );
+
+                hurdlesDots.forEach((dot, idx) => {
+                    if (idx === activeIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+        };
+
+        if (hurdlesPrevBtn) {
+            hurdlesPrevBtn.addEventListener('click', () => {
+                const firstCard = hurdlesTrack.querySelector('.apple-slide-card');
+                const scrollAmount = firstCard ? firstCard.offsetWidth + 24 : 320;
+                hurdlesTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+        }
+
+        if (hurdlesNextBtn) {
+            hurdlesNextBtn.addEventListener('click', () => {
+                const firstCard = hurdlesTrack.querySelector('.apple-slide-card');
+                const scrollAmount = firstCard ? firstCard.offsetWidth + 24 : 320;
+                hurdlesTrack.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+        }
+
+        hurdlesDots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+                const cards = hurdlesTrack.querySelectorAll('.apple-slide-card');
+                if (cards[idx]) {
+                    cards[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+                }
+            });
+        });
+
+        let isDraggingHurdles = false;
+        let startXHurdles = 0;
+        let startScrollLeftHurdles = 0;
+
+        hurdlesTrack.addEventListener('mousedown', (e) => {
+            isDraggingHurdles = true;
+            hurdlesTrack.classList.add('is-dragging');
+            startXHurdles = e.pageX - hurdlesTrack.offsetLeft;
+            startScrollLeftHurdles = hurdlesTrack.scrollLeft;
+        });
+
+        hurdlesTrack.addEventListener('mouseleave', () => {
+            isDraggingHurdles = false;
+            hurdlesTrack.classList.remove('is-dragging');
+        });
+
+        hurdlesTrack.addEventListener('mouseup', () => {
+            isDraggingHurdles = false;
+            hurdlesTrack.classList.remove('is-dragging');
+        });
+
+        hurdlesTrack.addEventListener('mousemove', (e) => {
+            if (!isDraggingHurdles) return;
+            e.preventDefault();
+            const x = e.pageX - hurdlesTrack.offsetLeft;
+            const walk = (x - startXHurdles) * 1.6;
+            hurdlesTrack.scrollLeft = startScrollLeftHurdles - walk;
+        });
+
+        hurdlesTrack.addEventListener('scroll', updateHurdlesControls);
+        window.addEventListener('resize', updateHurdlesControls);
+        updateHurdlesControls();
+    }
+
+    // ==========================================
+    // GENERIC APPLE CAROUSEL INITIALIZER HELPER
+    // ==========================================
+    const initAppleCarousel = (trackId, prevBtnId, nextBtnId, dotsSelector) => {
+        const track = document.getElementById(trackId);
+        const prevBtn = document.getElementById(prevBtnId);
+        const nextBtn = document.getElementById(nextBtnId);
+        const dots = document.querySelectorAll(dotsSelector);
+
+        if (!track) return;
+
+        const updateControls = () => {
+            const maxScroll = track.scrollWidth - track.clientWidth;
+            if (prevBtn) prevBtn.disabled = track.scrollLeft <= 5;
+            if (nextBtn) nextBtn.disabled = track.scrollLeft >= maxScroll - 5;
+
+            if (maxScroll > 0 && dots.length > 0) {
+                const scrollRatio = track.scrollLeft / maxScroll;
+                const activeIndex = Math.min(
+                    dots.length - 1,
+                    Math.round(scrollRatio * (dots.length - 1))
+                );
+
+                dots.forEach((dot, idx) => {
+                    if (idx === activeIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+        };
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                const firstCard = track.querySelector('.apple-slide-card');
+                const scrollAmount = firstCard ? firstCard.offsetWidth + 24 : 320;
+                track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                const firstCard = track.querySelector('.apple-slide-card');
+                const scrollAmount = firstCard ? firstCard.offsetWidth + 24 : 320;
+                track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+        }
+
+        dots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+                const cards = track.querySelectorAll('.apple-slide-card');
+                if (cards[idx]) {
+                    cards[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+                }
+            });
+        });
+
+        let isDragging = false;
+        let startX = 0;
+        let startScrollLeft = 0;
+
+        track.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            track.classList.add('is-dragging');
+            startX = e.pageX - track.offsetLeft;
+            startScrollLeft = track.scrollLeft;
+        });
+
+        track.addEventListener('mouseleave', () => {
+            isDragging = false;
+            track.classList.remove('is-dragging');
+        });
+
+        track.addEventListener('mouseup', () => {
+            isDragging = false;
+            track.classList.remove('is-dragging');
+        });
+
+        track.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            const x = e.pageX - track.offsetLeft;
+            const walk = (x - startX) * 1.6;
+            track.scrollLeft = startScrollLeft - walk;
+        });
+
+        track.addEventListener('scroll', updateControls);
+        window.addEventListener('resize', updateControls);
+        updateControls();
+    };
+
+    // Initialize all solution and after-germany carousels
+    initAppleCarousel('nurse-sol-track', 'nurse-sol-prev', 'nurse-sol-next', '#nurse-sol-dots .apple-dot');
+    initAppleCarousel('student-sol-track', 'student-sol-prev', 'student-sol-next', '#student-sol-dots .apple-dot');
+    initAppleCarousel('student-after-track', 'student-after-prev', 'student-after-next', '#student-after-dots .apple-dot');
 });
