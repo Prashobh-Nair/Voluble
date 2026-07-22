@@ -90,18 +90,42 @@ document.addEventListener('DOMContentLoaded', () => {
                     </svg>
                 `;
 
-                // Prepare waitlist lead data
+                // Determine page type and target sheet tab (English, Nurse, Student)
+                let pageType = 'English';
+                let sourcePage = 'Home Page';
+                
+                const hiddenSheetInput = document.getElementById('sheetNameInput');
+                if (hiddenSheetInput && hiddenSheetInput.value) {
+                    pageType = hiddenSheetInput.value;
+                } else if (document.body.classList.contains('germany-page') || window.location.pathname.includes('germany.html')) {
+                    pageType = 'Nurse';
+                } else if (document.body.classList.contains('germany-students-page') || window.location.pathname.includes('germany-students.html')) {
+                    pageType = 'Student';
+                }
+
+                if (pageType === 'Nurse') {
+                    sourcePage = 'Germany Nurses Page';
+                } else if (pageType === 'Student') {
+                    sourcePage = 'Germany Students Page';
+                }
+
+                // Prepare waitlist lead data with target sheet identifiers
                 const formData = {
                     name: nameInput.value.trim(),
                     countryCode: document.getElementById('countryCode').value,
                     phone: phoneInput.value.trim(),
                     email: emailInput.value.trim(),
+                    sheetName: pageType,
+                    sheet: pageType,
+                    pageType: pageType,
+                    tab: pageType,
+                    sourcePage: sourcePage,
                     timestamp: new Date().toISOString()
                 };
 
                 const handleSuccess = () => {
                     // Save lead in localStorage for local browser backup
-                    localStorage.setItem('voluble_waitlist_lead', JSON.stringify(formData));
+                    localStorage.setItem(`voluble_waitlist_${pageType.toLowerCase()}_lead`, JSON.stringify(formData));
 
                     // Show success screen state
                     successMsg.classList.add('active');
@@ -114,13 +138,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Send to Google Sheets if Script Web App URL is configured
                 if (GOOGLE_SHEETS_URL) {
-                    fetch(GOOGLE_SHEETS_URL, {
+                    // Construct URL query parameters so e.parameter.sheetName is populated in Google Apps Script!
+                    const targetUrl = `${GOOGLE_SHEETS_URL}?sheetName=${encodeURIComponent(pageType)}&sheet=${encodeURIComponent(pageType)}&pageType=${encodeURIComponent(pageType)}&tab=${encodeURIComponent(pageType)}&sourcePage=${encodeURIComponent(sourcePage)}`;
+
+                    // Send form encoded body
+                    const urlParams = new URLSearchParams();
+                    for (const key in formData) {
+                        urlParams.append(key, formData[key]);
+                    }
+
+                    fetch(targetUrl, {
                         method: 'POST',
                         mode: 'no-cors',
                         headers: {
-                            'Content-Type': 'text/plain'
+                            'Content-Type': 'application/x-www-form-urlencoded'
                         },
-                        body: JSON.stringify(formData)
+                        body: urlParams.toString()
                     })
                     .then(() => {
                         handleSuccess();
