@@ -131,6 +131,13 @@
     box-shadow: 0 8px 20px rgba(8,138,153,0.1);
 }
 
+.pill-flag-icon {
+    width: 18px;
+    height: 12px;
+    border-radius: 2px;
+    object-fit: cover;
+}
+
 .std-hero-cta-cluster {
     display: flex;
     flex-direction: column;
@@ -292,7 +299,8 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2.5rem;
+    width: 100%;
 }
 
 .roadmap-header-box {
@@ -304,12 +312,13 @@
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(10px);
     border: 1.5px solid rgba(2, 59, 89, 0.08);
     border-radius: 24px;
     padding: 1.85rem;
     box-shadow: 0 10px 30px rgba(2, 59, 89, 0.04);
+    width: 100%;
 }
 
 .phase-header {
@@ -339,8 +348,8 @@
 }
 
 .phase-3-badge {
-    background-color: #DCFCE7;
-    color: #15803D;
+    background-color: #E0F2FE;
+    color: #0284C7;
 }
 
 .phase-title {
@@ -353,6 +362,7 @@
 .roadmap-horizontal-grid {
     display: grid;
     gap: 1.15rem;
+    width: 100%;
 }
 
 .cols-6 {
@@ -385,16 +395,18 @@
     box-shadow: 0 14px 28px rgba(8, 138, 153, 0.12);
 }
 
+/* Brand Teal Highlight Card (Replaced bright green with brand teal) */
 .highlight-step-card {
-    background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
-    border-color: #86EFAC;
+    background: linear-gradient(135deg, #E6F6F7 0%, #FFFFFF 100%);
+    border: 2px solid #088A99;
+    box-shadow: 0 6px 20px rgba(8, 138, 153, 0.1);
 }
 
 .success-step-card {
     background: linear-gradient(135deg, #023B59 0%, #012437 100%);
     color: #FFFFFF;
-    border-color: #088A99;
-    box-shadow: 0 8px 24px rgba(2, 59, 89, 0.2);
+    border: 2px solid #088A99;
+    box-shadow: 0 8px 24px rgba(2, 59, 89, 0.25);
 }
 
 .success-step-card .step-card-title {
@@ -421,18 +433,26 @@
     border-radius: 100px;
 }
 
-.green-step-badge {
-    background: #15803D;
+.teal-step-badge {
+    background: #088A99;
     color: #FFFFFF;
 }
 
-.gold-step-badge {
+.dark-step-badge {
     background: #F59E0B;
     color: #FFFFFF;
 }
 
 .step-icon-emoji {
     font-size: 1.35rem;
+}
+
+.card-flag-icon {
+    width: 22px;
+    height: 15px;
+    border-radius: 3px;
+    object-fit: cover;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
 
 .step-card-title {
@@ -450,24 +470,27 @@
     margin: 0;
 }
 
+/* Bottom Summary Callout Box - Full Width with no leftover empty space */
 .roadmap-conclusion-box {
-    background: #023B59;
-    border-radius: 20px;
-    padding: 2.25rem 2rem;
+    background: linear-gradient(135deg, #023B59 0%, #012437 100%);
+    border-radius: 24px;
+    padding: 2.5rem 3rem;
     text-align: center;
     color: #FFFFFF;
-    box-shadow: 0 14px 32px rgba(2, 59, 89, 0.15);
+    box-shadow: 0 16px 40px rgba(2, 59, 89, 0.2);
+    width: 100%;
+    margin-top: 0.5rem;
 }
 
 .conclusion-lead {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.85);
     margin-bottom: 0.4rem;
 }
 
 .conclusion-highlight {
     font-family: var(--font-serif);
-    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
     color: #FFFFFF;
     font-weight: 800;
     margin: 0;
@@ -478,6 +501,7 @@
     .cols-6 { grid-template-columns: repeat(3, 1fr); }
     .cols-3 { grid-template-columns: repeat(3, 1fr); }
     .cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .roadmap-conclusion-box { padding: 2rem 1.5rem; }
 }
 
 @media (max-width: 768px) {
@@ -524,6 +548,13 @@
     transition: var(--transition-normal);
     font-size: 0.95rem; font-weight: 600;
     color: #1e293b; line-height: 1.45;
+}
+
+.check-flag-icon {
+    width: 18px;
+    height: 12px;
+    border-radius: 2px;
+    object-fit: cover;
 }
 
 .std-check-item:hover {
