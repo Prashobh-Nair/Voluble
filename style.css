@@ -5370,7 +5370,8 @@ img {
 
 .solution-header-box {
     max-width: 800px;
-    margin: 0 auto 3.8rem;
+    margin: 0 auto 2rem;
+    text-align: center;
 }
 
 .solution-badge {
