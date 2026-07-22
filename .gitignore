@@ -1,3 +1,16 @@
 # Exclude raw PDF slides and cropped images
 Landing English .pdf
-images/
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Dev scratch files
+scratch/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
