@@ -946,8 +946,33 @@ document.addEventListener('DOMContentLoaded', () => {
         updateControls();
     };
 
-    // Initialize all solution and after-germany carousels
+    // Initialize all carousels
+    initAppleCarousel('problem-carousel-track', 'problem-carousel-prev', 'problem-carousel-next', '#problem-carousel-dots .apple-dot');
+    initAppleCarousel('apple-carousel-track', 'apple-carousel-prev', 'apple-carousel-next', '#apple-carousel-dots .apple-dot');
+    initAppleCarousel('career-carousel-track', 'career-carousel-prev', 'career-carousel-next', '#career-carousel-dots .apple-dot');
+    initAppleCarousel('progress-carousel-track', 'progress-carousel-prev', 'progress-carousel-next', '#progress-carousel-dots .apple-dot');
     initAppleCarousel('nurse-sol-track', 'nurse-sol-prev', 'nurse-sol-next', '#nurse-sol-dots .apple-dot');
     initAppleCarousel('student-sol-track', 'student-sol-prev', 'student-sol-next', '#student-sol-dots .apple-dot');
     initAppleCarousel('student-after-track', 'student-after-prev', 'student-after-next', '#student-after-dots .apple-dot');
+
+    // FAQ Accordion Interaction
+    const faqButtons = document.querySelectorAll('.faq-question-btn');
+    faqButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            if (item) {
+                const isActive = item.classList.contains('active');
+                
+                // Close all active items for accordion behavior
+                document.querySelectorAll('.faq-item.active').forEach((activeItem) => {
+                    if (activeItem !== item) {
+                        activeItem.classList.remove('active');
+                    }
+                });
+
+                item.classList.toggle('active', !isActive);
+            }
+        });
+    });
 });
+
