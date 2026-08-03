@@ -127,6 +127,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Save lead in localStorage for local browser backup
                     localStorage.setItem(`voluble_waitlist_${pageType.toLowerCase()}_lead`, JSON.stringify(formData));
 
+                    // Send conversion event to Google Analytics 4
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'generate_lead', {
+                            'event_category': 'Waitlist',
+                            'event_label': pageType + ' Signup'
+                        });
+                    }
+
                     // Show success screen state
                     successMsg.classList.add('active');
                     
