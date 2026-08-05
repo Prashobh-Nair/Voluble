@@ -1082,6 +1082,31 @@ img, svg {
   box-shadow: 0 8px 24px rgba(37, 99, 235, 0.25);
 }
 
+.form-submit-btn {
+  background-color: var(--primary) !important;
+  color: #FFFFFF !important;
+  font-family: var(--font-body);
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  padding: 1.1rem 2rem !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3) !important;
+  border: none !important;
+  width: 100% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+}
+
+.form-submit-btn:hover {
+  background-color: #1D4ED8 !important;
+  transform: translateY(-2px) scale(1.005) !important;
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.4) !important;
+}
+
 .fold5-trust-footer {
   margin-top: 1.5rem;
   display: flex;
