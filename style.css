@@ -1874,4 +1874,92 @@ img, svg {
     width: 18px;
     border-radius: 3px;
   }
+
+  /* ── Mobile-First Section Rhythm & Touch Optimization ── */
+  .section-padding {
+    padding: 3rem 0 !important;
+  }
+
+  /* Compact form card on mobile */
+  #application-form-section [style*="padding: 3.5rem 3rem"],
+  #application-form-section [style*="padding: 3.5rem"],
+  .bg-pro-fold-6 [style*="padding: 3.5rem 3rem"] {
+    padding: 2rem 1.25rem !important;
+    border-radius: 1.25rem !important;
+  }
+
+  /* Form 2-col grids stack on mobile */
+  #inlineWaitlistForm [style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Inputs 16px to prevent iOS Safari auto-zoom */
+  .form-input,
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select {
+    font-size: 16px !important;
+    height: 48px !important;
+    padding: 0.75rem 1rem !important;
+    border-radius: 0.75rem !important;
+  }
+
+  /* Mobile pill submit button */
+  .form-submit-btn {
+    height: 52px !important;
+    font-size: 1rem !important;
+    border-radius: 9999px !important;
+  }
+
+  /* Vertical pricing box on mobile */
+  .fold5-pricing-box {
+    flex-direction: column !important;
+    padding: 1.5rem 1.25rem !important;
+    gap: 1.25rem !important;
+    text-align: center !important;
+  }
+
+  .fold5-price-left {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border) !important;
+    padding-right: 0 !important;
+    padding-bottom: 1.25rem !important;
+  }
+
+  .fold5-free-badge {
+    justify-content: center !important;
+    margin: 0.5rem auto 0 auto !important;
+  }
+
+  /* Header capsule on mobile */
+  header {
+    top: 0.5rem !important;
+  }
+
+  .nav-container {
+    width: calc(100% - 1.5rem) !important;
+    max-width: 440px !important;
+    margin: 0 auto !important;
+    padding: 0.45rem 0.6rem 0.45rem 1rem !important;
+    box-shadow: 0 8px 32px rgba(15, 23, 42, 0.12) !important;
+  }
+
+  /* Stack hero CTA buttons on mobile */
+  .hero-cta-group,
+  .hero-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+  }
+
+  .hero-cta-group .btn,
+  .hero-buttons .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
 }
