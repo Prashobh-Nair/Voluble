@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voluble for Students - Speak English with Real Confidence</title>
+  <meta name="description" content="Break free from 12 years of silent English learning. Voluble gives students a safe space to practice speaking daily with AI feedback on grammar, pronunciation, and vocabulary.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Navigation Header (Floating Movable Capsule Taskbar) -->
+  <header class="nav-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m22 2-7 20-4-9-9-4Z"/>
+          <path d="M22 2 11 13"/>
+        </svg>
+        <span>Voluble</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="professionals.html" class="nav-link">Professionals</a></li>
+          <li><a href="career-growth.html" class="nav-link">Career Growth</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta-group">
+        <a href="index.html#application-form-section" class="nav-pill-btn">Start Speaking Free</a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- FOLD 1: Student Hero -->
+  <section class="section-padding bg-main">
+    <div class="container-custom">
+      <div style="max-width: 860px; margin: 0 auto; text-align: center;" class="fade-in-up">
+        <div class="pill-badge">
+          <span class="pill-dot"></span> Student Fluency Track
+        </div>
+
+        <h1 style="font-size: 3.75rem; font-weight: 800; line-height: 1.12; margin-bottom: 1.75rem; letter-spacing: -0.03em;">
+          12 years of English.<br>
+          <span style="color: var(--primary);">Still afraid to speak?</span>
+        </h1>
+
+        <div style="font-size: 1.25rem; color: var(--text-secondary); line-height: 1.7; max-width: 760px; margin: 0 auto 2.5rem auto;">
+          <p style="margin-bottom: 0.75rem;">You studied English in school. You wrote exams in English. You may have even completed college in English.</p>
+          <p style="margin-bottom: 1.25rem; font-weight: 600; color: var(--text-primary);">But when it is time to speak, the words still don’t come out.</p>
+          <p style="font-size: 1.35rem; color: var(--primary); font-weight: 700;">
+            School taught you English as a subject. Voluble teaches you to speak it.
+          </p>
+        </div>
+
+        <div style="display: flex; justify-content: center; gap: 1rem;">
+          <a href="#early-access" class="btn btn-primary btn-lg open-early-access-modal">
+            Start Speaking Free
+            <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOLD 2: Animated Stat -->
+  <section class="section-padding bg-alt">
+    <div class="container-custom">
+      <div style="max-width: 800px; margin: 0 auto; text-align: center; background: #FFFFFF; border: 1px solid var(--border); border-radius: 1.5rem; padding: 3.5rem 2.5rem; box-shadow: var(--shadow-md);" class="fade-in-up">
+        <span style="font-size: 0.875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); display: block; margin-bottom: 1rem;">The Problem Is Bigger Than You Think</span>
+        
+        <div class="stat-number" data-target="42" data-suffix="%">0%</div>
+
+        <p class="stat-label" style="max-width: 580px; margin: 1.25rem auto 0 auto; line-height: 1.6;">
+          of rural Indian youth aged 14–18 could not read a simple sentence in English.
+        </p>
+
+        <p style="font-size: 1rem; color: var(--text-secondary); margin-top: 1rem;">
+          You were taught to memorise grammar and pass exams—not to have real conversations.
+        </p>
+
+        <div class="stat-source">
+          Source: <a href="https://asercentre.org/aser-2023-beyond-basics/" target="_blank" rel="noopener noreferrer">ASER 2023 Beyond Basics Report</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOLD 3 -->
+  <section class="section-padding bg-main">
+    <div class="container-custom">
+      <div class="fold3-wrapper fade-in-up">
+        <div class="fold3-header">
+          <h2 class="fold3-title">
+            You are not bad at English.
+            <span class="highlight-blue">You are under-practised.</span>
+          </h2>
+          <p class="fold3-subtitle">
+            English cannot be learned only by reading and writing.
+          </p>
+        </div>
+
+        <div class="fold3-steps-grid">
+          <div class="step-card">
+            <div class="step-num">1</div>
+            <div class="step-title">You have to speak</div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">2</div>
+            <div class="step-title">Make mistakes</div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">3</div>
+            <div class="step-title">Receive corrections</div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">4</div>
+            <div class="step-title">And speak again</div>
+          </div>
+        </div>
+
+        <div class="fold3-safe-banner">
+          <i data-lucide="shield-check" style="color: var(--primary); width: 24px; height: 24px;"></i>
+          <span>Voluble gives you a safe place to do that every day.</span>
+        </div>
+
+        <div class="comparison-grid-v2">
+          <div class="comp-column school">
+            <div>
+              <div class="comp-header">
+                <span class="comp-badge school">School Method</span>
+                <i data-lucide="book-open" style="color: #64748B;"></i>
+              </div>
+              <h3 class="comp-title school">Passive Learning</h3>
+              <p style="font-size: 0.875rem; color: var(--text-secondary);">Focuses on paper exams and memorization without oral practice.</p>
+
+              <div class="flow-chain">
+                <div class="flow-pill school-pill">Memorise</div>
+                <i data-lucide="chevron-right" class="flow-arrow" style="width: 16px;"></i>
+                <div class="flow-pill school-pill">Grammar</div>
+                <i data-lucide="chevron-right" class="flow-arrow" style="width: 16px;"></i>
+                <div class="flow-pill school-pill">Exams</div>
+              </div>
+            </div>
+
+            <div class="comp-footer school">
+              <i data-lucide="x-circle" style="width: 18px; height: 18px;"></i>
+              Result: Fear of speaking in real conversations
+            </div>
+          </div>
+
+          <div class="comp-column voluble">
+            <div>
+              <div class="comp-header">
+                <span class="comp-badge voluble">Voluble Method</span>
+                <i data-lucide="sparkles" style="color: var(--primary);"></i>
+              </div>
+              <h3 class="comp-title voluble">Active Speaking Practice</h3>
+              <p style="font-size: 0.875rem; color: var(--text-secondary);">Real-time voice practice with instant AI feedback every single day.</p>
+
+              <div class="flow-chain">
+                <div class="flow-pill voluble-pill">Speak</div>
+                <i data-lucide="chevron-right" class="flow-arrow active" style="width: 16px;"></i>
+                <div class="flow-pill voluble-pill">Feedback</div>
+                <i data-lucide="chevron-right" class="flow-arrow active" style="width: 16px;"></i>
+                <div class="flow-pill voluble-pill">Improve</div>
+                <i data-lucide="chevron-right" class="flow-arrow active" style="width: 16px;"></i>
+                <div class="flow-pill voluble-success">Confidence</div>
+              </div>
+            </div>
+
+            <div class="comp-footer voluble">
+              <i data-lucide="check-circle-2" style="width: 18px; height: 18px;"></i>
+              Result: Fluent, natural, workplace-ready English
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOLD 4: 6 Feature Cards -->
+  <section class="section-padding bg-alt">
+    <div class="container-custom">
+      <div style="text-align: center; max-width: 760px; margin: 0 auto 3.5rem auto;" class="fade-in-up">
+        <h2 style="font-size: 2.25rem; font-weight: 800; margin-bottom: 1rem;">Speak for 15 Minutes Every Day</h2>
+        <p style="font-size: 1.125rem; color: var(--text-secondary); line-height: 1.6;">
+          Talk to your personal AI English teacher. Practise real-life conversations. Improve grammar, vocabulary and pronunciation. Receive instant, simple corrections without fear or judgement.
+        </p>
+      </div>
+
+      <div class="card-grid-3">
+        <div class="v-card fade-in-up">
+          <div class="icon-wrapper"><i data-lucide="message-circle"></i></div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Practice Real-Life Conversations</h3>
+          <p style="font-size: 0.9375rem; color: var(--text-secondary);">Simulate conversations with friends, college professors, and everyday social interactions.</p>
+        </div>
+        <div class="v-card fade-in-up">
+          <div class="icon-wrapper"><i data-lucide="bot"></i></div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">AI English Teacher</h3>
+          <p style="font-size: 0.9375rem; color: var(--text-secondary);">Your patient, friendly AI tutor available anytime on your phone or laptop.</p>
+        </div>
+        <div class="v-card fade-in-up">
+          <div class="icon-wrapper"><i data-lucide="check-square"></i></div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Grammar Corrections</h3>
+          <p style="font-size: 0.9375rem; color: var(--text-secondary);">Get subtle, simple sentence rewrites right when you make a mistake.</p>
+        </div>
+        <div class="v-card fade-in-up">
+          <div class="icon-wrapper"><i data-lucide="book-open"></i></div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Vocabulary Improvement</h3>
+          <p style="font-size: 0.9375rem; color: var(--text-secondary);">Replace repeated words with natural, modern English phrases effortlessly.</p>
+        </div>
+        <div class="v-card fade-in-up">
+          <div class="icon-wrapper"><i data-lucide="mic"></i></div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Pronunciation Feedback</h3>
+          <p style="font-size: 0.9375rem; color: var(--text-secondary);">Visual accent and clarity scores so people understand you the first time.</p>
+        </div>
+        <div class="v-card fade-in-up">
+          <div class="icon-wrapper"><i data-lucide="calendar"></i></div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Daily Speaking Practice</h3>
+          <p style="font-size: 0.9375rem; color: var(--text-secondary);">Short 15-minute daily challenges engineered to break speech anxiety forever.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOLD 5 (REDESIGNED) -->
+  <section class="section-padding bg-main">
+    <div class="container-custom">
+      <div class="fold5-card-container fade-in-up">
+        
+        <div class="fold5-badge-bar">
+          <div class="pill-badge" style="margin-bottom: 0;">
+            <span class="pill-dot"></span> Student Early Access Offer
+          </div>
+        </div>
+
+        <div style="text-align: center;">
+          <h2 class="fold5-title">
+            Stop learning English.<br>
+            <span>Start speaking it.</span>
+          </h2>
+
+          <p class="fold5-subtitle">
+            Be among the first learners to experience Voluble.
+          </p>
+        </div>
+
+        <div class="fold5-pricing-box">
+          <div class="fold5-price-left">
+            <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-secondary); letter-spacing: 0.05em; margin-bottom: 0.25rem;">EARLY-ACCESS PRICE</span>
+            <div class="fold5-price-tag">
+              ₹399 <span class="fold5-period">/month</span>
+            </div>
+            <div class="fold5-free-badge">
+              <i data-lucide="gift" style="width: 14px; height: 14px;"></i>
+              Free for the first 100 users
+            </div>
+          </div>
+
+          <div class="fold5-price-right">
+            <ul class="fold5-features-list">
+              <li class="fold5-feature-item">
+                <i data-lucide="check-circle-2" style="color: var(--success); width: 18px; height: 18px;"></i>
+                15-Min Daily AI Speaking Practice
+              </li>
+              <li class="fold5-feature-item">
+                <i data-lucide="check-circle-2" style="color: var(--success); width: 18px; height: 18px;"></i>
+                Instant Grammar & Vocabulary Corrections
+              </li>
+              <li class="fold5-feature-item">
+                <i data-lucide="check-circle-2" style="color: var(--success); width: 18px; height: 18px;"></i>
+                Everyday & Campus Speaking Scenarios
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <a href="#early-access" class="btn btn-primary btn-lg open-early-access-modal fold5-cta-btn">
+            Claim Your Free Early Access
+            <i data-lucide="arrow-right" style="width: 20px; height: 20px;"></i>
+          </a>
+        </div>
+
+        <div class="fold5-trust-footer">
+          <span><i data-lucide="lock" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 0.25rem;"></i> Cancel Anytime</span>
+          <span>•</span>
+          <span><i data-lucide="zap" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 0.25rem;"></i> Instant Access</span>
+          <span>•</span>
+          <span><i data-lucide="shield-check" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 0.25rem;"></i> Safe Speaking Zone</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal-backdrop" id="earlyAccessModal">
+    <div class="modal-content">
+      <button class="close-modal-btn" id="closeModalBtn"><i data-lucide="x"></i></button>
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <h3 style="font-size: 1.5rem; font-weight: 800;">Claim Student Access</h3>
+        <p style="font-size: 0.875rem; color: var(--text-secondary);">Start your 15-minute daily practice today.</p>
+      </div>
+      <form id="waitlistForm">
+        <div class="form-group">
+          <label class="form-label" for="userName">Full Name</label>
+          <input type="text" id="userName" class="form-input" placeholder="e.g. Ananya Roy" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="userEmail">Email Address</label>
+          <input type="email" id="userEmail" class="form-input" placeholder="ananya@example.com" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 1rem;">Get Early Access</button>
+      </form>
+      <div id="formSuccess" style="display: none; text-align: center; padding: 1.5rem 0;">
+        <i data-lucide="check-circle" style="width: 48px; height: 48px; color: var(--success); margin-bottom: 1rem;"></i>
+        <h4 style="font-size: 1.25rem; font-weight: 700;">Spot Reserved!</h4>
+        <p style="font-size: 0.875rem; color: var(--text-secondary);">Check your email shortly for your access code.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container-custom">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Voluble AI, Inc. All rights reserved.</p>
+        <p><a href="index.html" style="color: var(--primary); font-weight: 600;">Return to Homepage</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script class="custom-script">
+    lucide.createIcons();
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>

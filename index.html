@@ -1,1250 +1,525 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voluble - English That Works</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    
-    <!-- Meta tags for SEO -->
-    <meta name="description" content="Practise interviews, workplace conversations and global job scenarios with a personal AI voice coach built for Indian job seekers and professionals.">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-    
-    <!-- Google tag (gtag.js) - Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYB1D7Y1Y0"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-RYB1D7Y1Y0');
-    </script>
-
-    <!-- CSS stylesheet -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voluble - Stop Learning English. Start Speaking It.</title>
+  <meta name="description" content="12 years of English. Still afraid to speak? Voluble gives you a safe place to practice speaking 15 minutes every day with instant AI feedback on grammar, pronunciation, and vocabulary.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <!-- Floating Navigation Header -->
-    <header class="header">
-        <div class="header-container">
-            <a href="index.html" class="logo" id="header-logo">
-                <!-- Inline SVG Paper Plane Logo Icon -->
-                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M22 2L2 8.66667L11.5 12.5L15.3333 22L22 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>
-                    <path d="M11.5 12.5L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>Voluble</span>
+
+  <!-- Navigation Header (Floating Movable Capsule Taskbar) -->
+  <header class="nav-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m22 2-7 20-4-9-9-4Z"/>
+          <path d="M22 2 11 13"/>
+        </svg>
+        <span>Voluble</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="professionals.html" class="nav-link">Professionals</a></li>
+          <li><a href="career-growth.html" class="nav-link">Career Growth</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta-group">
+        <a href="#application-form-section" class="nav-pill-btn">Start Speaking Free</a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==================== FOLD 1: HERO ==================== -->
+  <section class="section-padding bg-fold-1" id="fold-1">
+    <div class="container-custom">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center;">
+        
+        <!-- Fold 1 Content -->
+        <div class="fade-in-up">
+          <div class="pill-badge">
+            <span class="pill-dot"></span> Personal AI English Coach
+          </div>
+
+          <h1 style="font-size: 3.5rem; font-weight: 800; line-height: 1.15; margin-bottom: 1.5rem; letter-spacing: -0.03em;">
+            12 years of English.<br>
+            <span style="color: var(--primary);">Still afraid to speak?</span>
+          </h1>
+
+          <div style="font-size: 1.125rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+            <p style="margin-bottom: 0.5rem;">You studied English in school.</p>
+            <p style="margin-bottom: 0.5rem;">You wrote exams in English.</p>
+            <p style="margin-bottom: 0.75rem;">You may have even completed college in English.</p>
+            <p style="margin-bottom: 1rem; font-weight: 600; color: var(--text-primary);">But when it is time to speak, the words still don’t come out.</p>
+            <p style="font-size: 1.25rem; font-weight: 700; color: var(--primary); margin-top: 1rem;">
+              School taught you English as a subject. Voluble teaches you to speak it.
+            </p>
+          </div>
+
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
+            <a href="#application-form-section" class="btn btn-primary btn-lg">
+              Start Speaking Free
+              <i data-lucide="arrow-down" style="width: 18px; height: 18px;"></i>
             </a>
-            
-            <nav class="nav-links-desktop">
-                <a href="#how-it-works" class="nav-link-item">How It Works</a>
-                <a href="#voice-dna" class="nav-link-item">Voice DNA</a>
-                <a href="#scenarios" class="nav-link-item">Scenarios</a>
-                <a href="#career-paths" class="nav-link-item">Career Paths</a>
-                <a href="#ava" class="nav-link-item">Meet Ava</a>
-                <a href="#faqs" class="nav-link-item">FAQs</a>
-            </nav>
+            <a href="#fold-2" class="btn btn-secondary btn-lg">
+              <i data-lucide="play-circle" style="width: 18px; height: 18px;"></i>
+              See How It Works
+            </a>
+          </div>
 
-            <a href="#waitlist" class="nav-btn">Start Speaking Free</a>
-            <button class="mobile-hamburger" id="mobile-hamburger-btn" aria-label="Open menu">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-                    <line x1="3" y1="6" x2="21" y2="6"/>
-                    <line x1="3" y1="12" x2="21" y2="12"/>
-                    <line x1="3" y1="18" x2="21" y2="18"/>
-                </svg>
-            </button>
+          <div style="display: flex; align-items: center; gap: 1.5rem; color: var(--text-secondary); font-size: 0.875rem;">
+            <div style="display: flex; align-items: center; gap: 0.35rem;">
+              <i data-lucide="check-circle-2" style="color: var(--success); width: 16px; height: 16px;"></i>
+              No Fear or Judgement
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.35rem;">
+              <i data-lucide="check-circle-2" style="color: var(--success); width: 16px; height: 16px;"></i>
+              15 Min Daily Practice
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.35rem;">
+              <i data-lucide="check-circle-2" style="color: var(--success); width: 16px; height: 16px;"></i>
+              Free 100 Slots
+            </div>
+          </div>
         </div>
-    </header>
 
-    <main>
-        <!-- 1. HERO SECTION -->
-        <section id="hero" class="section hero-section hero-fullwidth">
-            <div class="hero-decor-orb hero-decor-orb-1"></div>
-            <div class="hero-decor-orb hero-decor-orb-2"></div>
-
-            <div class="hero-container fullwidth-container">
-                <div class="hero-content hero-card-full">
-                    
-                    <!-- Eyebrow Badge -->
-                    <div class="hero-badge-container">
-                        <div class="hero-badge">
-                            <span class="live-pulse"></span>
-                            <span class="badge-text">ENGLISH THAT WORKS.</span>
-                        </div>
-                    </div>
-
-                    <!-- Main Hero Headline -->
-                    <h1 class="hero-title">
-                        Speak like you’re <span class="highlight-text">ready for the job.</span>
-                    </h1>
-                    
-                    <!-- Lead Statement -->
-                    <p class="hero-lead">
-                        Practise interviews, workplace conversations and global job scenarios with a personal AI voice coach built for Indian job seekers and professionals.
-                    </p>
-
-                    <!-- CTA Actions -->
-                    <div class="hero-actions" style="margin-top: 1rem;">
-                        <a href="#waitlist" class="btn-primary btn-hero-primary">
-                            <span>Start Speaking Free</span>
-                            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 12H19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                                <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                        <a href="#how-it-works" class="btn-secondary" style="padding: 0.85rem 1.6rem; border-radius: 100px; border: 1.5px solid var(--color-brand-teal); font-weight: 700; color: var(--color-brand-teal);">
-                            See How It Works
-                        </a>
-                    </div>
-                    
-                    <p class="hero-subtext" style="margin-top: 0.5rem;">
-                        <span class="subtext-star">✨</span> Private practice. Personal feedback. Available anytime.
-                    </p>
-
-                    <!-- HERO VISUAL: Active Voice Conversation Mockup Card -->
-                    <div class="hero-visual-card">
-                        <div class="ava-visual-header">
-                            <div class="ava-avatar-box">
-                                <span class="ava-avatar-emoji">🎙️</span>
-                                <div>
-                                    <div class="ava-name">Ava — AI Voice Coach</div>
-                                    <div class="ava-status">
-                                        <span class="ava-pulse-dot"></span> Live Rehearsal Room
-                                    </div>
-                                </div>
-                            </div>
-                            <span class="ava-live-badge">Active Session</span>
-                        </div>
-
-                        <div class="ava-dialogue-flow">
-                            <!-- Ava Speech Bubble -->
-                            <div class="dialogue-box ava-bubble">
-                                <div class="speaker-label">Ava</div>
-                                <p class="speaker-text">“Tell me about a project you’re proud of.”</p>
-                            </div>
-
-                            <!-- User Speech & Waveform -->
-                            <div class="dialogue-box user-bubble">
-                                <div class="speaker-label">User (Live Audio)</div>
-                                <div class="voice-waveform-bar">
-                                    <span class="wave-bar wb-1"></span>
-                                    <span class="wave-bar wb-2"></span>
-                                    <span class="wave-bar wb-3"></span>
-                                    <span class="wave-bar wb-4"></span>
-                                    <span class="wave-bar wb-5"></span>
-                                    <span class="wave-bar wb-6"></span>
-                                    <span class="wave-bar wb-7"></span>
-                                </div>
-                                <p class="speaker-text transcript-text">“I led a cross-functional team of 4 engineers to deliver our microservices refactor ahead of deadline...”</p>
-                            </div>
-
-                            <!-- Instant Feedback Card -->
-                            <div class="dialogue-box feedback-bubble">
-                                <div class="feedback-badge-tag">
-                                    <span>⚡ Instant Feedback</span>
-                                </div>
-                                <p class="feedback-text">“Strong opening. Add one measurable result to make your answer more convincing.”</p>
-                            </div>
-                        </div>
-                    </div>
-
+        <!-- Fold 1 Visual Hero Card -->
+        <div class="fade-in-up">
+          <div class="hero-visualizer-card">
+            <!-- Header Bar -->
+            <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 1.25rem; border-bottom: 1px solid var(--border); margin-bottom: 1.5rem;">
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <div style="width: 42px; height: 42px; border-radius: 50%; background: var(--primary-light); display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                  <i data-lucide="bot"></i>
                 </div>
-            </div>
-        </section>
-
-        <!-- 2. THE PROBLEM (Apple-Style Swipe Carousel) -->
-        <section id="problem" class="section job-market-section">
-            <div class="voluble-platform-container">
-                <div class="voluble-platform-header-row">
-                    <div class="voluble-platform-header">
-                        <span class="reality-pill">
-                            <span class="reality-icon">💡</span> The Pressure Gap
-                        </span>
-                        <h2 class="job-market-title">
-                            Your English isn’t the problem.<br><span class="highlight-text">Using it under pressure is.</span>
-                        </h2>
-                        <p class="job-market-lead">
-                            You may understand English perfectly and still freeze during an interview, struggle to explain your work or hesitate in front of a manager. That is because knowing English and using English confidently are two different skills.
-                        </p>
-                    </div>
-
-                    <!-- Apple Floating Navigation Arrows -->
-                    <div class="apple-carousel-controls">
-                        <button class="apple-carousel-btn prev-btn" id="problem-carousel-prev" aria-label="Previous slide">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M15 18l-6-6 6-6"/>
-                            </svg>
-                        </button>
-                        <button class="apple-carousel-btn next-btn" id="problem-carousel-next" aria-label="Next slide">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M9 18l6-6-6-6"/>
-                            </svg>
-                        </button>
-                    </div>
+                <div>
+                  <h4 style="font-size: 1rem; font-weight: 700; margin: 0;">AI Voice Coach Ava</h4>
+                  <span style="font-size: 0.75rem; color: var(--success); font-weight: 600; display: flex; align-items: center; gap: 0.25rem;">
+                    <span style="width: 6px; height: 6px; background-color: var(--success); border-radius: 50%;"></span> Active Speaking Session
+                  </span>
                 </div>
-
-                <!-- Apple Sliding Cards Track -->
-                <div class="apple-carousel-wrapper">
-                    <div class="apple-carousel-track" id="problem-carousel-track">
-                        <!-- Pillar 1 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-amber">
-                                <span class="feature-emoji">💡</span>
-                            </div>
-                            <span class="apple-card-tag">PILLAR 01</span>
-                            <h3 class="feature-card-title">Think while speaking</h3>
-                            <p class="feature-card-desc">
-                                Express complex ideas spontaneously without getting lost mid-sentence.
-                            </p>
-                        </div>
-
-                        <!-- Pillar 2 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-teal">
-                                <span class="feature-emoji">📐</span>
-                            </div>
-                            <span class="apple-card-tag">PILLAR 02</span>
-                            <h3 class="feature-card-title">Structure your answers clearly</h3>
-                            <p class="feature-card-desc">
-                                Deliver logical, persuasive answers using proven professional communication frameworks.
-                            </p>
-                        </div>
-
-                        <!-- Pillar 3 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-indigo">
-                                <span class="feature-emoji">🚀</span>
-                            </div>
-                            <span class="apple-card-tag">PILLAR 03</span>
-                            <h3 class="feature-card-title">Speak without translating</h3>
-                            <p class="feature-card-desc">
-                                Eliminate native language translation delays and speak directly in natural English.
-                            </p>
-                        </div>
-
-                        <!-- Pillar 4 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-rose">
-                                <span class="feature-emoji">🤝</span>
-                            </div>
-                            <span class="apple-card-tag">PILLAR 04</span>
-                            <h3 class="feature-card-title">Handle real workplace calls</h3>
-                            <p class="feature-card-desc">
-                                Navigate spontaneous interview follow-ups, client calls, and team discussions calmly.
-                            </p>
-                        </div>
-
-                        <!-- Pillar 5 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-emerald">
-                                <span class="feature-emoji">💪</span>
-                            </div>
-                            <span class="apple-card-tag">PILLAR 05</span>
-                            <h3 class="feature-card-title">Build confidence through practice</h3>
-                            <p class="feature-card-desc">
-                                Develop muscle memory in a private space where you can make mistakes without risk.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Apple Pagination Indicator & Drag Hint -->
-                <div class="apple-carousel-pagination">
-                    <div class="apple-dots-group" id="problem-carousel-dots">
-                        <button class="apple-dot active" data-index="0" aria-label="Go to slide 1"></button>
-                        <button class="apple-dot" data-index="1" aria-label="Go to slide 2"></button>
-                        <button class="apple-dot" data-index="2" aria-label="Go to slide 3"></button>
-                        <button class="apple-dot" data-index="3" aria-label="Go to slide 4"></button>
-                        <button class="apple-dot" data-index="4" aria-label="Go to slide 5"></button>
-                    </div>
-                    <span class="apple-scroll-hint">Swipe or drag to explore ↔</span>
-                </div>
-
-                <div class="reality-box" style="margin-top: 3rem; text-align: center;">
-                    <div class="reality-box-header" style="justify-content: center;">
-                        <span class="globe-emoji">🚀</span>
-                        <h3 style="font-size: 1.35rem; color: #ffffff; font-weight: 800;">Voluble turns the English you already know into career confidence.</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. HOW VOLUBLE WORKS -->
-        <section id="how-it-works" class="section prep-gap-section">
-            <div class="prep-gap-container">
-                <div class="prep-gap-header">
-                    <span class="prep-gap-pill">
-                        <span class="pill-icon">⚡</span> SIMPLE 3-STEP PROCESS
-                    </span>
-                    <h2 class="prep-gap-title">
-                        Less studying. <span class="highlight-text">More speaking.</span>
-                    </h2>
-                </div>
-
-                <div class="narrative-steps-grid">
-                    <div class="step-process-card">
-                        <div class="step-card-num">01</div>
-                        <h3 class="step-card-heading">Tell us where you want to go</h3>
-                        <p class="step-card-body">
-                            Choose your profession, career goal, current confidence level and the workplace you are preparing for.
-                        </p>
-                    </div>
-
-                    <div class="step-process-card">
-                        <div class="step-card-num">02</div>
-                        <h3 class="step-card-heading">Practise real conversations</h3>
-                        <p class="step-card-body">
-                            Speak with Ava through interviews, meetings, customer calls, presentations and difficult workplace situations.
-                        </p>
-                    </div>
-
-                    <div class="step-process-card">
-                        <div class="step-card-num">03</div>
-                        <h3 class="step-card-heading">Receive actionable feedback</h3>
-                        <p class="step-card-body">
-                            Understand what worked, where you struggled and exactly what to improve before your next conversation.
-                        </p>
-                    </div>
-                </div>
-
-                <div style="text-align: center; margin-top: 3rem;">
-                    <a href="#waitlist" class="btn-primary btn-hero-primary">
-                        <span>Take Your First Assessment</span>
-                        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 12H19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                            <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. VOICE ASSESSMENT (VOICE DNA) -->
-        <section id="voice-dna" class="section meet-voluble-section">
-            <div class="voluble-platform-container">
-                <div class="voluble-platform-header" style="text-align: center; margin: 0 auto 3rem;">
-                    <span class="voluble-pill">
-                        <span class="pill-sparkle">🧬</span> VOICE ASSESSMENT
-                    </span>
-                    <h2 class="voluble-platform-title">
-                        Meet your <span class="highlight-text">Voice DNA.</span>
-                    </h2>
-                    <p class="voluble-platform-subheading" style="margin: 0 auto; max-width: 720px;">
-                        Your first conversation creates a personalised picture of how you currently communicate. Voluble evaluates your core communication pillars:
-                    </p>
-                </div>
-
-                <div class="voice-dna-metrics-grid">
-                    <div class="dna-metric-pill"><span>🎯</span> Clarity</div>
-                    <div class="dna-metric-pill"><span>🌊</span> Fluency</div>
-                    <div class="dna-metric-pill"><span>💪</span> Confidence</div>
-                    <div class="dna-metric-pill"><span>✍️</span> Grammar</div>
-                    <div class="dna-metric-pill"><span>📚</span> Vocabulary</div>
-                    <div class="dna-metric-pill"><span>📐</span> Answer Structure</div>
-                    <div class="dna-metric-pill"><span>💼</span> Role Relevance</div>
-                </div>
-
-                <div class="dna-callout-card">
-                    <p class="dna-callout-text">
-                        This is not another English examination. It is your starting point for becoming job-ready.
-                    </p>
-                    <a href="#waitlist" class="btn-primary" style="margin-top: 1.5rem; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.8rem; border-radius: 100px;">
-                        <span>Discover My Voice DNA</span>
-                        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:18px;height:18px;">
-                            <path d="M5 12H19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                            <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. PRACTICE SCENARIOS (APPLE CAROUSEL) -->
-        <section id="scenarios" class="section meet-voluble-section" style="background-color: #F8FAFC;">
-            <div class="voluble-platform-container">
-                <div class="voluble-platform-header-row">
-                    <div class="voluble-platform-header">
-                        <span class="voluble-pill">
-                            <span class="pill-sparkle">🎭</span> PRACTICE SCENARIOS
-                        </span>
-                        <h2 class="voluble-platform-title">
-                            Practise the conversations that <span class="highlight-text">decide your career.</span>
-                        </h2>
-                    </div>
-
-                    <!-- Apple Floating Navigation Arrows -->
-                    <div class="apple-carousel-controls">
-                        <button class="apple-carousel-btn prev-btn" id="apple-carousel-prev" aria-label="Previous slide">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M15 18l-6-6 6-6"/>
-                            </svg>
-                        </button>
-                        <button class="apple-carousel-btn next-btn" id="apple-carousel-next" aria-label="Next slide">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M9 18l6-6-6-6"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Apple Sliding Cards Track -->
-                <div class="apple-carousel-wrapper">
-                    <div class="apple-carousel-track" id="apple-carousel-track">
-                        <!-- Card 1 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-amber">
-                                <span class="feature-emoji">💼</span>
-                            </div>
-                            <span class="apple-card-tag">SCENARIO 01</span>
-                            <h3 class="feature-card-title">Job Interviews</h3>
-                            <p class="feature-card-desc">
-                                Answer “Tell me about yourself,” explain your experience, handle follow-up questions and practise salary conversations.
-                            </p>
-                        </div>
-
-                        <!-- Card 2 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-teal">
-                                <span class="feature-emoji">👋</span>
-                            </div>
-                            <span class="apple-card-tag">SCENARIO 02</span>
-                            <h3 class="feature-card-title">Your First Day</h3>
-                            <p class="feature-card-desc">
-                                Introduce yourself, ask questions, understand instructions and speak confidently with a new team.
-                            </p>
-                        </div>
-
-                        <!-- Card 3 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-indigo">
-                                <span class="feature-emoji">👔</span>
-                            </div>
-                            <span class="apple-card-tag">SCENARIO 03</span>
-                            <h3 class="feature-card-title">Manager Conversations</h3>
-                            <p class="feature-card-desc">
-                                Give updates, explain delays, ask for feedback and communicate when something goes wrong.
-                            </p>
-                        </div>
-
-                        <!-- Card 4 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-rose">
-                                <span class="feature-emoji">📞</span>
-                            </div>
-                            <span class="apple-card-tag">SCENARIO 04</span>
-                            <h3 class="feature-card-title">Customer & Client Calls</h3>
-                            <p class="feature-card-desc">
-                                Understand requirements, clarify problems, handle objections and manage difficult conversations.
-                            </p>
-                        </div>
-
-                        <!-- Card 5 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-emerald">
-                                <span class="feature-emoji">📊</span>
-                            </div>
-                            <span class="apple-card-tag">SCENARIO 05</span>
-                            <h3 class="feature-card-title">Meetings & Presentations</h3>
-                            <p class="feature-card-desc">
-                                Present ideas, participate in discussions, disagree professionally and answer unexpected questions.
-                            </p>
-                        </div>
-
-                        <!-- Card 6 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-blue">
-                                <span class="feature-emoji">🌏</span>
-                            </div>
-                            <span class="apple-card-tag">SCENARIO 06</span>
-                            <h3 class="feature-card-title">Global Workplaces</h3>
-                            <p class="feature-card-desc">
-                                Prepare for conversations with colleagues, customers and managers across different countries and cultures.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="apple-carousel-pagination">
-                    <div class="apple-dots-group" id="apple-carousel-dots">
-                        <button class="apple-dot active" data-index="0" aria-label="Go to slide 1"></button>
-                        <button class="apple-dot" data-index="1" aria-label="Go to slide 2"></button>
-                        <button class="apple-dot" data-index="2" aria-label="Go to slide 3"></button>
-                        <button class="apple-dot" data-index="3" aria-label="Go to slide 4"></button>
-                        <button class="apple-dot" data-index="4" aria-label="Go to slide 5"></button>
-                        <button class="apple-dot" data-index="5" aria-label="Go to slide 6"></button>
-                    </div>
-                    <span class="apple-scroll-hint">Swipe or drag to explore ↔</span>
-                </div>
-
-                <div style="text-align: center; margin-top: 2rem;">
-                    <a href="#waitlist" class="btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.8rem; border-radius: 100px;">
-                        <span>Explore Practice Scenarios</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. ROLE PERSONALISATION (Apple-Style Swipe Carousel) -->
-        <section id="career-paths" class="section job-market-section">
-            <div class="voluble-platform-container">
-                <div class="voluble-platform-header-row">
-                    <div class="voluble-platform-header">
-                        <span class="reality-pill">
-                            <span class="reality-icon">🎯</span> ROLE PERSONALISATION
-                        </span>
-                        <h2 class="job-market-title">
-                            Not one English course <span class="highlight-text">for everyone.</span>
-                        </h2>
-                        <p class="job-market-lead">
-                            The communication required for a software engineer is different from the communication required for a salesperson, nurse or customer-support professional. Voluble personalises your conversations, vocabulary and feedback around the work you want to do.
-                        </p>
-                    </div>
-
-                    <!-- Apple Floating Navigation Arrows -->
-                    <div class="apple-carousel-controls">
-                        <button class="apple-carousel-btn prev-btn" id="career-carousel-prev" aria-label="Previous slide">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M15 18l-6-6 6-6"/>
-                            </svg>
-                        </button>
-                        <button class="apple-carousel-btn next-btn" id="career-carousel-next" aria-label="Next slide">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M9 18l6-6-6-6"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Apple Sliding Cards Track -->
-                <div class="apple-carousel-wrapper">
-                    <div class="apple-carousel-track" id="career-carousel-track">
-                        <!-- Role 1 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-teal">
-                                <span class="feature-emoji">💻</span>
-                            </div>
-                            <span class="apple-card-tag">PATH 01</span>
-                            <h3 class="feature-card-title">Technology & IT</h3>
-                            <p class="feature-card-desc">
-                                Standups, code reviews, technical interviews & system architecture discussions.
-                            </p>
-                        </div>
-
-                        <!-- Role 2 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-indigo">
-                                <span class="feature-emoji">📈</span>
-                            </div>
-                            <span class="apple-card-tag">PATH 02</span>
-                            <h3 class="feature-card-title">Sales & Business Dev</h3>
-                            <p class="feature-card-desc">
-                                Client pitches, deal negotiations, follow-ups & high-stakes revenue calls.
-                            </p>
-                        </div>
-
-                        <!-- Role 3 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-rose">
-                                <span class="feature-emoji">🎧</span>
-                            </div>
-                            <span class="apple-card-tag">PATH 03</span>
-                            <h3 class="feature-card-title">Customer Support</h3>
-                            <p class="feature-card-desc">
-                                Customer queries, active listening, de-escalation & empathetic resolution.
-                            </p>
-                        </div>
-
-                        <!-- Role 4 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-amber">
-                                <span class="feature-emoji">🩺</span>
-                            </div>
-                            <span class="apple-card-tag">PATH 04</span>
-                            <h3 class="feature-card-title">Healthcare</h3>
-                            <p class="feature-card-desc">
-                                Patient consultations, medical handovers, doctor syncs & clinical briefings.
-                            </p>
-                        </div>
-
-                        <!-- Role 5 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-emerald">
-                                <span class="feature-emoji">🏨</span>
-                            </div>
-                            <span class="apple-card-tag">PATH 05</span>
-                            <h3 class="feature-card-title">Hospitality</h3>
-                            <p class="feature-card-desc">
-                                Guest relations, service recovery, team briefings & international hospitality etiquette.
-                            </p>
-                        </div>
-
-                        <!-- Role 6 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-purple">
-                                <span class="feature-emoji">📦</span>
-                            </div>
-                            <span class="apple-card-tag">PATH 06</span>
-                            <h3 class="feature-card-title">Operations & Logistics</h3>
-                            <p class="feature-card-desc">
-                                Vendor negotiations, supply chain updates, crisis handling & operational alignment.
-                            </p>
-                        </div>
-
-                        <!-- Role 7 -->
-                        <div class="voluble-feature-card apple-slide-card highlight-path-card">
-                            <div class="feature-icon-wrapper icon-blue">
-                                <span class="feature-emoji">🌐</span>
-                            </div>
-                            <span class="apple-card-tag">PATH 07</span>
-                            <h3 class="feature-card-title">Corporate & Global Roles</h3>
-                            <p class="feature-card-desc">
-                                Cross-border team collaboration, executive presentations & global stakeholder syncs.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Apple Pagination Indicator & Drag Hint -->
-                <div class="apple-carousel-pagination">
-                    <div class="apple-dots-group" id="career-carousel-dots">
-                        <button class="apple-dot active" data-index="0" aria-label="Go to slide 1"></button>
-                        <button class="apple-dot" data-index="1" aria-label="Go to slide 2"></button>
-                        <button class="apple-dot" data-index="2" aria-label="Go to slide 3"></button>
-                        <button class="apple-dot" data-index="3" aria-label="Go to slide 4"></button>
-                        <button class="apple-dot" data-index="4" aria-label="Go to slide 5"></button>
-                        <button class="apple-dot" data-index="5" aria-label="Go to slide 6"></button>
-                        <button class="apple-dot" data-index="6" aria-label="Go to slide 7"></button>
-                    </div>
-                    <span class="apple-scroll-hint">Swipe or drag to explore ↔</span>
-                </div>
-
-                <div style="text-align: center; margin-top: 2.5rem;">
-                    <a href="#waitlist" class="btn-primary btn-hero-primary">
-                        <span>Choose My Career Path</span>
-                        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 12H19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                            <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- 8. FEEDBACK SECTION -->
-        <section id="feedback" class="section meet-voluble-section">
-            <div class="voluble-platform-container">
-                <div class="voluble-platform-header" style="text-align: center; margin: 0 auto 3rem;">
-                    <span class="voluble-pill">
-                        <span class="pill-sparkle">📝</span> ACTIONABLE FEEDBACK
-                    </span>
-                    <h2 class="voluble-platform-title">
-                        Feedback you can use in your <span class="highlight-text">very next conversation.</span>
-                    </h2>
-                    <p class="voluble-platform-subheading" style="margin: 0 auto; max-width: 720px;">
-                        Voluble does not interrupt you every time you make a mistake. It lets you finish, understand your thought process and then gives you clear feedback on:
-                    </p>
-                </div>
-
-                <!-- 5 Interactive Feedback Feature Cards Grid -->
-                <div class="feedback-cards-grid">
-                    <div class="feedback-feature-card">
-                        <div class="fb-card-icon icon-emerald">
-                            <span class="fb-emoji">✨</span>
-                        </div>
-                        <h3>What you communicated well</h3>
-                        <p>Instant positive reinforcement on strong sentence openings, vocabulary choices, and persuasive tone.</p>
-                    </div>
-
-                    <div class="feedback-feature-card">
-                        <div class="fb-card-icon icon-amber">
-                            <span class="fb-emoji">🔍</span>
-                        </div>
-                        <h3>Which parts were difficult to understand</h3>
-                        <p>Pinpoints exact moments where hesitation, filler words, or rapid pacing affected message clarity.</p>
-                    </div>
-
-                    <div class="feedback-feature-card">
-                        <div class="fb-card-icon icon-indigo">
-                            <span class="fb-emoji">📐</span>
-                        </div>
-                        <h3>Where your answer lost structure</h3>
-                        <p>Actionable guidance on logical flow, framework alignment (STAR), and keeping answers concise.</p>
-                    </div>
-
-                    <div class="feedback-feature-card">
-                        <div class="fb-card-icon icon-rose">
-                            <span class="fb-emoji">💡</span>
-                        </div>
-                        <h3>Which words or sentences to improve</h3>
-                        <p>Replaces repetitive words with professional, workplace-ready vocabulary and natural phrasing.</p>
-                    </div>
-
-                    <div class="feedback-feature-card full-width-fb-card">
-                        <div class="fb-card-icon icon-teal">
-                            <span class="fb-emoji">🚀</span>
-                        </div>
-                        <h3>How to answer more confidently next time</h3>
-                        <p>Step-by-step suggestions you can immediately practice in your very next AI voice coaching session.</p>
-                    </div>
-                </div>
-
-                <div class="no-embarrassment-card">
-                    <span class="sparkle-icon">🛡️</span>
-                    <div class="no-embarrassment-content">
-                        <h4>No red marks. No classroom embarrassment.</h4>
-                        <p>Just private, encouraging, and practical improvement available 24/7.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 9. PROGRESS SECTION (JOB-READY SCORE - Apple Swipe Carousel) -->
-        <section id="progress" class="section job-market-section">
-            <div class="voluble-platform-container">
-                <div class="voluble-platform-header-row">
-                    <div class="voluble-platform-header">
-                        <span class="reality-pill">
-                            <span class="reality-icon">📊</span> JOB-READY SCORE
-                        </span>
-                        <h2 class="job-market-title">
-                            Know when you’re <span class="highlight-text">becoming job-ready.</span>
-                        </h2>
-                        <p class="job-market-lead">
-                            Every conversation contributes to your personalised Job-Ready Score. Track your progress across:
-                        </p>
-                    </div>
-
-                    <!-- Apple Floating Navigation Arrows -->
-                    <div class="apple-carousel-controls">
-                        <button class="apple-carousel-btn prev-btn" id="progress-carousel-prev" aria-label="Previous slide">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M15 18l-6-6 6-6"/>
-                            </svg>
-                        </button>
-                        <button class="apple-carousel-btn next-btn" id="progress-carousel-next" aria-label="Next slide">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M9 18l6-6-6-6"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Apple Sliding Cards Track -->
-                <div class="apple-carousel-wrapper">
-                    <div class="apple-carousel-track" id="progress-carousel-track">
-                        <!-- Metric 1 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-amber">
-                                <span class="feature-emoji">🎯</span>
-                            </div>
-                            <span class="apple-card-tag">METRIC 01</span>
-                            <h3 class="feature-card-title">Interview readiness</h3>
-                            <p class="feature-card-desc">
-                                Real-time evaluation of STAR framework answers, strong opening statements & technical responses.
-                            </p>
-                        </div>
-
-                        <!-- Metric 2 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-teal">
-                                <span class="feature-emoji">💼</span>
-                            </div>
-                            <span class="apple-card-tag">METRIC 02</span>
-                            <h3 class="feature-card-title">Workplace communication</h3>
-                            <p class="feature-card-desc">
-                                Tracking professional tone, active listening & clarity during team meetings and manager updates.
-                            </p>
-                        </div>
-
-                        <!-- Metric 3 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-indigo">
-                                <span class="feature-emoji">🗣️</span>
-                            </div>
-                            <span class="apple-card-tag">METRIC 03</span>
-                            <h3 class="feature-card-title">Fluency & clarity</h3>
-                            <p class="feature-card-desc">
-                                Measuring speech rhythm, reduction of filler words ("um", "ah"), and natural sentence flow.
-                            </p>
-                        </div>
-
-                        <!-- Metric 4 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-rose">
-                                <span class="feature-emoji">💪</span>
-                            </div>
-                            <span class="apple-card-tag">METRIC 04</span>
-                            <h3 class="feature-card-title">Confidence under pressure</h3>
-                            <p class="feature-card-desc">
-                                Response timing analysis, spontaneous question handling & composure under high stakes.
-                            </p>
-                        </div>
-
-                        <!-- Metric 5 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-emerald">
-                                <span class="feature-emoji">🏆</span>
-                            </div>
-                            <span class="apple-card-tag">METRIC 05</span>
-                            <h3 class="feature-card-title">Role-specific communication</h3>
-                            <p class="feature-card-desc">
-                                Industry vocabulary mastery tailored specifically to your chosen profession and target job.
-                            </p>
-                        </div>
-
-                        <!-- Metric 6 -->
-                        <div class="voluble-feature-card apple-slide-card">
-                            <div class="feature-icon-wrapper icon-purple">
-                                <span class="feature-emoji">📈</span>
-                            </div>
-                            <span class="apple-card-tag">METRIC 06</span>
-                            <h3 class="feature-card-title">Consistency & practice</h3>
-                            <p class="feature-card-desc">
-                                Practice streaks, cumulative speaking minutes & weekly improvement benchmarks over time.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Apple Pagination Indicator & Drag Hint -->
-                <div class="apple-carousel-pagination">
-                    <div class="apple-dots-group" id="progress-carousel-dots">
-                        <button class="apple-dot active" data-index="0" aria-label="Go to slide 1"></button>
-                        <button class="apple-dot" data-index="1" aria-label="Go to slide 2"></button>
-                        <button class="apple-dot" data-index="2" aria-label="Go to slide 3"></button>
-                        <button class="apple-dot" data-index="3" aria-label="Go to slide 4"></button>
-                        <button class="apple-dot" data-index="4" aria-label="Go to slide 5"></button>
-                        <button class="apple-dot" data-index="5" aria-label="Go to slide 6"></button>
-                    </div>
-                    <span class="apple-scroll-hint">Swipe or drag to explore ↔</span>
-                </div>
-
-                <div class="progress-footer-box">
-                    <p>See what is improving, what still needs work and what you should practise next.</p>
-                    <a href="#waitlist" class="btn-primary btn-hero-primary" style="margin-top: 1.25rem;">
-                        <span>Build My Job-Ready Score</span>
-                        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 12H19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                            <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 10. AVA SECTION (Redesigned & High-Level CSS) -->
-        <section id="ava" class="section prep-gap-section">
-            <div class="prep-gap-container" style="text-align: center;">
-                <span class="prep-gap-pill">
-                    <span class="pill-icon">🎙️</span> PERSONAL AI VOICE COACH
-                </span>
-                <h2 class="prep-gap-title" style="margin-top: 1rem;">
-                    Meet Ava. <span class="highlight-text">Your private rehearsal room.</span>
-                </h2>
-                <p class="prep-gap-lead" style="max-width: 720px; margin: 1rem auto 2.5rem;">
-                    Ava is your personal AI voice coach. She remembers your goals, adapts to your level and creates conversations around the situations you need to master.
-                </p>
-
-                <!-- 3 Ava Capability Cards -->
-                <div class="ava-features-grid">
-                    <div class="ava-feature-card">
-                        <div class="ava-feat-icon icon-teal">
-                            <span>🧠</span>
-                        </div>
-                        <h3>Adaptive Memory</h3>
-                        <p>Remembers your target role, past mistakes, and progress across every conversation.</p>
-                    </div>
-
-                    <div class="ava-feature-card">
-                        <div class="ava-feat-icon icon-indigo">
-                            <span>🔁</span>
-                        </div>
-                        <h3>Unlimited Repetition</h3>
-                        <p>Practise the same answer 10 times until you feel completely confident.</p>
-                    </div>
-
-                    <div class="ava-feature-card">
-                        <div class="ava-feat-icon icon-emerald">
-                            <span>⚡</span>
-                        </div>
-                        <h3>Instant Feedback</h3>
-                        <p>Get real-time suggestions on clarity, structure, and professional vocabulary.</p>
-                    </div>
-                </div>
-
-                <!-- Main Glassmorphic Rehearsal Room Banner -->
-                <div class="ava-highlight-box">
-                    <div class="ava-box-sparkle">✨</div>
-                    <p class="ava-box-text">
-                        Practise the same answer five times. Make mistakes without embarrassment. Stop and start whenever you want.<br>
-                        <strong class="ava-highlight-bold">Ava will be ready when you are.</strong>
-                    </p>
-                </div>
-
-                <div style="margin-top: 2.5rem;">
-                    <a href="#waitlist" class="btn-primary btn-hero-primary">
-                        <span>Start Practising Free</span>
-                        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 12H19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                            <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 11. PRODUCT PHILOSOPHY -->
-        <section id="philosophy" class="section meet-voluble-section">
-            <div class="voluble-platform-container" style="text-align: center;">
-                <span class="voluble-pill">
-                    <span class="pill-sparkle">🌱</span> OUR PHILOSOPHY
-                </span>
-                <h2 class="voluble-platform-title" style="max-width: 800px; margin: 0.5rem auto 1rem;">
-                    We don’t want you to <span class="highlight-text">sound perfect.</span>
-                </h2>
-                <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--color-brand-teal); margin-bottom: 1.5rem;">
-                    We want you to sound clear, confident and ready.
-                </h3>
-                <p class="voluble-platform-subheading" style="max-width: 760px; margin: 0 auto; line-height: 1.7;">
-                    Voluble is not built to change your identity or make everyone speak with the same accent. It is built to help you communicate your ideas, experience and potential—without English standing in the way.
-                </p>
-            </div>
-        </section>
-
-        <!-- 12. FOUNDING COHORT (Redesigned Horizontal Grid) -->
-        <section id="founding-cohort" class="section job-market-section">
-            <div class="job-market-container">
-                <div class="job-market-header">
-                    <span class="reality-pill">
-                        <span class="reality-icon">⭐</span> FOUNDING MEMBERS
-                    </span>
-                    <h2 class="job-market-title">
-                        Built for Indian job seekers.<br><span class="highlight-text">Designed to help you succeed globally.</span>
-                    </h2>
-                    <p class="job-market-lead">
-                        We are building Voluble with students, professionals and job seekers from across India.
-                    </p>
-                </div>
-
-                <!-- 4 Horizontal Benefit Feature Cards -->
-                <div class="founding-grid">
-                    <div class="founding-item-card">
-                        <div class="founding-item-icon icon-amber">
-                            <span>🌟</span>
-                        </div>
-                        <h3>Early Access</h3>
-                        <p>Be among the first in India to test new voice AI scenarios and features.</p>
-                    </div>
-
-                    <div class="founding-item-card">
-                        <div class="founding-item-icon icon-teal">
-                            <span>⚡</span>
-                        </div>
-                        <h3>First to Practise</h3>
-                        <p>Practise new workplace scenarios before anyone else.</p>
-                    </div>
-
-                    <div class="founding-item-card">
-                        <div class="founding-item-icon icon-indigo">
-                            <span>💬</span>
-                        </div>
-                        <h3>Founder Sync</h3>
-                        <p>Share direct feedback & ideas with the founding team.</p>
-                    </div>
-
-                    <div class="founding-item-card">
-                        <div class="founding-item-icon icon-emerald">
-                            <span>🎁</span>
-                        </div>
-                        <h3>Cohort Perks</h3>
-                        <p>Enjoy permanent founding-member benefits and priority updates.</p>
-                    </div>
-                </div>
-
-                <!-- Compact Callout & CTA Row -->
-                <div class="founding-cta-box">
-                    <a href="#waitlist" class="btn-primary btn-hero-primary">
-                        <span>Join the Founding Cohort</span>
-                        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 12H19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                            <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                    <span class="founding-lock-tag">🔒 Limited early-access places are available.</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- 13. FAQs SECTION (Redesigned 2-Column Grid) -->
-        <section id="faqs" class="section prep-gap-section">
-            <div class="prep-gap-container" style="max-width: 1040px;">
-                <div class="prep-gap-header" style="text-align: center;">
-                    <span class="prep-gap-pill">
-                        <span class="pill-icon">❓</span> FREQUENTLY ASKED QUESTIONS
-                    </span>
-                    <h2 class="prep-gap-title">
-                        Everything you <span class="highlight-text">need to know.</span>
-                    </h2>
-                </div>
-
-                <div class="faq-accordion-group">
-                    <!-- Column 1 Items -->
-                    <div class="faq-item">
-                        <button class="faq-question-btn">
-                            <span class="faq-q-text"><span class="faq-q-icon">📚</span> Is Voluble an English-learning course?</span>
-                            <span class="faq-toggle-icon">+</span>
-                        </button>
-                        <div class="faq-answer-content">
-                            <p>Not in the traditional sense. Voluble does not make you memorise lessons or complete endless grammar exercises. You improve by speaking through real career situations and receiving personalised feedback.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question-btn">
-                            <span class="faq-q-text"><span class="faq-q-icon">🎯</span> Who is Voluble for?</span>
-                            <span class="faq-toggle-icon">+</span>
-                        </button>
-                        <div class="faq-answer-content">
-                            <p>Voluble is designed for students, job seekers and professionals who want to communicate more confidently during interviews and at work.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question-btn">
-                            <span class="faq-q-text"><span class="faq-q-icon">💪</span> What if my English is not very strong?</span>
-                            <span class="faq-toggle-icon">+</span>
-                        </button>
-                        <div class="faq-answer-content">
-                            <p>Ava adapts the conversation to your current ability. You can begin with simpler conversations and progress gradually.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question-btn">
-                            <span class="faq-q-text"><span class="faq-q-icon">💼</span> Will Voluble help me prepare for interviews?</span>
-                            <span class="faq-toggle-icon">+</span>
-                        </button>
-                        <div class="faq-answer-content">
-                            <p>Yes. You can practise common questions, role-specific interviews, follow-up questions, behavioural interviews and difficult situations.</p>
-                        </div>
-                    </div>
-
-                    <!-- Column 2 Items -->
-                    <div class="faq-item">
-                        <button class="faq-question-btn">
-                            <span class="faq-q-text"><span class="faq-q-icon">📝</span> Does Voluble help with grammar?</span>
-                            <span class="faq-toggle-icon">+</span>
-                        </button>
-                        <div class="faq-answer-content">
-                            <p>Yes, but grammar is taught through your conversations. You receive relevant corrections after speaking instead of completing disconnected grammar exercises.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question-btn">
-                            <span class="faq-q-text"><span class="faq-q-icon">🌐</span> Can I prepare for jobs outside India?</span>
-                            <span class="faq-toggle-icon">+</span>
-                        </button>
-                        <div class="faq-answer-content">
-                            <p>Yes. Voluble will offer career paths for the United States, United Kingdom, Canada, Australia and New Zealand, alongside Indian workplace preparation.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question-btn">
-                            <span class="faq-q-text"><span class="faq-q-icon">🛡️</span> Does Voluble guarantee a job?</span>
-                            <span class="faq-toggle-icon">+</span>
-                        </button>
-                        <div class="faq-answer-content">
-                            <p>No platform can guarantee a job. Voluble helps you build and demonstrate the communication skills required to perform better during interviews and at work.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question-btn">
-                            <span class="faq-q-text"><span class="faq-q-icon">📱</span> Where will Voluble be available?</span>
-                            <span class="faq-toggle-icon">+</span>
-                        </button>
-                        <div class="faq-answer-content">
-                            <p>Voluble will be accessible via mobile application and web, allowing you to practise voice conversations anytime, anywhere.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 14 & 5. WAITLIST & FINAL CTA -->
-        <section id="waitlist" class="section waitlist-section">
-            <div class="waitlist-container">
-                <div class="waitlist-info">
-                    <span class="reality-pill" style="margin-bottom: 1rem;">
-                        <span class="reality-icon">🚀</span> GET EARLY ACCESS
-                    </span>
-                    <h2 class="waitlist-title">
-                        Your next opportunity may begin with one conversation.
-                    </h2>
-                    <h3 class="waitlist-status">
-                        Be ready when it happens.
-                    </h3>
-                    <p class="waitlist-subtitle">
-                        No classrooms. No judgement. Just you, your voice and the career you want.
-                    </p>
-
-                    <!-- What's Included Box -->
-                    <div class="whats-included-box">
-                        <h4 class="whats-included-title">What's Included?</h4>
-                        <ul class="whats-included-list">
-                            <li>
-                                <span class="included-check">✅</span>
-                                <span>Early access to Ava — AI Voice Coach</span>
-                            </li>
-                            <li>
-                                <span class="included-check">✅</span>
-                                <span>Free Voice DNA Assessment & Personalised Career Path</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="waitlist-form-container">
-                    <h3 class="form-card-header-title">Start Speaking Free</h3>
-
-                    <form class="waitlist-form" id="waitlistForm" novalidate>
-                        <input type="hidden" id="sheetNameInput" name="sheetName" value="English">
-                        
-                        <!-- Form Row: Full Name -->
-                        <div class="form-group">
-                            <span class="input-icon">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 21V19C20 17.9401 19.5786 16.9235 18.8284 16.1734C18.0783 15.4232 17.0617 15 16 15H8C6.93827 15 5.92172 15.4232 5.17157 16.1734C4.42143 16.9235 4 17.9401 4 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                    <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </span>
-                            <input type="text" id="name" name="name" class="form-input" placeholder="Full Name" required>
-                            <span class="error-msg" id="nameError">Please enter your full name</span>
-                        </div>
-                        
-                        <!-- Form Row: Mobile Number -->
-                        <div class="form-group">
-                            <div class="phone-input-wrapper">
-                                <select id="countryCode" name="countryCode" class="form-select">
-                                    <option value="+91">🇮🇳 +91</option>
-                                    <option value="+1">🇺🇸 +1</option>
-                                    <option value="+44">🇬🇧 +44</option>
-                                    <option value="+61">🇦🇺 +61</option>
-                                    <option value="+64">🇳ℤ +64</option>
-                                </select>
-                                <input type="tel" id="phone" name="phone" class="form-input phone-field" placeholder="Mobile Number" required>
-                            </div>
-                            <span class="error-msg" id="phoneError">Please enter a valid mobile number</span>
-                        </div>
-                        
-                        <!-- Form Row: Email -->
-                        <div class="form-group">
-                            <span class="input-icon">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </span>
-                            <input type="email" id="email" name="email" class="form-input" placeholder="Email Address" required>
-                            <span class="error-msg" id="emailError">Please enter a valid email address</span>
-                        </div>
-                        
-                        <!-- Submit Button -->
-                        <button type="submit" class="btn-submit" id="submitBtn">
-                            <span>Start Speaking Free</span>
-                            <svg class="submit-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22 2L2 8.66667L11.5 12.5L15.3333 22L22 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>
-                                <path d="M11.5 12.5L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </button>
-                        
-                        <!-- Form Success Indicator -->
-                        <div class="form-success-container" id="successMsg">
-                            <div class="success-icon-box">
-                                <svg class="success-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1216 8.53447 21.3736C6.51167 20.6257 4.78369 19.2443 3.60803 17.4332C2.43237 15.622 1.87413 13.4736 2.0152 11.3149C2.15627 9.15622 2.98927 7.10098 4.38927 5.46162C5.78926 3.82226 7.67969 2.68457 9.77494 2.21477C11.8702 1.74497 14.0536 1.9686 16 2.85" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <h3>You're on the list!</h3>
-                            <p>Thank you for signing up. We'll be in touch soon with your early access invitation.</p>
-                        </div>
-                    </form>
-                    
-                    <div class="form-privacy">
-                        <span class="subtext-star">✨</span>
-                        <span>Join the Founding Cohort for early access.</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- 15. FOOTER -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-top">
-                <div class="footer-brand-box">
-                    <a href="#" class="logo">
-                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22 2L2 8.66667L11.5 12.5L15.3333 22L22 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>
-                            <path d="M11.5 12.5L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                        <span>Voluble</span>
-                    </a>
-                    <p class="footer-brand-subtext">
-                        English That Works.<br>Personal AI voice coaching for Indian job seekers & professionals.
-                    </p>
-                </div>
-
-                <div class="footer-nav-cols">
-                    <div class="footer-col">
-                        <h4>Product</h4>
-                        <ul>
-                            <li><a href="#how-it-works">How It Works</a></li>
-                            <li><a href="#scenarios">Practice Scenarios</a></li>
-                            <li><a href="#career-paths">Career Paths</a></li>
-                            <li><a href="#waitlist">Download App</a></li>
-                            <li><a href="#waitlist">Sign In</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-col">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="#philosophy">About Voluble</a></li>
-                            <li><a href="#founding-cohort">Founding Cohort</a></li>
-                            <li><a href="#waitlist">Contact</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-col">
-                        <h4>Legal</h4>
-                        <ul>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms of Use</a></li>
-                        </ul>
-                    </div>
-                </div>
+              </div>
+              
+              <div class="audio-waveform">
+                <div class="waveform-bar"></div>
+                <div class="waveform-bar"></div>
+                <div class="waveform-bar"></div>
+                <div class="waveform-bar"></div>
+                <div class="waveform-bar"></div>
+                <div class="waveform-bar"></div>
+              </div>
             </div>
 
-            <hr class="footer-divider">
+            <!-- Speech Card -->
+            <div style="background-color: var(--bg-alt); border-radius: 0.875rem; padding: 1.25rem; margin-bottom: 1.25rem; border: 1px solid var(--border);">
+              <div style="display: flex; gap: 0.75rem; margin-bottom: 1rem;">
+                <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; flex-shrink: 0;">YOU</div>
+                <div>
+                  <p style="font-size: 0.9375rem; color: var(--text-primary); font-weight: 500; margin: 0;">
+                    "I want to introduce myself for the campus interview."
+                  </p>
+                </div>
+              </div>
 
-            <div class="footer-bottom">
-                <p class="footer-copy">Voluble is a product of Infinity Illumine Business Technologies Private Limited.<br>&copy; 2026 Voluble. All rights reserved.</p>
-                <p class="footer-tagline">English That Works.</p>
+              <div style="display: flex; gap: 0.75rem; padding-top: 0.75rem; border-top: 1px dashed var(--border);">
+                <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; flex-shrink: 0;">AVA</div>
+                <div>
+                  <p style="font-size: 0.875rem; color: var(--text-primary); margin: 0; line-height: 1.5;">
+                    "Great start! Try saying: <span style="background: #FEF08A; padding: 0.1rem 0.3rem; border-radius: 0.25rem; font-weight: 600;">'I look forward to sharing how my technical projects align with your team.'</span> Clear and natural!"
+                  </p>
+                </div>
+              </div>
             </div>
+
+            <!-- Feedback badges -->
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem;">
+              <div style="background: #FFFFFF; border: 1px solid var(--border); padding: 0.75rem; border-radius: 0.75rem; text-align: center;">
+                <span style="font-size: 0.75rem; color: var(--text-secondary); display: block; margin-bottom: 0.2rem;">Grammar</span>
+                <strong style="color: var(--success); font-size: 1rem; font-weight: 800;">Instant Fixed</strong>
+              </div>
+              <div style="background: #FFFFFF; border: 1px solid var(--border); padding: 0.75rem; border-radius: 0.75rem; text-align: center;">
+                <span style="font-size: 0.75rem; color: var(--text-secondary); display: block; margin-bottom: 0.2rem;">Pronunciation</span>
+                <strong style="color: var(--primary); font-size: 1rem; font-weight: 800;">96% Clear</strong>
+              </div>
+              <div style="background: #FFFFFF; border: 1px solid var(--border); padding: 0.75rem; border-radius: 0.75rem; text-align: center;">
+                <span style="font-size: 0.75rem; color: var(--text-secondary); display: block; margin-bottom: 0.2rem;">Confidence</span>
+                <strong style="color: var(--success); font-size: 1rem; font-weight: 800;">High</strong>
+              </div>
+            </div>
+
+          </div>
         </div>
-    </footer>
 
-    <!-- JS file -->
-    <script src="main.js"></script>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOLD 2: PROBLEM STAT (RICH IMAGE & LAYOUT) ==================== -->
+  <section class="section-padding bg-fold-2" id="fold-2">
+    <div class="container-custom">
+      <div class="fold2-card-container fade-in-up">
+        
+        <div class="fold2-split-grid">
+          
+          <!-- Left Visual Image & Floating Stat Badge Overlay -->
+          <div class="fold2-image-wrapper">
+            <img src="fold2_stat_illustration.jpg" alt="Indian Student English Learning Benchmark Illustration" loading="lazy">
+            <div class="fold2-floating-stat-badge">
+              <div class="fold2-floating-num stat-number" data-target="42" data-suffix="%">0%</div>
+              <div class="fold2-floating-label">
+                Rural Youth<br>Benchmark
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Content Box -->
+          <div class="fold2-content-box">
+            <div class="pill-badge" style="margin-bottom: 0.75rem;">
+              <span class="pill-dot"></span> The Reality of Language Learning
+            </div>
+
+            <h2 class="fold2-title">
+              The problem is bigger than you think.
+            </h2>
+
+            <div class="fold2-highlight-quote">
+              "42% of rural Indian youth aged 14–18 could not read a simple sentence in English."
+            </div>
+
+            <p class="fold2-insight-text">
+              You were taught to memorise grammar rules and pass written exams — not to have real, spontaneous spoken conversations.
+            </p>
+
+            <a href="https://asercentre.org/aser-2023-beyond-basics/" target="_blank" rel="noopener noreferrer" class="fold2-source-link">
+              <span>Source: ASER 2023 Beyond Basics Report</span>
+              <i data-lucide="external-link" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOLD 3: METHOD COMPARISON ==================== -->
+  <section class="section-padding bg-fold-3" id="fold-3">
+    <div class="container-custom">
+      <div class="fold3-wrapper fade-in-up">
+        
+        <!-- Header -->
+        <div class="fold3-header">
+          <h2 class="fold3-title">
+            You are not bad at English.
+            <span class="highlight-blue">You are under-practised.</span>
+          </h2>
+          <p class="fold3-subtitle">
+            English cannot be learned only by reading and writing.
+          </p>
+        </div>
+
+        <!-- 4 Step Cards -->
+        <div class="fold3-steps-grid">
+          <div class="step-card">
+            <div class="step-num">1</div>
+            <div class="step-title">You have to speak</div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">2</div>
+            <div class="step-title">Make mistakes</div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">3</div>
+            <div class="step-title">Receive corrections</div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">4</div>
+            <div class="step-title">And speak again</div>
+          </div>
+        </div>
+
+        <!-- Safe Banner -->
+        <div class="fold3-safe-banner">
+          <i data-lucide="shield-check" style="color: var(--primary); width: 24px; height: 24px;"></i>
+          <span>Voluble gives you a safe place to do that every day.</span>
+        </div>
+
+        <!-- Redesigned Comparison Cards -->
+        <div class="comparison-grid-v2">
+          
+          <!-- School Card -->
+          <div class="comp-column school">
+            <div>
+              <div class="comp-header">
+                <span class="comp-badge school">School Method</span>
+                <i data-lucide="book-open" style="color: #64748B;"></i>
+              </div>
+              <h3 class="comp-title school">Passive Learning</h3>
+              <p style="font-size: 0.875rem; color: var(--text-secondary);">Focuses on paper exams and memorization without oral practice.</p>
+
+              <div class="flow-chain">
+                <div class="flow-pill school-pill">Memorise</div>
+                <i data-lucide="chevron-right" class="flow-arrow" style="width: 16px;"></i>
+                <div class="flow-pill school-pill">Grammar</div>
+                <i data-lucide="chevron-right" class="flow-arrow" style="width: 16px;"></i>
+                <div class="flow-pill school-pill">Exams</div>
+              </div>
+            </div>
+
+            <div class="comp-footer school">
+              <i data-lucide="x-circle" style="width: 18px; height: 18px;"></i>
+              Result: Fear of speaking in real conversations
+            </div>
+          </div>
+
+          <!-- Voluble Card -->
+          <div class="comp-column voluble">
+            <div>
+              <div class="comp-header">
+                <span class="comp-badge voluble">Voluble Method</span>
+                <i data-lucide="sparkles" style="color: var(--primary);"></i>
+              </div>
+              <h3 class="comp-title voluble">Active Speaking Practice</h3>
+              <p style="font-size: 0.875rem; color: var(--text-secondary);">Real-time voice practice with instant AI feedback every single day.</p>
+
+              <div class="flow-chain">
+                <div class="flow-pill voluble-pill">Speak</div>
+                <i data-lucide="chevron-right" class="flow-arrow active" style="width: 16px;"></i>
+                <div class="flow-pill voluble-pill">Feedback</div>
+                <i data-lucide="chevron-right" class="flow-arrow active" style="width: 16px;"></i>
+                <div class="flow-pill voluble-pill">Improve</div>
+                <i data-lucide="chevron-right" class="flow-arrow active" style="width: 16px;"></i>
+                <div class="flow-pill voluble-success">Confidence</div>
+              </div>
+            </div>
+
+            <div class="comp-footer voluble">
+              <i data-lucide="check-circle-2" style="width: 18px; height: 18px;"></i>
+              Result: Fluent, natural, workplace-ready English
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOLD 4: FEATURES ==================== -->
+  <section class="section-padding bg-fold-4" id="fold-4">
+    <div class="container-custom">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 3.5rem auto;" class="fade-in-up">
+        <div class="pill-badge">15 Minutes Daily Habit</div>
+        <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1.25rem;">Speak for 15 minutes every day.</h2>
+        <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.7; max-width: 720px; margin: 0 auto;">
+          The longer you wait to start speaking, the longer English will hold you back.
+        </p>
+      </div>
+
+      <div class="card-grid-3 swipe-carousel">
+        <!-- Feature 1 -->
+        <div class="v-card fade-in-up">
+          <div class="icon-wrapper"><i data-lucide="bot"></i></div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">AI English Teacher</h3>
+          <p style="font-size: 0.9375rem; color: var(--text-secondary);">Talk to your personal AI English teacher anytime without scheduling delays.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="v-card fade-in-up">
+          <div class="icon-wrapper"><i data-lucide="message-square"></i></div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Real-Life Conversations</h3>
+          <p style="font-size: 0.9375rem; color: var(--text-secondary);">Practise real-life conversations across work, social, and academic settings.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="v-card fade-in-up">
+          <div class="icon-wrapper"><i data-lucide="check-check"></i></div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Instant Simple Corrections</h3>
+          <p style="font-size: 0.9375rem; color: var(--text-secondary);">Improve grammar, vocabulary and pronunciation with real-time feedback.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="v-card fade-in-up">
+          <div class="icon-wrapper"><i data-lucide="shield-check"></i></div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Without Fear or Judgement</h3>
+          <p style="font-size: 0.9375rem; color: var(--text-secondary);">Speak freely in a 100% judgment-free safe zone built for mistake-driven learning.</p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="v-card fade-in-up">
+          <div class="icon-wrapper"><i data-lucide="sparkles"></i></div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Vocabulary Enhancement</h3>
+          <p style="font-size: 0.9375rem; color: var(--text-secondary);">Learn natural, modern sentence rewrites as you talk.</p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="v-card fade-in-up">
+          <div class="icon-wrapper"><i data-lucide="clock"></i></div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">15-Min Daily Rhythm</h3>
+          <p style="font-size: 0.9375rem; color: var(--text-secondary);">Bite-sized daily challenges that build lifelong speaking confidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOLD 5: PRICING CARD FOLD ==================== -->
+  <section class="section-padding bg-fold-5" id="fold-5">
+    <div class="container-custom">
+      <div class="fold5-card-container fade-in-up">
+        
+        <div class="fold5-badge-bar">
+          <div class="pill-badge" style="margin-bottom: 0;">
+            <span class="pill-dot"></span> Early-Access Application
+          </div>
+        </div>
+
+        <div style="text-align: center;">
+          <h2 class="fold5-title">
+            Stop learning English.<br>
+            <span>Start speaking it.</span>
+          </h2>
+
+          <p class="fold5-subtitle">
+            Be among the first learners to experience Voluble with complete early-access benefits.
+          </p>
+        </div>
+
+        <!-- Side-by-side Pricing Box -->
+        <div class="fold5-pricing-box">
+          <div class="fold5-price-left">
+            <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-secondary); letter-spacing: 0.05em; margin-bottom: 0.25rem;">EARLY-ACCESS PRICE</span>
+            <div class="fold5-price-tag">
+              ₹399 <span class="fold5-period">/month</span>
+            </div>
+            <div class="fold5-free-badge">
+              <i data-lucide="gift" style="width: 14px; height: 14px;"></i>
+              Free for the first 100 users
+            </div>
+          </div>
+
+          <div class="fold5-price-right">
+            <ul class="fold5-features-list">
+              <li class="fold5-feature-item">
+                <i data-lucide="check-circle-2" style="color: var(--success); width: 18px; height: 18px;"></i>
+                15-Min Daily AI Speaking Practice
+              </li>
+              <li class="fold5-feature-item">
+                <i data-lucide="check-circle-2" style="color: var(--success); width: 18px; height: 18px;"></i>
+                Instant Grammar & Pronunciation Feedback
+              </li>
+              <li class="fold5-feature-item">
+                <i data-lucide="check-circle-2" style="color: var(--success); width: 18px; height: 18px;"></i>
+                Real-World Conversation Scenarios
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <div style="text-align: center;">
+          <a href="#application-form-section" class="btn btn-primary btn-lg fold5-cta-btn">
+            Claim Your Free Early Access
+            <i data-lucide="arrow-down" style="width: 20px; height: 20px;"></i>
+          </a>
+        </div>
+
+        <!-- Trust Footer -->
+        <div class="fold5-trust-footer">
+          <span><i data-lucide="lock" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 0.25rem;"></i> No Credit Card Required</span>
+          <span>•</span>
+          <span><i data-lucide="zap" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 0.25rem;"></i> Instant Activation</span>
+          <span>•</span>
+          <span><i data-lucide="shield-check" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 0.25rem;"></i> 100% Safe Speaking Zone</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOLD 6: APPLICATION FORM FOLD ==================== -->
+  <section class="section-padding bg-fold-6" id="application-form-section">
+    <div class="container-custom">
+      <div style="max-width: 680px; margin: 0 auto; background: #FFFFFF; border: 1px solid var(--border); border-radius: 1.5rem; padding: 3.5rem 3rem; box-shadow: var(--shadow-lg);" class="fade-in-up">
+        
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <div class="pill-badge" style="margin-bottom: 0.75rem;">
+            <span class="pill-dot"></span> Early Access Application
+          </div>
+          <h3 style="font-size: 2.25rem; font-weight: 800; color: var(--text-primary);">Apply for Free Early Access</h3>
+          <p style="font-size: 1rem; color: var(--text-secondary); margin-top: 0.5rem;">Free for the first 100 learners • No credit card required</p>
+        </div>
+
+        <form id="inlineWaitlistForm">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label" for="inlineUserName">Full Name</label>
+              <input type="text" id="inlineUserName" class="form-input" placeholder="e.g. Rahul Sharma" required>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label" for="inlineUserEmail">Email Address</label>
+              <input type="email" id="inlineUserEmail" class="form-input" placeholder="rahul@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.75rem;">
+            <label class="form-label" for="inlineUserGoal">Primary Focus</label>
+            <select id="inlineUserGoal" class="form-input" required>
+              <option value="Student">Student Practice (Daily Fluency)</option>
+              <option value="Professional">Workplace & Salary Jump</option>
+              <option value="CareerGrowth">Metro City Career Shift</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg fold5-cta-btn" style="width: 100%;">
+            Submit Early Access Application
+            <i data-lucide="arrow-right" style="width: 20px; height: 20px;"></i>
+          </button>
+        </form>
+
+        <div id="inlineFormSuccess" style="display: none; text-align: center; padding: 2rem 0;">
+          <i data-lucide="check-circle" style="width: 54px; height: 54px; color: var(--success); margin-bottom: 1rem;"></i>
+          <h4 style="font-size: 1.5rem; font-weight: 800;">Spot Reserved!</h4>
+          <p style="font-size: 1rem; color: var(--text-secondary); margin-top: 0.5rem;">We have reserved your early access spot. Check your email shortly for your invite link.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container-custom">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Voluble AI, Inc. All rights reserved.</p>
+        <p>Built with intentional simplicity & extreme performance.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script class="custom-script">
+    lucide.createIcons();
+  </script>
+  <script src="main.js"></script>
 </body>
 </html>
