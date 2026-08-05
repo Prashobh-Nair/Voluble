@@ -287,7 +287,7 @@ img, svg {
 /* ==================== FLOATING MOVABLE CAPSULE TASKBAR ==================== */
 .nav-header {
   position: fixed;
-  top: 1.25rem;
+  top: 1rem;
   left: 0;
   right: 0;
   z-index: 1000;
@@ -300,55 +300,55 @@ img, svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1100px;
+  max-width: 440px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0.65rem 0.85rem 0.65rem 2rem;
+  padding: 0.4rem 0.5rem 0.4rem 1.1rem;
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 9999px;
   border: 1.5px solid rgba(229, 231, 235, 0.9);
-  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  height: auto;
 }
 
 .nav-container.scrolled {
   background: rgba(255, 255, 255, 0.98);
-  border-color: rgba(37, 99, 235, 0.25);
-  box-shadow: 0 14px 40px -5px rgba(37, 99, 235, 0.14), 0 6px 16px rgba(0, 0, 0, 0.05);
+  border-color: rgba(37, 99, 235, 0.2);
+  box-shadow: 0 10px 30px -5px rgba(37, 99, 235, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.5rem;
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: #0F172A;
   letter-spacing: -0.03em;
 }
 
 .logo-icon-svg {
-  width: 27px;
-  height: 27px;
+  width: 20px;
+  height: 20px;
   color: #0D9488;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2.25rem;
+  gap: 1.5rem;
   list-style: none;
 }
 
 .nav-link {
-  font-size: 0.9375rem;
+  font-size: 0.825rem;
   font-weight: 600;
   color: #334155;
   transition: color 0.2s ease;
-  padding: 0.3rem 0;
+  padding: 0.2rem 0;
   position: relative;
 }
 
@@ -359,7 +359,7 @@ img, svg {
 .nav-link.active::after {
   content: '';
   position: absolute;
-  bottom: -4px;
+  bottom: -3px;
   left: 0;
   width: 100%;
   height: 2px;
@@ -370,28 +370,28 @@ img, svg {
 .nav-cta-group {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 .nav-pill-btn {
   background-color: #0F172A;
   color: #FFFFFF;
   font-weight: 700;
-  font-size: 0.9375rem;
-  padding: 0.7rem 1.65rem;
+  font-size: 0.8rem;
+  padding: 0.45rem 1.1rem;
   border-radius: 9999px;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.18);
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.16);
   transition: all 0.25s ease;
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.35rem;
   white-space: nowrap;
 }
 
 .nav-pill-btn:hover {
   background-color: #1E293B;
   transform: translateY(-1px) scale(1.02);
-  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.28);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.24);
   color: #FFFFFF;
 }
 
@@ -1436,39 +1436,12 @@ img, svg {
     padding: 0 0.75rem;
   }
   .nav-container {
-    padding: 0.55rem 0.85rem;
-    border-radius: 1rem;
+    padding: 0.35rem 0.45rem 0.35rem 0.85rem;
+    border-radius: 9999px;
+    max-width: min(92vw, 420px);
   }
-  .nav-links,
   .nav-cta-group {
-    display: none;
-  }
-  .mobile-menu-btn {
-    display: block;
-  }
-  .mobile-nav-active .nav-links {
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 4.25rem;
-    left: 0;
-    width: 100%;
-    background-color: #FFFFFF;
-    border-bottom: 1px solid var(--border);
-    padding: 1.25rem 1.5rem;
-    box-shadow: var(--shadow-lg);
-    gap: 1rem;
-    border-radius: 0 0 1rem 1rem;
-    z-index: 999;
-  }
-  .mobile-nav-active .nav-cta-group {
-    display: flex;
-    padding: 0 1.5rem 1.25rem 1.5rem;
-    width: 100%;
-  }
-  .mobile-nav-active .nav-cta-group .nav-pill-btn {
-    width: 100%;
-    justify-content: center;
   }
 
   /* ── Hero section top padding (accounts for fixed nav) ── */
@@ -1683,7 +1656,7 @@ img, svg {
   }
 
   .nav-container {
-    padding: 0.5rem 0.75rem;
+    padding: 0.35rem 0.4rem 0.35rem 0.75rem;
   }
 
   .logo {
