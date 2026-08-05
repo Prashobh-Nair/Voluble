@@ -1962,4 +1962,36 @@ img, svg {
     justify-content: center !important;
     text-align: center !important;
   }
+
+  /* Force all 2-col, 3-col and asymmetrical inline grids to stack on mobile */
+  [style*="grid-template-columns: 1.15fr 0.85fr"],
+  [style*="grid-template-columns: repeat(3, 1fr)"],
+  [style*="grid-template-columns: repeat(2, 1fr)"],
+  [style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Hero section padding optimization on mobile */
+  .bg-fold-1,
+  .bg-pro-fold-1,
+  .bg-cg-fold-1 {
+    padding-top: 5.5rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  /* Headline scaling for crisp readability on mobile */
+  h1 {
+    font-size: 1.95rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Compact card padding on mobile */
+  [style*="padding: 2.25rem 2rem"],
+  [style*="padding: 2.5rem 2rem"],
+  [style*="padding: 2.25rem"],
+  [style*="padding: 2rem"] {
+    padding: 1.35rem 1.25rem !important;
+  }
 }
