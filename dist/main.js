@@ -245,8 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ── Google Sheets Webhook Integration ──
-  // Replace the URL below with your Google Apps Script Web App URL
-  window.VOLUBLE_SHEETS_WEBHOOK_URL = window.VOLUBLE_SHEETS_WEBHOOK_URL || '';
+  window.VOLUBLE_SHEETS_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbydHBo57NDP73utCZAzksf5WhksB_jvM8ayZB9eEImwULU5PTY-mHHg1KN9W26po6c/exec';
 
   function sendToGoogleSheets(data) {
     if (!window.VOLUBLE_SHEETS_WEBHOOK_URL) {
