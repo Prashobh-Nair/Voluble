@@ -434,7 +434,7 @@
           </p>
         </div>
 
-        <form id="inlineWaitlistForm" style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <form id="inlineWaitlistForm" data-sheet="Carrier_Growth" style="display: flex; flex-direction: column; gap: 1.25rem;">
           <div>
             <label for="formFullName" style="display: block; font-size: 0.875rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;">
               Full Name *
@@ -453,7 +453,16 @@
             <label for="formPhone" style="display: block; font-size: 0.875rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem;">
               Phone Number *
             </label>
-            <input type="tel" id="formPhone" required placeholder="+91 98765 43210" style="width: 100%; padding: 0.85rem 1rem; border: 1.5px solid var(--border); border-radius: 0.75rem; font-size: 0.95rem; background: var(--bg-alt); outline: none;">
+            <div style="display: flex; gap: 0.5rem;">
+              <select id="formCountryCode" style="width: 115px; flex-shrink: 0; padding: 0.85rem 0.5rem; border: 1.5px solid var(--border); border-radius: 0.75rem; font-size: 0.95rem; background: var(--bg-alt); outline: none;" required>
+                <option value="+91" selected>+91 (IN)</option>
+                <option value="+1">+1 (US)</option>
+                <option value="+44">+44 (UK)</option>
+                <option value="+61">+61 (AU)</option>
+                <option value="+971">+971 (UAE)</option>
+              </select>
+              <input type="tel" id="formPhone" required placeholder="98765 43210" style="width: 100%; padding: 0.85rem 1rem; border: 1.5px solid var(--border); border-radius: 0.75rem; font-size: 0.95rem; background: var(--bg-alt); outline: none;">
+            </div>
           </div>
 
           <button type="submit" class="form-submit-btn" style="margin-top: 0.5rem;">

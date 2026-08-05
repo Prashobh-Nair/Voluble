@@ -244,6 +244,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ── Google Sheets Webhook Integration ──
+  // Replace the URL below with your Google Apps Script Web App URL
+  window.VOLUBLE_SHEETS_WEBHOOK_URL = window.VOLUBLE_SHEETS_WEBHOOK_URL || '';
+
+  function sendToGoogleSheets(data) {
+    if (!window.VOLUBLE_SHEETS_WEBHOOK_URL) {
+      console.log('Voluble Form Submitted:', data);
+      return;
+    }
+    fetch(window.VOLUBLE_SHEETS_WEBHOOK_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).catch(err => console.error('Google Sheets Error:', err));
+  }
+
   const inlineWaitlistForm = document.getElementById('inlineWaitlistForm');
   const inlineFormSuccess = document.getElementById('inlineFormSuccess');
 
@@ -255,6 +272,23 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Submitting Application...';
       }
+
+      const sheetTarget = inlineWaitlistForm.getAttribute('data-sheet') || 'English';
+      const name = (document.getElementById('inlineUserName') || document.getElementById('formFullName') || {}).value || '';
+      const email = (document.getElementById('inlineUserEmail') || document.getElementById('formEmail') || {}).value || '';
+      const countryCode = (document.getElementById('inlineCountryCode') || document.getElementById('formCountryCode') || {}).value || '+91';
+      const phone = (document.getElementById('inlineUserPhone') || document.getElementById('formPhone') || {}).value || '';
+
+      const payload = {
+        sheet: sheetTarget,
+        timestamp: new Date().toLocaleString(),
+        name: name,
+        countryCode: countryCode,
+        phone: phone,
+        email: email
+      };
+
+      sendToGoogleSheets(payload);
 
       setTimeout(() => {
         if (inlineWaitlistForm) inlineWaitlistForm.style.display = 'none';

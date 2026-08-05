@@ -471,7 +471,7 @@
           <p style="font-size: 1rem; color: var(--text-secondary); margin-top: 0.5rem;">Limited early-access spots available • No credit card required</p>
         </div>
 
-        <form id="inlineWaitlistForm">
+        <form id="inlineWaitlistForm" data-sheet="English">
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
             <div class="form-group" style="margin-bottom: 0;">
               <label class="form-label" for="inlineUserName">Full Name</label>
@@ -486,7 +486,16 @@
 
           <div class="form-group" style="margin-bottom: 1.75rem;">
             <label class="form-label" for="inlineUserPhone">Phone Number</label>
-            <input type="tel" id="inlineUserPhone" class="form-input" placeholder="+91 98765 43210" required>
+            <div style="display: flex; gap: 0.5rem;">
+              <select id="inlineCountryCode" class="form-input" style="width: 115px; flex-shrink: 0;" required>
+                <option value="+91" selected>+91 (IN)</option>
+                <option value="+1">+1 (US)</option>
+                <option value="+44">+44 (UK)</option>
+                <option value="+61">+61 (AU)</option>
+                <option value="+971">+971 (UAE)</option>
+              </select>
+              <input type="tel" id="inlineUserPhone" class="form-input" placeholder="98765 43210" required>
+            </div>
           </div>
 
           <button type="submit" class="form-submit-btn">
