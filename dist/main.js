@@ -274,9 +274,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const sheetTarget = inlineWaitlistForm.getAttribute('data-sheet') || 'English';
       const name = (document.getElementById('inlineUserName') || document.getElementById('formFullName') || {}).value || '';
-      const email = (document.getElementById('inlineUserEmail') || document.getElementById('formEmail') || {}).value || '';
       const countryCode = (document.getElementById('inlineCountryCode') || document.getElementById('formCountryCode') || {}).value || '+91';
       const phone = (document.getElementById('inlineUserPhone') || document.getElementById('formPhone') || {}).value || '';
+      const role = (document.getElementById('inlineUserRole') || document.getElementById('formRole') || {}).value || '';
+      const goal = (document.getElementById('inlineUserGoal') || document.getElementById('formGoal') || {}).value || '';
+      const rawEmail = (document.getElementById('inlineUserEmail') || document.getElementById('formEmail') || {}).value;
+      const email = rawEmail || [role, goal].filter(Boolean).join(' | ');
 
       const payload = {
         sheet: sheetTarget,
@@ -284,7 +287,9 @@ document.addEventListener('DOMContentLoaded', () => {
         name: name,
         countryCode: countryCode,
         phone: phone,
-        email: email
+        email: email,
+        role: role,
+        goal: goal
       };
 
       sendToGoogleSheets(payload);

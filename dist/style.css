@@ -1995,3 +1995,206 @@ img, svg {
     padding: 1.35rem 1.25rem !important;
   }
 }
+
+/* ======================================================
+   CHALKBOARD THEME SPECIFIC STYLING
+   ====================================================== */
+.chalk-page {
+  background-color: #11171E !important;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(rgba(250, 204, 21, 0.035) 1px, transparent 1px) !important;
+  background-size: 24px 24px, 48px 48px !important;
+  background-position: 0 0, 12px 12px !important;
+  color: #F8FAFC !important;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+}
+
+.chalk-font {
+  font-family: 'Caveat', cursive, sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.03em !important;
+}
+
+.chalk-yellow {
+  color: #FACC15 !important;
+  text-shadow: 0 0 16px rgba(250, 204, 21, 0.3) !important;
+}
+
+.chalk-sky {
+  color: #38BDF8 !important;
+  text-shadow: 0 0 16px rgba(56, 189, 248, 0.3) !important;
+}
+
+.chalk-card {
+  background: rgba(30, 41, 59, 0.7) !important;
+  border: 2px dashed rgba(255, 255, 255, 0.2) !important;
+  border-radius: 1.5rem !important;
+  padding: 2.25rem !important;
+  backdrop-filter: blur(14px) !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4) !important;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.chalk-card:hover {
+  border-color: rgba(250, 204, 21, 0.45) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5) !important;
+}
+
+.chalk-cta-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.65rem !important;
+  background: #2563EB !important;
+  color: #FFFFFF !important;
+  font-size: 1.125rem !important;
+  font-weight: 700 !important;
+  padding: 1.15rem 2.25rem !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 10px 28px rgba(37, 99, 235, 0.4) !important;
+  text-decoration: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+}
+
+.chalk-cta-btn:hover {
+  background: #1D4ED8 !important;
+  transform: translateY(-2px) scale(1.01) !important;
+  box-shadow: 0 14px 35px rgba(37, 99, 235, 0.55) !important;
+}
+
+.chalk-stat-number {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 4.25rem !important;
+  font-weight: 900 !important;
+  color: #FACC15 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.04em !important;
+  text-shadow: 0 0 20px rgba(250, 204, 21, 0.35) !important;
+}
+
+.chalk-before-after-table {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border-radius: 1.25rem !important;
+  overflow: hidden !important;
+  border: 2px dashed rgba(255, 255, 255, 0.22) !important;
+  background: rgba(15, 23, 42, 0.6) !important;
+}
+
+.chalk-before-after-table th {
+  background: rgba(30, 41, 59, 0.95) !important;
+  padding: 1.25rem 1.5rem !important;
+  font-weight: 800 !important;
+  font-size: 1.1rem !important;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.22) !important;
+  color: #F8FAFC !important;
+  text-align: left !important;
+}
+
+.chalk-before-after-table td {
+  padding: 1.15rem 1.5rem !important;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1) !important;
+  font-size: 1rem !important;
+  line-height: 1.55 !important;
+  color: #E2E8F0 !important;
+}
+
+.chalk-before-after-table tr:last-child td {
+  border-bottom: none !important;
+}
+
+@media (max-width: 768px) {
+  .chalk-card {
+    padding: 1.5rem 1.25rem !important;
+  }
+  .chalk-stat-number {
+    font-size: 3rem !important;
+  }
+  .chalk-before-after-table th,
+  .chalk-before-after-table td {
+    padding: 0.85rem 0.75rem !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+/* ── Advanced Chalkboard Frame & Grid Alignment ── */
+.chalk-board-frame {
+  background: rgba(26, 35, 44, 0.75) !important;
+  border: 3px dashed rgba(255, 255, 255, 0.22) !important;
+  border-radius: 2rem !important;
+  padding: 3.5rem 3rem !important;
+  backdrop-filter: blur(16px) !important;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5), 0 25px 60px rgba(0, 0, 0, 0.4) !important;
+  position: relative !important;
+}
+
+.chalk-badge-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  padding: 0.45rem 1.15rem !important;
+  background: rgba(250, 204, 21, 0.1) !important;
+  border: 1px dashed rgba(250, 204, 21, 0.35) !important;
+  border-radius: 9999px !important;
+  color: #FACC15 !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+}
+
+.chalk-comparison-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 1.75rem !important;
+}
+
+.chalk-comp-column {
+  border-radius: 1.5rem !important;
+  padding: 2rem 1.75rem !important;
+  border: 2px dashed rgba(255, 255, 255, 0.2) !important;
+}
+
+.chalk-comp-before {
+  background: rgba(239, 68, 68, 0.08) !important;
+  border-color: rgba(239, 68, 68, 0.3) !important;
+}
+
+.chalk-comp-after {
+  background: rgba(52, 211, 153, 0.08) !important;
+  border-color: rgba(52, 211, 153, 0.35) !important;
+}
+
+.chalk-comp-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.35rem !important;
+}
+
+.chalk-comp-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 0.85rem !important;
+  font-size: 1.05rem !important;
+  line-height: 1.55 !important;
+}
+
+@media (max-width: 768px) {
+  .chalk-board-frame {
+    padding: 2rem 1.25rem !important;
+    border-radius: 1.25rem !important;
+  }
+  .chalk-comparison-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+  .chalk-comp-column {
+    padding: 1.5rem 1.25rem !important;
+  }
+}
