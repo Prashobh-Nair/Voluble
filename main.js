@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Google Sheets Webhook Integration ──
   window.VOLUBLE_SHEETS_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbydHBo57NDP73utCZAzksf5WhksB_jvM8ayZB9eEImwULU5PTY-mHHg1KN9W26po6c/exec';
 
-  function sendToGoogleSheets(data) {
+  window.sendToGoogleSheets = function(data) {
     if (!window.VOLUBLE_SHEETS_WEBHOOK_URL) {
       console.log('Voluble Form Submitted:', data);
       return;
@@ -258,7 +258,8 @@ document.addEventListener('DOMContentLoaded', () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     }).catch(err => console.error('Google Sheets Error:', err));
-  }
+  };
+  const sendToGoogleSheets = window.sendToGoogleSheets;
 
   const inlineWaitlistForm = document.getElementById('inlineWaitlistForm');
   const inlineFormSuccess = document.getElementById('inlineFormSuccess');

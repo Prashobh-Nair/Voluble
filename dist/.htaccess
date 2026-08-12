@@ -12,6 +12,9 @@ RewriteRule ^career-growth/?$ career-growth.html [L]
 # Handle /students
 RewriteRule ^students/?$ students.html [L]
 
+# Handle /interview
+RewriteRule ^interview/?$ interview.html [L]
+
 # General .html extension removal
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
