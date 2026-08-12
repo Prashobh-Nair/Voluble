@@ -4,4 +4,6 @@
 /careergrowth    /career-growth.html   200
 /career-growth   /career-growth.html   200
 /students        /students.html        200
-/interview       /interview.html       200
+/interview       /interview/index.html 200
+/interview/      /interview/index.html 200
+/interview.html  /interview            301

@@ -7,6 +7,7 @@
     { "source": "/careergrowth", "destination": "/career-growth.html" },
     { "source": "/career-growth", "destination": "/career-growth.html" },
     { "source": "/students", "destination": "/students.html" },
-    { "source": "/interview", "destination": "/interview.html" }
+    { "source": "/interview", "destination": "/interview/index.html" },
+    { "source": "/interview/", "destination": "/interview/index.html" }
   ]
 }
