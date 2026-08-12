@@ -477,10 +477,43 @@
         <form id="interviewConfigForm">
           <div class="config-grid">
             
+            <!-- Candidate Full Name -->
+            <div>
+              <label class="form-label" for="interviewCandidateName">Full Name</label>
+              <input type="text" id="interviewCandidateName" class="form-input-custom" placeholder="What should we call you?" required>
+            </div>
+
+            <!-- Candidate Email / Gmail -->
+            <div>
+              <label class="form-label" for="interviewCandidateEmail">Email Address (Gmail)</label>
+              <input type="email" id="interviewCandidateEmail" class="form-input-custom" placeholder="your.name@gmail.com" required>
+            </div>
+
+            <!-- Candidate Phone Number -->
+            <div>
+              <label class="form-label" for="interviewCandidatePhone">Phone Number (WhatsApp)</label>
+              <div style="display: flex; gap: 0.5rem;">
+                <select id="interviewCountryCode" class="form-input-custom" style="width: 110px; flex-shrink: 0;" required>
+                  <option value="+91" selected>+91 (IN)</option>
+                  <option value="+1">+1 (US)</option>
+                  <option value="+44">+44 (UK)</option>
+                  <option value="+61">+61 (AU)</option>
+                  <option value="+971">+971 (UAE)</option>
+                </select>
+                <input type="tel" id="interviewCandidatePhone" class="form-input-custom" placeholder="Phone number" required style="width: 100%;">
+              </div>
+            </div>
+
             <!-- Job Role -->
             <div>
               <label class="form-label" for="interviewJobRole">Job Role</label>
               <input type="text" id="interviewJobRole" class="form-input-custom" placeholder="e.g. Software Developer" required>
+            </div>
+
+            <!-- Target Company -->
+            <div>
+              <label class="form-label" for="interviewCompany">Target Company</label>
+              <input type="text" id="interviewCompany" class="form-input-custom" placeholder="e.g. Google, TCS, Infosys, Wipro">
             </div>
 
             <!-- Experience Level -->
@@ -492,12 +525,6 @@
                 <option value="1–3 Years">1–3 Years</option>
                 <option value="3+ Years">3+ Years</option>
               </select>
-            </div>
-
-            <!-- Target Company -->
-            <div>
-              <label class="form-label" for="interviewCompany">Target Company</label>
-              <input type="text" id="interviewCompany" class="form-input-custom" placeholder="e.g. Google, TCS, Infosys, Wipro">
             </div>
 
             <!-- Difficulty Level -->

@@ -54,6 +54,16 @@ document.addEventListener('DOMContentLoaded', () => {
   if (configForm) {
     configForm.addEventListener('submit', (e) => {
       e.preventDefault();
+      const candidateNameInput = document.getElementById('interviewCandidateName');
+      const candidateEmailInput = document.getElementById('interviewCandidateEmail');
+      const candidatePhoneInput = document.getElementById('interviewCandidatePhone');
+      const countryCodeSelect = document.getElementById('interviewCountryCode');
+
+      const name = candidateNameInput ? candidateNameInput.value.trim() : '';
+      const email = candidateEmailInput ? candidateEmailInput.value.trim() : '';
+      const phone = candidatePhoneInput ? candidatePhoneInput.value.trim() : '';
+      const countryCode = countryCodeSelect ? countryCodeSelect.value : '+91';
+
       const role = jobRoleInput ? jobRoleInput.value.trim() || 'Software Developer' : 'Software Developer';
       const company = companyInput ? companyInput.value.trim() || 'Target Company' : 'Target Company';
       const experience = experienceSelect ? experienceSelect.value : 'Fresher';
@@ -66,16 +76,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const payload = {
         sheet: 'Interview',
         timestamp: new Date().toLocaleString(),
+        name: name,
+        email: email,
+        phone: phone,
+        countryCode: countryCode,
         interviewType: selectedInterviewType || 'Fresher Interview',
         jobRole: role,
-        experience: experience,
         company: company,
+        experience: experience,
         difficulty: difficulty,
         jobDescription: jd,
-        name: `[${selectedInterviewType}] ${role}`,
-        countryCode: '+91',
-        phone: company,
-        email: `Exp: ${experience} | Diff: ${difficulty}`,
         role: `Job Role: ${role} (${company})`,
         goal: `Track: ${selectedInterviewType} | JD: ${jd || 'None'}`
       };
