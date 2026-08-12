@@ -96,28 +96,34 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Google Sheets Payload:', payload);
       }
 
-      // Visual button feedback
+      // Visual button feedback & success alert banner
       const submitBtn = configForm.querySelector('button[type="submit"]');
+      const successAlert = document.getElementById('formSuccessAlert');
+      const successNameEl = document.getElementById('successCandidateName');
+
       if (submitBtn) {
         const origText = submitBtn.textContent;
         submitBtn.disabled = true;
         submitBtn.textContent = 'Registering for Access...';
+
         setTimeout(() => {
           submitBtn.disabled = false;
           submitBtn.textContent = origText;
-        }, 1500);
+
+          if (successAlert) {
+            if (successNameEl) {
+              successNameEl.textContent = name || 'there';
+            }
+            successAlert.style.display = 'block';
+            successAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 1200);
       }
 
-      // Update Fold 3 Coach Question dynamically!
+      // Update Fold 3 Coach Question dynamically if navigated later
       const coachQuestionEl = document.getElementById('coachQuestionText');
       if (coachQuestionEl) {
         coachQuestionEl.textContent = `"Tell me about yourself and why you're interested in the ${role} position at ${company}."`;
-      }
-
-      // Smooth scroll to Fold 3
-      const fold3 = document.getElementById('fold-3-coach');
-      if (fold3) {
-        fold3.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
   }
