@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (submitBtn) {
         const origText = submitBtn.textContent;
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Generating & Saving Session...';
+        submitBtn.textContent = 'Registering for Access...';
         setTimeout(() => {
           submitBtn.disabled = false;
           submitBtn.textContent = origText;
