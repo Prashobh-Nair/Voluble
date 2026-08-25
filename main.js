@@ -48,15 +48,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
       try {
         if (GOOGLE_SHEET_SCRIPT_URL) {
-          const formData = new FormData();
-          formData.append('name', name);
-          formData.append('mobile', mobile);
-          formData.append('email', email);
+          const params = new URLSearchParams();
+          params.append('name', name);
+          params.append('mobile', mobile);
+          params.append('email', email);
 
           await fetch(GOOGLE_SHEET_SCRIPT_URL, {
             method: 'POST',
-            body: formData,
-            mode: 'no-cors'
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: params.toString()
           });
         }
 
