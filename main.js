@@ -48,17 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       try {
         if (GOOGLE_SHEET_SCRIPT_URL) {
-          const params = new URLSearchParams();
-          params.append('name', name);
-          params.append('mobile', mobile);
-          params.append('email', email);
-
           await fetch(GOOGLE_SHEET_SCRIPT_URL, {
             method: 'POST',
+            mode: 'no-cors',
             headers: {
-              'Content-Type': 'application/x-www-form-urlencoded'
+              'Content-Type': 'text/plain'
             },
-            body: params.toString()
+            body: JSON.stringify({ name, mobile, email })
           });
         }
 
