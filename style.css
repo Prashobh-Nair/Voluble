@@ -327,13 +327,13 @@ body {
   padding: 3.5rem 0 0 0;
   margin: 0;
   position: relative;
-  background-color: #FCF7EB;
+  background-color: #ffffff;
   overflow: hidden;
 }
 
 .mountain-header-wrap {
   width: 100%;
-  max-width: 480px;
+  max-width: 520px;
   margin: 0 auto 0.75rem auto;
 }
 
@@ -743,12 +743,30 @@ body {
   }
 
   .fold3-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .fold3-left {
+    display: contents;
+  }
+
+  .heritage-header {
+    order: 1;
+  }
+
+  .heritage-stats-grid {
+    order: 2;
   }
 
   .fold3-right {
+    order: 3;
     margin-top: 0;
+  }
+
+  .testimonials-grid {
+    order: 4;
   }
 
   .heritage-title {
@@ -853,7 +871,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 0.95rem;
-    max-width: 250px;
+    max-width: 265px;
     margin: 0 auto 2rem auto;
   }
 
