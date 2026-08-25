@@ -1,40 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile Menu Toggle
-  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-  const closeNavBtn = document.getElementById('closeNavBtn');
-  const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+  // Deployed Google Apps Script Web App URL
+  const GOOGLE_SHEET_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz9M8RwFLOqz9i3aIXtfVsG3WJdvcBWLSSsk2zkGyvciGYfgEUcZJ_WyYS3J168Cu8lMg/exec';
 
-  if (mobileMenuBtn && mobileNavDrawer) {
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileNavDrawer.classList.add('active');
-    });
-  }
+  const toastMsg = document.getElementById('toastMsg');
 
-  if (closeNavBtn && mobileNavDrawer) {
-    closeNavBtn.addEventListener('click', () => {
-      mobileNavDrawer.classList.remove('active');
-    });
-  }
-
-  // Close mobile drawer when clicking nav links
-  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-  mobileNavLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (mobileNavDrawer) mobileNavDrawer.classList.remove('active');
-    });
-  });
-
-  // Early Access Form Validation & Submission (Desktop and Mobile)
+  // Early Access Form Validation & Submission
   function handleFormSubmit(formId, nameId, mobileId, emailId) {
     const form = document.getElementById(formId);
     if (!form) return;
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const nameInput = document.getElementById(nameId);
       const mobileInput = document.getElementById(mobileId);
       const emailInput = document.getElementById(emailId);
+      const submitBtn = form.querySelector('button[type="submit"]');
 
       const name = nameInput ? nameInput.value.trim() : '';
       const mobile = mobileInput ? mobileInput.value.trim() : '';
@@ -58,14 +39,43 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Success feedback
-      showToast(`🎉 Thank you ${name}! You're registered for Early Access!`);
-      form.reset();
+      // Indicate loading
+      const originalBtnText = submitBtn ? submitBtn.innerHTML : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Registering...';
+      }
+
+      try {
+        if (GOOGLE_SHEET_SCRIPT_URL) {
+          const formData = new FormData();
+          formData.append('name', name);
+          formData.append('mobile', mobile);
+          formData.append('email', email);
+
+          await fetch(GOOGLE_SHEET_SCRIPT_URL, {
+            method: 'POST',
+            body: formData,
+            mode: 'no-cors'
+          });
+        }
+
+        // Success feedback
+        showToast(`🎉 Thank you ${name}! You're registered for Early Access!`);
+        form.reset();
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        showToast('⚠️ Something went wrong. Please try again.');
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnText;
+        }
+      }
     });
   }
 
   handleFormSubmit('earlyAccessForm', 'userName', 'userMobile', 'userEmail');
-  handleFormSubmit('earlyAccessFormMobile', 'userNameMob', 'userMobileMob', 'userEmailMob');
 
   function showToast(message) {
     if (!toastMsg) return;
