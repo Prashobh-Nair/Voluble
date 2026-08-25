@@ -212,6 +212,10 @@ body {
   color: #0d172a;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .hero-subtitle {
   font-size: 1.18rem;
   color: #334155;
