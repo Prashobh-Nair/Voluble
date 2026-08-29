@@ -60,6 +60,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Success feedback
         showToast(`🎉 Thank you ${name}! You're registered for Early Access!`);
+        
+        // Track GA4 conversion event
+        if (typeof gtag === 'function') {
+          gtag('event', 'generate_lead', {
+            event_category: 'engagement',
+            event_label: 'early_access_registration',
+            value: 1
+          });
+        }
+
         form.reset();
       } catch (error) {
         console.error('Error submitting form:', error);

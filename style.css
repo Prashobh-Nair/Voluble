@@ -767,6 +767,7 @@ body {
 
   .testimonials-grid {
     order: 4;
+    margin-bottom: 1.5rem;
   }
 
   .heritage-title {
@@ -886,7 +887,8 @@ body {
 
   .testimonials-grid {
     grid-template-columns: 1fr;
-    gap: 0.85rem;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .early-access-card {
@@ -899,7 +901,16 @@ body {
   }
 
   .fold3-landscape-bottom {
-    margin-top: -1.5rem;
+    margin-top: 1.5rem;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .bottom-landscape-art {
+    width: 100%;
+    min-height: 90px;
+    object-fit: cover;
+    object-position: left center;
   }
 }
 
